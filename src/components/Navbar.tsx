@@ -1,19 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, PlusCircle, User, Compass, Wrench, Users, ShieldCheck } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 interface NavbarProps {
-  currentView: string;
-  onNavigate: (view: string, sectionId?: string) => void;
-  onOpenLogin: () => void;
-  onOpenPublish: () => void;
+  onNavigate: (sectionId: string) => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({
-  currentView,
-  onNavigate,
-  onOpenLogin,
-  onOpenPublish,
-}) => {
+export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -25,117 +17,95 @@ export const Navbar: React.FC<NavbarProps> = ({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleLinkClick = (view: string, sectionId?: string) => {
+  const handleLinkClick = (sectionId: string) => {
     setIsMobileMenuOpen(false);
-    onNavigate(view, sectionId);
+    onNavigate(sectionId);
   };
+
+  const whatsappUrl =
+    'https://wa.me/573132233304?text=Hola%2C%20vi%20el%20proyecto%20RC%20HUB%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20y%20compartir%20algunas%20ideas.';
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+      className={`sticky top-0 z-50 transition-all duration-200 ${
         isScrolled
-          ? 'bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80 shadow-lg shadow-black/20'
-          : 'bg-transparent border-b border-white/5'
+          ? 'bg-[#101214]/90 backdrop-blur-md border-b border-[#26292E]'
+          : 'bg-transparent border-b border-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <button
-            onClick={() => handleLinkClick('landing')}
-            className="flex items-center gap-3 group text-left focus:outline-none"
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="flex items-center gap-3 group focus:outline-none"
           >
-            <div className="relative flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-orange-500 to-amber-600 shadow-md shadow-orange-500/30 group-hover:scale-105 transition-transform duration-200">
-              <div className="w-5 h-5 border-2 border-white/90 rounded-sm rotate-45 flex items-center justify-center">
-                <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-              </div>
-              <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-slate-950 border border-orange-500/50 rounded-full flex items-center justify-center">
-                <span className="w-1.5 h-1.5 bg-orange-400 rounded-full animate-ping"></span>
-              </div>
+            <div className="w-8 h-8 rounded-md bg-[#101214] border border-[#26292E] flex items-center justify-center font-tech font-bold text-xs text-[#F4F2ED] tracking-wider group-hover:border-[#C65D2E] transition-colors">
+              RC
             </div>
-
             <div className="flex flex-col">
-              <div className="flex items-center gap-1.5">
-                <span className="font-display font-extrabold text-2xl tracking-tight text-white group-hover:text-orange-400 transition-colors">
-                  RC<span className="text-orange-500">.</span>HUB
-                </span>
-                <span className="text-[9px] font-mono-tech tracking-wider uppercase bg-orange-500/10 text-orange-400 border border-orange-500/30 px-1.5 py-0.5 rounded">
-                  COL
-                </span>
-              </div>
-              <span className="text-[10px] tracking-widest uppercase font-semibold text-slate-400">
-                Radio Control Colombia
+              <span className="font-editorial font-bold text-lg tracking-tight text-[#F4F2ED]">
+                RC HUB
+              </span>
+              <span className="text-[10px] font-tech text-[#8D949C] uppercase tracking-wider -mt-0.5">
+                Plataforma en desarrollo
               </span>
             </div>
-          </button>
+          </a>
 
-          {/* Desktop Nav Links */}
+          {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center gap-8">
             <button
-              onClick={() => handleLinkClick('landing', 'marketplace')}
-              className={`text-sm font-semibold transition-colors duration-150 hover:text-orange-400 ${
-                currentView === 'marketplace' ? 'text-orange-400' : 'text-slate-300'
-              }`}
+              onClick={() => handleLinkClick('que-construimos')}
+              className="text-xs uppercase font-tech tracking-wider text-[#8D949C] hover:text-[#F4F2ED] transition-colors cursor-pointer"
             >
-              Marketplace
+              Qué estamos construyendo
             </button>
             <button
-              onClick={() => handleLinkClick('landing', 'garage')}
-              className={`text-sm font-semibold transition-colors duration-150 hover:text-orange-400 ${
-                currentView === 'garage' ? 'text-orange-400' : 'text-slate-300'
-              }`}
+              onClick={() => handleLinkClick('vista-previa')}
+              className="text-xs uppercase font-tech tracking-wider text-[#8D949C] hover:text-[#F4F2ED] transition-colors cursor-pointer"
             >
-              Garage
+              Vista previa
             </button>
             <button
-              onClick={() => handleLinkClick('landing', 'comunidad')}
-              className={`text-sm font-semibold transition-colors duration-150 hover:text-orange-400 ${
-                currentView === 'comunidad' ? 'text-orange-400' : 'text-slate-300'
-              }`}
+              onClick={() => handleLinkClick('hoja-de-ruta')}
+              className="text-xs uppercase font-tech tracking-wider text-[#8D949C] hover:text-[#F4F2ED] transition-colors cursor-pointer"
             >
-              Comunidad
+              Hoja de ruta
+            </button>
+            <button
+              onClick={() => handleLinkClick('contacto')}
+              className="text-xs uppercase font-tech tracking-wider text-[#8D949C] hover:text-[#F4F2ED] transition-colors cursor-pointer"
+            >
+              Contacto
             </button>
           </nav>
 
-          {/* Desktop Right Actions */}
+          {/* Desktop Right Action */}
           <div className="hidden md:flex items-center gap-4">
-            <button
-              onClick={onOpenLogin}
-              className="text-sm font-semibold text-slate-300 hover:text-white px-3 py-2 rounded-lg transition-colors flex items-center gap-2 cursor-pointer"
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md text-xs font-semibold text-[#F4F2ED] bg-[#101214] border border-[#26292E] hover:border-[#C65D2E] hover:text-white transition-all duration-150 cursor-pointer"
             >
-              <User className="w-4 h-4 text-slate-400" />
-              Ingresar
-            </button>
-
-            <button
-              onClick={onOpenPublish}
-              className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-bold text-white bg-gradient-to-r from-orange-500 via-orange-600 to-amber-600 hover:from-orange-400 hover:to-amber-500 shadow-md shadow-orange-600/30 hover:shadow-orange-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer"
-            >
-              <PlusCircle className="w-4 h-4" />
-              <span>Publicar</span>
-              <span className="flex h-2 w-2 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-300 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-200"></span>
-              </span>
-            </button>
+              <span>Participar en el proyecto</span>
+              <ArrowUpRight className="w-3.5 h-3.5 text-[#C65D2E]" />
+            </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex md:hidden items-center gap-3">
-            <button
-              onClick={onOpenPublish}
-              className="p-2 rounded-lg bg-orange-500 text-white hover:bg-orange-600 transition-colors shadow-sm"
-              title="Publicar"
-            >
-              <PlusCircle className="w-5 h-5" />
-            </button>
-
+          {/* Mobile Menu Toggle */}
+          <div className="flex md:hidden items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/80 transition-colors focus:outline-none"
+              className="p-2 rounded-md text-[#8D949C] hover:text-[#F4F2ED] hover:bg-[#101214] transition-colors focus:outline-none"
               aria-label="Abrir menú"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
@@ -143,60 +113,44 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-slate-950/95 border-b border-slate-800 backdrop-blur-xl animate-in slide-in-from-top-4 duration-200">
-          <div className="px-5 pt-3 pb-6 space-y-4">
-            <div className="flex flex-col space-y-2">
-              <button
-                onClick={() => handleLinkClick('landing', 'marketplace')}
-                className="flex items-center gap-3 px-3 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-orange-400 transition-colors text-left"
-              >
-                <Compass className="w-5 h-5 text-orange-400" />
-                Marketplace Especializado
-              </button>
-              <button
-                onClick={() => handleLinkClick('landing', 'garage')}
-                className="flex items-center gap-3 px-3 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-orange-400 transition-colors text-left"
-              >
-                <Wrench className="w-5 h-5 text-orange-400" />
-                Mi Garage
-              </button>
-              <button
-                onClick={() => handleLinkClick('landing', 'comunidad')}
-                className="flex items-center gap-3 px-3 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-orange-400 transition-colors text-left"
-              >
-                <Users className="w-5 h-5 text-orange-400" />
-                Pistas y Comunidad
-              </button>
-            </div>
+        <div className="md:hidden bg-[#101214] border-b border-[#26292E] px-4 pt-3 pb-6 space-y-3 animate-in slide-in-from-top-2 duration-150">
+          <nav className="flex flex-col space-y-1">
+            <button
+              onClick={() => handleLinkClick('que-construimos')}
+              className="px-3 py-2 text-left text-sm text-[#8D949C] hover:text-[#F4F2ED] hover:bg-[#17191C] rounded-md transition-colors"
+            >
+              Qué estamos construyendo
+            </button>
+            <button
+              onClick={() => handleLinkClick('vista-previa')}
+              className="px-3 py-2 text-left text-sm text-[#8D949C] hover:text-[#F4F2ED] hover:bg-[#17191C] rounded-md transition-colors"
+            >
+              Vista previa
+            </button>
+            <button
+              onClick={() => handleLinkClick('hoja-de-ruta')}
+              className="px-3 py-2 text-left text-sm text-[#8D949C] hover:text-[#F4F2ED] hover:bg-[#17191C] rounded-md transition-colors"
+            >
+              Hoja de ruta
+            </button>
+            <button
+              onClick={() => handleLinkClick('contacto')}
+              className="px-3 py-2 text-left text-sm text-[#8D949C] hover:text-[#F4F2ED] hover:bg-[#17191C] rounded-md transition-colors"
+            >
+              Contacto
+            </button>
+          </nav>
 
-            <div className="pt-4 border-t border-slate-800/80 space-y-3">
-              <button
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  onOpenPublish();
-                }}
-                className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-orange-500 to-amber-600 shadow-md shadow-orange-500/25"
-              >
-                <PlusCircle className="w-5 h-5" />
-                Publicar un Vehículo o Repuesto
-              </button>
-
-              <button
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  onOpenLogin();
-                }}
-                className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-slate-300 bg-slate-900 border border-slate-800 hover:text-white"
-              >
-                <User className="w-4 h-4" />
-                Ingresar a mi cuenta
-              </button>
-            </div>
-
-            <div className="flex items-center justify-center gap-2 text-xs text-slate-400 pt-2 font-mono-tech">
-              <ShieldCheck className="w-4 h-4 text-emerald-400" />
-              <span>Mercado seguro de Radio Control Colombia</span>
-            </div>
+          <div className="pt-3 border-t border-[#26292E]">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full flex items-center justify-center gap-2 py-2.5 rounded-md text-xs font-semibold text-[#F4F2ED] bg-[#C65D2E] hover:bg-[#B34F24] transition-colors"
+            >
+              <span>Participar en el proyecto (WhatsApp)</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
           </div>
         </div>
       )}
