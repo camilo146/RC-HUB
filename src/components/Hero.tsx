@@ -10,7 +10,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
   return (
-    <section className="relative pt-8 pb-16 lg:pt-16 lg:pb-24 overflow-hidden border-b border-[#26292E]">
+    <section className="relative pt-8 pb-12 lg:pt-12 lg:pb-16 overflow-hidden border-b border-[#26292E]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Editorial Headline & Actions */}
@@ -85,12 +85,12 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
             <div className="relative rounded-lg overflow-hidden border border-[#26292E] bg-[#101214]">
               <img
                 src="/images/hero-rc.jpg"
-                alt="Vehículo de radiocontrol en pista de tierra"
-                className="w-full h-auto object-cover aspect-[16/11] contrast-[1.03]"
+                alt="Toyota Land Cruiser RC Crawler 4x4 a escala 1/10 en terreno de montaña"
+                className="w-full h-auto object-cover aspect-[16/10] sm:aspect-[16/11] contrast-[1.03]"
                 loading="eager"
               />
               <div className="p-3 bg-[#101214] border-t border-[#26292E] flex items-center justify-between text-xs text-[#8D949C] font-tech">
-                <span>Fotografía: Estadio Off-Road · Escala 1/8</span>
+                <span>Fotografía: Toyota Land Cruiser RC Crawler · Escala 1/10</span>
                 <span className="text-[#C65D2E]">Enfoque técnico</span>
               </div>
             </div>
