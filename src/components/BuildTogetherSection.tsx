@@ -10,7 +10,7 @@ export const BuildTogetherSection: React.FC = () => {
   const [comments, setComments] = useState('');
 
   const directWhatsappUrl =
-    'https://wa.me/573132233304?text=Hola%2C%20vi%20el%20proyecto%20RC%20HUB%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20y%20compartir%20algunas%20ideas.';
+    'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Conoc%C3%AD%20RC%20HUB%20y%20me%20gustar%C3%ADa%20conversar%20contigo%20sobre%20el%20proyecto%20y%20compartir%20algunas%20ideas.';
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -68,10 +68,12 @@ ${comments ? `- Comentarios: ${comments}` : ''}`;
                 href={directWhatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md text-xs font-semibold text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-colors cursor-pointer"
+                id="cta-build-whatsapp-direct"
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md text-sm font-semibold text-white bg-[#17191C] hover:bg-[#101214] border border-[#17191C] transition-colors cursor-pointer"
               >
-                <span>Enviar mensaje por WhatsApp</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
+                <MessageCircle className="w-4 h-4 text-[#C65D2E]" />
+                <span>Charla conmigo por WhatsApp</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#8D949C]" />
               </a>
             </div>
 

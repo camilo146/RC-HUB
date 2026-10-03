@@ -78,6 +78,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               Hoja de ruta
             </button>
             <button
+              onClick={() => handleLinkClick('detras-de-rchub')}
+              className="text-xs uppercase font-tech tracking-wider text-[#8D949C] hover:text-[#F4F2ED] transition-colors cursor-pointer"
+            >
+              El creador
+            </button>
+            <button
               onClick={() => handleLinkClick('contacto')}
               className="text-xs uppercase font-tech tracking-wider text-[#8D949C] hover:text-[#F4F2ED] transition-colors cursor-pointer"
             >
@@ -132,6 +138,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               className="px-3 py-2 text-left text-sm text-[#8D949C] hover:text-[#F4F2ED] hover:bg-[#17191C] rounded-md transition-colors"
             >
               Hoja de ruta
+            </button>
+            <button
+              onClick={() => handleLinkClick('detras-de-rchub')}
+              className="px-3 py-2 text-left text-sm text-[#8D949C] hover:text-[#F4F2ED] hover:bg-[#17191C] rounded-md transition-colors"
+            >
+              El creador
             </button>
             <button
               onClick={() => handleLinkClick('contacto')}

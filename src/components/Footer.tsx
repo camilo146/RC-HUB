@@ -65,6 +65,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </li>
               <li>
                 <button
+                  onClick={() => onNavigate('detras-de-rchub')}
+                  className="hover:text-[#F4F2ED] transition-colors cursor-pointer text-left"
+                >
+                  El creador
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => onNavigate('contacto')}
                   className="hover:text-[#F4F2ED] transition-colors cursor-pointer text-left"
                 >

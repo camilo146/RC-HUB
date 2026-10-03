@@ -5,6 +5,7 @@ import { TheProblemSection } from './components/TheProblemSection';
 import { WhatWeAreBuilding } from './components/WhatWeAreBuilding';
 import { ConceptualPreview } from './components/ConceptualPreview';
 import { RoadmapSection } from './components/RoadmapSection';
+import { BehindRCHUB } from './components/BehindRCHUB';
 import { BuildTogetherSection } from './components/BuildTogetherSection';
 import { Footer } from './components/Footer';
 
@@ -17,7 +18,6 @@ export function App() {
   };
 
   useEffect(() => {
-    // Handle initial hash on load
     if (window.location.hash) {
       const id = window.location.hash.replace('#', '');
       setTimeout(() => scrollToSection(id), 100);
@@ -31,22 +31,25 @@ export function App() {
 
       {/* Main Content */}
       <main className="flex-1">
-        {/* 1. Hero — Above the fold, project vision */}
+        {/* 1. Hero — Titular, propuesta de valor, autor, CTAs */}
         <Hero onDiscoverVision={() => scrollToSection('el-problema')} />
 
-        {/* 2. The Problem — Why this hobby needs better tools */}
+        {/* 2. The Problem — Por qué este hobby necesita mejores herramientas */}
         <TheProblemSection />
 
-        {/* 3. What We're Building — Module overview */}
+        {/* 3. What We're Building — Descripción de módulos */}
         <WhatWeAreBuilding />
 
-        {/* 4. Conceptual Preview — UI mockups / interactive tabs */}
+        {/* 4. Conceptual Preview — Mockups interactivos */}
         <ConceptualPreview />
 
-        {/* 5. Roadmap — Timeline & progress */}
+        {/* 5. Roadmap — Plan de desarrollo */}
         <RoadmapSection />
 
-        {/* 6. Build Together / Contact — Community involvement form */}
+        {/* 6. Behind RC HUB — Camilo López Romero, historia y motivaciones */}
+        <BehindRCHUB />
+
+        {/* 7. Build Together / Contact — Formulario de interés temprano */}
         <BuildTogetherSection />
       </main>
 
