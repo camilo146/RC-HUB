@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, MessageCircle } from 'lucide-react';
+import { ArrowDown, MessageCircle, Sparkles } from 'lucide-react';
 
 const WHATSAPP_URL =
   'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Conoc%C3%AD%20BOX%20HUB%20y%20me%20gustar%C3%ADa%20compartir%20algunas%20ideas%20sobre%20el%20proyecto.';
@@ -101,8 +101,11 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
                 loading="eager"
               />
               <div className="p-3 bg-[#101214] border-t border-[#26292E] flex items-center justify-between text-xs text-[#8D949C] font-tech">
-                <span>Fotografía: Toyota Land Cruiser RC Crawler · Escala 1/10</span>
-                <span className="text-[#C65D2E]">Enfoque técnico</span>
+                <span className="truncate">Toyota Land Cruiser RC Crawler · Escala 1/10</span>
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#17191C] border border-[#26292E] text-[10px] text-[#C65D2E] font-semibold uppercase tracking-wider shrink-0 ml-2">
+                  <Sparkles className="w-3 h-3 text-[#C65D2E]" />
+                  <span>Imagen generada con IA</span>
+                </span>
               </div>
             </div>
           </div>

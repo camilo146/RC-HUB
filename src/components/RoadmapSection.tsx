@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageSquare, ShoppingCart, Wrench, Users, ArrowRight } from 'lucide-react';
+import { MessageSquare, ShoppingCart, Wrench, Users, ArrowRight, Sparkles } from 'lucide-react';
 
 interface RoadmapStep {
   number: string;
@@ -111,6 +111,12 @@ export const RoadmapSection: React.FC = () => {
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#101214] via-transparent to-transparent opacity-60" />
+                    <div className="absolute top-2.5 right-2.5 z-10">
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#101214]/85 backdrop-blur-sm border border-[#26292E] text-[9px] font-tech text-[#C65D2E] font-semibold uppercase tracking-wider">
+                        <Sparkles className="w-2.5 h-2.5 text-[#C65D2E]" />
+                        <span>Imagen IA</span>
+                      </span>
+                    </div>
                   </div>
 
                   {/* Body Content */}

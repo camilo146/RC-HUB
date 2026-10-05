@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
-import { MessageCircle, ArrowRight, Eye, X } from 'lucide-react';
+import React from 'react';
+import { MessageCircle, ArrowRight, Sparkles } from 'lucide-react';
 
 const WHATSAPP_URL =
   'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Conoc%C3%AD%20BOX%20HUB%20y%20me%20gustar%C3%ADa%20compartir%20algunas%20ideas%20sobre%20el%20proyecto.';
 
 export const BehindRCHUB: React.FC = () => {
-  const [showOriginalsModal, setShowOriginalsModal] = useState(false);
-
   return (
     <section
       id="detras-de-rchub"
@@ -62,17 +60,13 @@ export const BehindRCHUB: React.FC = () => {
                 </div>
               </div>
 
-              {/* Discreet badge with Camilo's actual vehicle */}
-              <div className="relative z-10 px-5 py-2.5 bg-[#101214]/90 backdrop-blur-sm border-t border-[#26292E] flex items-center justify-between text-xs font-tech text-[#8D949C]">
+              {/* Discreet badge indicating AI conceptual image */}
+              <div className="relative z-10 px-4 py-2.5 bg-[#101214]/90 backdrop-blur-sm border-t border-[#26292E] flex items-center justify-between text-xs font-tech text-[#8D949C]">
                 <span className="truncate">Camilo & Toyota LC79 Pro Crawler Escala 1/10</span>
-                <button
-                  onClick={() => setShowOriginalsModal(true)}
-                  className="inline-flex items-center gap-1 text-[#C65D2E] hover:text-[#F4F2ED] transition-colors cursor-pointer shrink-0 ml-2"
-                  title="Ver fotos reales de referencia"
-                >
-                  <Eye className="w-3.5 h-3.5" />
-                  <span className="text-[10px] uppercase font-bold">Ver fotos reales</span>
-                </button>
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#17191C] border border-[#26292E] text-[10px] text-[#C65D2E] font-semibold uppercase tracking-wider shrink-0 ml-2">
+                  <Sparkles className="w-3 h-3 text-[#C65D2E]" />
+                  <span>Imagen generada con IA</span>
+                </span>
               </div>
             </div>
           </div>
@@ -189,64 +183,6 @@ export const BehindRCHUB: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Modal: View original user reference photos */}
-      {showOriginalsModal && (
-        <div
-          className="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-4"
-          onClick={() => setShowOriginalsModal(false)}
-        >
-          <div
-            className="relative max-w-3xl w-full bg-[#101214] border border-[#26292E] rounded-lg p-6 space-y-4"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex items-center justify-between pb-3 border-b border-[#26292E]">
-              <div>
-                <h3 className="font-editorial font-bold text-lg text-[#F4F2ED]">
-                  Fotografías de Referencia Auténtica
-                </h3>
-                <p className="text-xs font-tech text-[#8D949C]">
-                  Camilo López Romero y su Toyota Land Cruiser LC79 RC Crawler personal
-                </p>
-              </div>
-              <button
-                onClick={() => setShowOriginalsModal(false)}
-                className="p-1.5 rounded-md hover:bg-[#17191C] text-[#8D949C] hover:text-white"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <div className="aspect-[3/4] rounded-md overflow-hidden border border-[#26292E] bg-[#17191C]">
-                  <img
-                    src="/images/camilo-portrait.jpg"
-                    alt="Camilo López Romero retrato original"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <p className="text-[11px] font-tech text-[#8D949C] text-center">
-                  Camilo López Romero (Fundador)
-                </p>
-              </div>
-
-              <div className="space-y-2">
-                <div className="aspect-[3/4] rounded-md overflow-hidden border border-[#26292E] bg-[#17191C]">
-                  <img
-                    src="/images/camilo-rc-car.png"
-                    alt="Toyota Land Cruiser LC79 RC Crawler de Camilo"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <p className="text-[11px] font-tech text-[#8D949C] text-center">
-                  Toyota Land Cruiser 70 Series RC Crawler (Vehículo personal)
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 };

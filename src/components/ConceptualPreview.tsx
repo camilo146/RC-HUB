@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Info } from 'lucide-react';
+import { MapPin, Info, Sparkles } from 'lucide-react';
 import { CONCEPTUAL_PRODUCTS, CONCEPTUAL_GARAGE_VEHICLES } from '../data/conceptualData';
 
 export const ConceptualPreview: React.FC = () => {
@@ -56,7 +56,7 @@ export const ConceptualPreview: React.FC = () => {
         <div className="mb-10 p-4 rounded-md bg-[#17191C] border border-[#26292E] flex items-start sm:items-center gap-3 text-xs text-[#8D949C]">
           <Info className="w-4 h-4 text-[#C65D2E] shrink-0 mt-0.5 sm:mt-0" />
           <span>
-            <strong>Vistas conceptuales:</strong> Las funcionalidades y el diseño pueden evolucionar según los comentarios de la comunidad. Los modelos, precios y referencias son ejemplos ilustrativos.
+            <strong>Vistas conceptuales:</strong> Las funcionalidades y el diseño pueden evolucionar según los comentarios de la comunidad. Las imágenes de vehículos son representaciones visuales generadas con IA con fines ilustrativos.
           </span>
         </div>
 
@@ -80,6 +80,12 @@ export const ConceptualPreview: React.FC = () => {
                     <div className="absolute top-2.5 left-2.5">
                       <span className="px-2 py-0.5 rounded-sm bg-[#101214]/90 text-[10px] font-tech text-[#C65D2E] border border-[#26292E] uppercase font-bold tracking-wider">
                         Ejemplo conceptual
+                      </span>
+                    </div>
+                    <div className="absolute top-2.5 right-2.5">
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-sm bg-[#101214]/90 text-[9px] font-tech text-[#C65D2E] border border-[#26292E] uppercase font-semibold tracking-wider">
+                        <Sparkles className="w-2.5 h-2.5 text-[#C65D2E]" />
+                        <span>Imagen IA</span>
                       </span>
                     </div>
                   </div>

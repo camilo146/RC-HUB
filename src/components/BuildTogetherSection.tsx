@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageCircle, ArrowRight, ClipboardList, X, Send } from 'lucide-react';
+import { MessageCircle, ArrowRight, ClipboardList, X, Send, Sparkles } from 'lucide-react';
 
 export const BuildTogetherSection: React.FC = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -38,6 +38,11 @@ ${comments ? `- Comentarios: ${comments}` : ''}`;
         {/* Dark film overlay matching design system */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#101214] via-[#101214]/90 to-[#101214]/95" />
         <div className="absolute inset-0 bg-[#101214]/50" />
+        {/* Subtle AI background note */}
+        <div className="absolute bottom-3 left-4 z-10 hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#101214]/80 backdrop-blur-sm border border-[#26292E]/60 text-[10px] font-tech text-[#8D949C]">
+          <Sparkles className="w-3 h-3 text-[#C65D2E]" />
+          <span>Fondo ilustrativo generado con IA</span>
+        </div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
