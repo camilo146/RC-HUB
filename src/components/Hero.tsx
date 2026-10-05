@@ -1,8 +1,10 @@
 import React from 'react';
 import { ArrowDown, MessageCircle, Sparkles } from 'lucide-react';
 
-const WHATSAPP_URL =
-  'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Conoc%C3%AD%20BOX%20HUB%20y%20me%20gustar%C3%ADa%20compartir%20algunas%20ideas%20sobre%20el%20proyecto.';
+const JOIN_WHATSAPP_URL =
+  'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Quiero%20ser%20parte%20de%20BOX%20HUB%20desde%20el%20comienzo%20y%20estar%20cuando%20salga.';
+const CHAT_WHATSAPP_URL =
+  'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Me%20gustar%C3%ADa%20hablar%20contigo%20sobre%20el%20proyecto%20BOX%20HUB.';
 
 interface HeroProps {
   onDiscoverVision: () => void;
@@ -10,17 +12,17 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
   return (
-    <section className="relative pt-8 pb-12 lg:pt-12 lg:pb-16 overflow-hidden border-b border-[#26292E]">
+    <section className="relative pt-8 pb-12 lg:pt-14 lg:pb-18 overflow-hidden border-b border-[#26292E]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Editorial Headline & Actions */}
           <div className="lg:col-span-6 space-y-6">
-            {/* Project Status Tag + Handwritten Accent */}
+            {/* Brand + Status Tag + Handwritten Accent */}
             <div className="flex flex-wrap items-center gap-3">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-[#101214] border border-[#26292E]">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C65D2E]" />
                 <span className="text-[11px] font-tech text-[#8D949C] uppercase tracking-widest font-medium">
-                  Proyecto en desarrollo · Colombia
+                  BOX HUB · Radio Control Colombia
                 </span>
               </div>
               <span className="font-handwritten text-xl text-[#C65D2E] inline-block -rotate-2 select-none">
@@ -34,60 +36,74 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
             </h1>
 
             {/* Description */}
-            <p className="text-base sm:text-lg text-[#8D949C] leading-relaxed max-w-xl font-normal">
-              Estamos construyendo <strong className="text-[#F4F2ED] font-semibold">BOX HUB</strong> para conectar a los aficionados al radio control en Colombia: vehículos, repuestos, colecciones y comunidad, en un mismo lugar especializado.
-            </p>
+            <div className="space-y-3 text-base sm:text-lg text-[#8D949C] leading-relaxed max-w-xl font-normal">
+              <p>
+                Un lugar para encontrar vehículos, repuestos, personas, clubes, eventos y todo lo que hace parte del mundo del radio control.
+              </p>
+              <p className="text-[#F4F2ED] font-medium text-sm sm:text-base">
+                Estamos construyendo BOX HUB junto a la comunidad RC colombiana.
+              </p>
+            </div>
 
-            {/* Author attribution — discrete, below value prop */}
-            <p className="text-xs font-tech text-[#555A60]">
-              Un proyecto independiente creado por{' '}
+            {/* Author attribution — brief discrete line */}
+            <p className="text-xs font-tech text-[#8D949C]">
+              Un proyecto independiente, creado por{' '}
               <button
                 onClick={() => {
                   const el = document.getElementById('detras-de-rchub');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="text-[#8D949C] hover:text-[#F4F2ED] transition-colors underline underline-offset-2 decoration-[#26292E] hover:decoration-[#8D949C] cursor-pointer"
+                className="text-[#F4F2ED] hover:text-[#C65D2E] transition-colors underline underline-offset-2 decoration-[#26292E] hover:decoration-[#C65D2E] cursor-pointer"
               >
                 Camilo López Romero
               </button>
+              .
             </p>
 
-            {/* Action Buttons */}
+            {/* Action Buttons: Primary 'Quiero ser parte' & Secondary 'Hablar con Camilo' */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-              {/* Primary: WhatsApp */}
+              {/* Primary CTA */}
               <a
-                href={WHATSAPP_URL}
+                href={JOIN_WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                id="cta-hero-whatsapp"
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-md text-sm font-semibold text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-all duration-150 cursor-pointer shadow-sm text-center group"
+                id="cta-hero-join"
+                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-md text-sm font-semibold text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-all duration-150 cursor-pointer shadow-lg hover:shadow-[#C65D2E]/25 text-center group"
               >
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <MessageCircle className="w-4 h-4" />
-                <span>Charla conmigo por WhatsApp</span>
+                <span>Quiero ser parte de BOX HUB</span>
               </a>
 
-              {/* Secondary: Discover vision */}
+              {/* Secondary CTA */}
+              <a
+                href={CHAT_WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                id="cta-hero-chat"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-md text-sm font-medium text-[#F4F2ED] bg-[#101214] border border-[#26292E] hover:border-[#8D949C] transition-colors cursor-pointer text-center"
+              >
+                <MessageCircle className="w-4 h-4 text-[#C65D2E]" />
+                <span>Hablar con Camilo</span>
+              </a>
+            </div>
+
+            {/* Encouraging micro note + quick jump to vision */}
+            <div className="flex items-center justify-between text-[11px] font-tech text-[#8D949C] pt-1">
+              <span>💬 Contacto directo sin bots</span>
               <button
                 onClick={onDiscoverVision}
-                id="cta-hero-discover"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md text-sm font-medium text-[#F4F2ED] bg-[#101214] border border-[#26292E] hover:border-[#8D949C] transition-colors cursor-pointer text-center"
+                className="hover:text-[#F4F2ED] transition-colors inline-flex items-center gap-1 cursor-pointer"
               >
-                <span>Conocer el proyecto</span>
-                <ArrowDown className="w-4 h-4 text-[#8D949C]" />
+                <span>Ver de qué se trata</span>
+                <ArrowDown className="w-3.5 h-3.5 text-[#C65D2E]" />
               </button>
             </div>
 
-            {/* Encouraging micro note */}
-            <p className="text-[11px] font-tech text-[#8D949C]">
-              💬 Respondo personalmente · ¡Hablemos de tus carros RC o de lo que falta en el hobby!
-            </p>
-
             {/* Micro metadata footer note */}
-            <div className="pt-6 border-t border-[#26292E]/60 flex items-center gap-6 text-xs text-[#8D949C] font-tech">
+            <div className="pt-4 border-t border-[#26292E]/60 flex items-center gap-6 text-xs text-[#8D949C] font-tech">
               <span>Etapa: Validación con la comunidad</span>
               <span>·</span>
-              <span>Iniciativa independiente</span>
+              <span>Construido para pilotos de toda Colombia</span>
             </div>
           </div>
 

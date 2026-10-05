@@ -1,17 +1,44 @@
 import React from 'react';
-import { ArrowUpRight, MessageCircle } from 'lucide-react';
+import { ArrowUpRight, MessageCircle, ArrowRight } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
-  const whatsappUrl =
-    'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Conoc%C3%AD%20BOX%20HUB%20y%20me%20gustar%C3%ADa%20compartir%20algunas%20ideas%20sobre%20el%20proyecto.';
+const JOIN_WHATSAPP_URL =
+  'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Quiero%20ser%20parte%20de%20BOX%20HUB%20desde%20el%20comienzo%20y%20estar%20cuando%20salga.';
 
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
-    <footer className="bg-[#101214] border-t border-[#26292E] py-14 text-slate-400">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#101214] border-t border-[#26292E] text-slate-400">
+      {/* Pre-footer Call to Action: Belonging */}
+      <div className="border-b border-[#26292E] py-16 bg-[#17191C]/40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+          <span className="font-handwritten text-2xl text-[#C65D2E] block -rotate-1">
+            «Construyamos BOX HUB juntos»
+          </span>
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#F4F2ED] max-w-2xl mx-auto leading-tight">
+            Sé parte desde el comienzo.
+          </h3>
+          <p className="text-sm sm:text-base text-[#8D949C] max-w-xl mx-auto leading-relaxed">
+            El radio control en Colombia merece su propio espacio. Si quieres que esta aplicación exista y quieres estar en primera fila cuando salga:
+          </p>
+          <div className="pt-2">
+            <a
+              href={JOIN_WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              id="cta-footer-join"
+              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-md text-sm font-tech font-bold uppercase tracking-wider text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-all shadow-xl hover:shadow-[#C65D2E]/25 cursor-pointer"
+            >
+              <span>QUIERO SER PARTE</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-10 border-b border-[#26292E]">
           {/* Brand Info */}
           <div className="md:col-span-6 space-y-4">
@@ -34,7 +61,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </p>
 
             <p className="text-xs text-[#8D949C] max-w-md leading-relaxed">
-              Iniciativa independiente creada por Camilo López Romero para conectar a la comunidad del radio control en Colombia: vehículos, repuestos, colecciones y pistas.
+              Iniciativa independiente creada por Camilo López Romero para conectar a la comunidad del radio control en Colombia: vehículos, repuestos, colecciones, pistas y modalidades.
             </p>
           </div>
 
@@ -46,10 +73,26 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <ul className="space-y-2 text-xs font-tech text-[#8D949C]">
               <li>
                 <button
+                  onClick={() => onNavigate('el-problema')}
+                  className="hover:text-[#F4F2ED] transition-colors cursor-pointer text-left"
+                >
+                  ¿Por qué BOX HUB?
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => onNavigate('que-construimos')}
                   className="hover:text-[#F4F2ED] transition-colors cursor-pointer text-left"
                 >
-                  Qué estamos construyendo
+                  Los 4 pilares
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('modalidades')}
+                  className="hover:text-[#F4F2ED] transition-colors cursor-pointer text-left"
+                >
+                  Modalidades RC
                 </button>
               </li>
               <li>
@@ -79,9 +122,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <li>
                 <button
                   onClick={() => onNavigate('contacto')}
-                  className="hover:text-[#F4F2ED] transition-colors cursor-pointer text-left"
+                  className="text-[#C65D2E] hover:text-white font-semibold transition-colors cursor-pointer text-left"
                 >
-                  Contacto comunitario
+                  Participa
                 </button>
               </li>
             </ul>
@@ -93,9 +136,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               Contacto Directo
             </h4>
             <div className="space-y-2 text-xs text-[#8D949C]">
-              <p>WhatsApp con el creador:</p>
+              <p>WhatsApp con Camilo:</p>
               <a
-                href={whatsappUrl}
+                href="https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Me%20gustar%C3%ADa%20conversar%20sobre%20BOX%20HUB."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-xs font-tech text-[#F4F2ED] hover:text-[#C65D2E] transition-colors"
@@ -105,7 +148,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
               <p className="text-[11px] font-tech text-[#8D949C] pt-1">
-                Bucaramanga · Cobertura Colombia
+                Bucaramanga · Abierto a toda Colombia
               </p>
             </div>
           </div>
@@ -113,7 +156,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
         {/* Bottom bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-tech text-[#8D949C]">
-          <p>© {new Date().getFullYear()} BOX HUB — Radio Control Colombia. Proyecto en desarrollo.</p>
+          <p>© {new Date().getFullYear()} BOX HUB — Radio Control Colombia. Proyecto independiente en construcción.</p>
           <div className="flex items-center gap-2">
             <span>Construido junto a la comunidad</span>
             <span>🇨🇴</span>

@@ -2,7 +2,7 @@ import React from 'react';
 import { MessageCircle, ArrowRight, Sparkles } from 'lucide-react';
 
 const WHATSAPP_URL =
-  'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Conoc%C3%AD%20BOX%20HUB%20y%20me%20gustar%C3%ADa%20compartir%20algunas%20ideas%20sobre%20el%20proyecto.';
+  'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Me%20gustar%C3%ADa%20hablar%20contigo%20sobre%20el%20proyecto%20BOX%20HUB.';
 
 export const BehindRCHUB: React.FC = () => {
   return (
@@ -62,39 +62,45 @@ export const BehindRCHUB: React.FC = () => {
 
               {/* Discreet badge indicating AI conceptual image */}
               <div className="relative z-10 px-4 py-2.5 bg-[#101214]/90 backdrop-blur-sm border-t border-[#26292E] flex items-center justify-between text-xs font-tech text-[#8D949C]">
-                <span className="truncate">Camilo & Toyota LC79 Pro Crawler Escala 1/10</span>
+                <span className="truncate">Camilo & Toyota LC79 Crawler</span>
                 <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#17191C] border border-[#26292E] text-[10px] text-[#C65D2E] font-semibold uppercase tracking-wider shrink-0 ml-2">
                   <Sparkles className="w-3 h-3 text-[#C65D2E]" />
-                  <span>Imagen generada con IA</span>
+                  <span>Retrato conceptual en taller</span>
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Middle Column (4 cols): Presentation Copy */}
+          {/* Middle Column (4 cols): Human & Authentic Presentation Copy */}
           <div className="lg:col-span-4 flex flex-col justify-between space-y-6">
             <div className="space-y-4">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-editorial font-bold text-[#F4F2ED] leading-tight tracking-tight">
-                Hola, soy Camilo López Romero.
+                Hola, soy Camilo.
               </h2>
 
               <p className="text-xs sm:text-sm font-tech text-[#C65D2E] uppercase tracking-wider font-semibold">
-                Apasionado por el mundo RC y creador de BOX HUB.
+                Aficionado al radio control y creador independiente de BOX HUB.
               </p>
 
               <div className="space-y-3.5 text-xs sm:text-sm text-[#8D949C] leading-relaxed">
                 <p>
-                  Creo que el radio control es mucho más que tener un vehículo. Es aprender, experimentar, poner a prueba nuestras habilidades y compartir una pasión con otras personas.
+                  Y estoy construyendo <strong className="text-[#F4F2ED] font-semibold">BOX HUB</strong> porque creo que el mundo RC en Colombia puede estar mucho más conectado.
                 </p>
                 <p>
-                  Por eso estoy desarrollando <strong className="text-[#F4F2ED] font-semibold">BOX HUB</strong>: un proyecto que busca conectar a los aficionados RC en Colombia y facilitar la forma en que encontramos vehículos, repuestos, herramientas para organizar nuestras colecciones y espacios para descubrir la comunidad.
+                  La comunidad ya existe. Hay personas, vehículos, tiendas, clubes, pistas, eventos y muchísimo conocimiento.
                 </p>
                 <p>
-                  La idea apenas está tomando forma y quiero construirla escuchando a quienes realmente viven este hobby. No quiero decidir por mi cuenta qué necesita la comunidad; quiero conversar con ustedes, conocer sus experiencias y descubrir qué herramientas serían verdaderamente útiles.
+                  Lo que falta es un lugar que conecte todo eso. Eso es lo que quiero construir con BOX HUB, y quiero hacerlo escuchando a quienes realmente viven este hobby.
                 </p>
-                <p>
-                  Si te apasiona el mundo RC, tienes una tienda, participas en carreras o simplemente quieres compartir una idea, me encantaría escucharte.
-                </p>
+
+                <div className="pt-2 border-t border-[#26292E] space-y-2 text-[#C8C4BC]">
+                  <p className="font-semibold text-xs text-[#F4F2ED]">
+                    ¿Tienes un RC? ¿Vendes repuestos? ¿Tienes una tienda? ¿Organizas encuentros? ¿O simplemente te apasiona este mundo?
+                  </p>
+                  <p className="font-editorial text-base text-[#C65D2E] italic">
+                    Quiero escucharte.
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -111,7 +117,7 @@ export const BehindRCHUB: React.FC = () => {
             {/* Top WhatsApp Box */}
             <div className="space-y-3">
               <span className="text-[11px] font-tech text-[#8D949C] uppercase tracking-wider block">
-                Contacto directo
+                Conversación directa
               </span>
 
               <a
@@ -131,7 +137,7 @@ export const BehindRCHUB: React.FC = () => {
                   </div>
                   <div className="text-left">
                     <span className="block text-xs font-semibold text-[#F4F2ED] group-hover:text-white">
-                      Charla conmigo
+                      Hablemos
                     </span>
                     <span className="block text-[10px] font-tech text-[#8D949C]">
                       por WhatsApp

@@ -3,6 +3,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { TheProblemSection } from './components/TheProblemSection';
 import { WhatWeAreBuilding } from './components/WhatWeAreBuilding';
+import { RCModalitiesSection } from './components/RCModalitiesSection';
 import { ConceptualPreview } from './components/ConceptualPreview';
 import { RoadmapSection } from './components/RoadmapSection';
 import { BehindRCHUB } from './components/BehindRCHUB';
@@ -35,22 +36,25 @@ export function App() {
         {/* 1. Hero — Titular, propuesta de valor, autor, CTAs */}
         <Hero onDiscoverVision={() => scrollToSection('el-problema')} />
 
-        {/* 2. The Problem — Por qué este hobby necesita mejores herramientas */}
+        {/* 2. The Problem — Preguntas cotidianas que viven los aficionados */}
         <TheProblemSection />
 
-        {/* 3. What We're Building — Descripción de módulos */}
+        {/* 3. The 4 Pillars — Beneficios claros para el aficionado */}
         <WhatWeAreBuilding />
 
-        {/* 4. Conceptual Preview — Mockups interactivos */}
+        {/* 4. Modalities — No importa qué tipo de RC tengas */}
+        <RCModalitiesSection />
+
+        {/* 5. Conceptual Preview — Prototipos de interfaz con disclaimers */}
         <ConceptualPreview />
 
-        {/* 5. Roadmap — Plan de desarrollo */}
+        {/* 6. Roadmap — Hoja de ruta construida con la comunidad */}
         <RoadmapSection />
 
-        {/* 6. Behind BOX HUB — Camilo López Romero, historia y motivaciones */}
+        {/* 7. Behind BOX HUB — Camilo López Romero, historia y motivaciones */}
         <BehindRCHUB />
 
-        {/* 7. Build Together / Contact — Formulario de interés temprano */}
+        {/* 8. Build Together / Contact — Participación comunitaria */}
         <BuildTogetherSection />
       </main>
 

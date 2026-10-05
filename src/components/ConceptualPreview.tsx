@@ -12,18 +12,18 @@ export const ConceptualPreview: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-3">
-              <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-semibold">
-                Diseño de Interfaz
+              <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-bold px-2.5 py-1 rounded bg-[#17191C] border border-[#26292E]">
+                CONCEPTO — ASÍ PODRÍA VERSE BOX HUB
               </span>
               <span className="font-handwritten text-xl text-[#C65D2E] rotate-1 select-none">
                 ¡Vistas preliminares!
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#F4F2ED] leading-[1.15] tracking-tight">
-              Así imaginamos BOX HUB.
+              Una vista preliminar al futuro de la plataforma.
             </h2>
             <p className="mt-4 text-base sm:text-lg text-[#8D949C] leading-relaxed">
-              Exploración de la futura experiencia de usuario para explorar el catálogo y gestionar vehículos.
+              Así imaginamos la experiencia para buscar repuestos, publicar vehículos y gestionar tu flota. Estos diseños son exploraciones que se están ajustando con las sugerencias de la comunidad.
             </p>
           </div>
 
@@ -37,7 +37,7 @@ export const ConceptualPreview: React.FC = () => {
                   : 'text-[#8D949C] hover:text-[#F4F2ED]'
               }`}
             >
-              Vista: Marketplace
+              Prototipo: Compra y Venta
             </button>
             <button
               onClick={() => setActiveTab('garage')}
@@ -47,7 +47,7 @@ export const ConceptualPreview: React.FC = () => {
                   : 'text-[#8D949C] hover:text-[#F4F2ED]'
               }`}
             >
-              Vista: Mi Garage
+              Prototipo: Mi Garage
             </button>
           </div>
         </div>
@@ -56,7 +56,7 @@ export const ConceptualPreview: React.FC = () => {
         <div className="mb-10 p-4 rounded-md bg-[#17191C] border border-[#26292E] flex items-start sm:items-center gap-3 text-xs text-[#8D949C]">
           <Info className="w-4 h-4 text-[#C65D2E] shrink-0 mt-0.5 sm:mt-0" />
           <span>
-            <strong>Vistas conceptuales:</strong> Las funcionalidades y el diseño pueden evolucionar según los comentarios de la comunidad. Las imágenes de vehículos son representaciones visuales generadas con IA con fines ilustrativos.
+            <strong>VISTA CONCEPTUAL:</strong> Las funcionalidades y el diseño pueden evolucionar según los comentarios de la comunidad. Los modelos, valores y ciudades mostrados son ejemplos de maquetación visual para ilustrar el prototipo; <strong>no representan publicaciones ni inventario real actualmente en venta</strong>.
           </span>
         </div>
 
