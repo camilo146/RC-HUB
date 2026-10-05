@@ -57,11 +57,11 @@ export const ConceptualPreview: React.FC = () => {
 
         {/* Tab 1: Conceptual Marketplace Grid */}
         {activeTab === 'marketplace' && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-in fade-in duration-200">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-in fade-in duration-200">
             {CONCEPTUAL_PRODUCTS.map((item) => (
               <div
                 key={item.id}
-                className="rounded-lg bg-[#17191C] border border-[#26292E] overflow-hidden flex flex-col justify-between"
+                className="rounded-lg bg-[#17191C] border border-[#26292E] hover:border-[#8D949C]/40 transition-colors overflow-hidden flex flex-col justify-between"
               >
                 <div>
                   {/* Image container */}
@@ -121,7 +121,7 @@ export const ConceptualPreview: React.FC = () => {
 
         {/* Tab 2: Conceptual Garage View */}
         {activeTab === 'garage' && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-in fade-in duration-200">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-in fade-in duration-200">
             {CONCEPTUAL_GARAGE_VEHICLES.map((vehicle) => (
               <div
                 key={vehicle.id}

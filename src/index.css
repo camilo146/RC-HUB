@@ -41,6 +41,10 @@
   font-family: var(--font-mono);
 }
 
+.font-handwritten {
+  font-family: 'Caveat', cursive;
+}
+
 /* Subtle editorial borders and accents */
 .border-subtle {
   border-color: #26292E;

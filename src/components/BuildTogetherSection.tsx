@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { MessageCircle, Send, ArrowUpRight } from 'lucide-react';
+import { MessageCircle, ArrowRight, ClipboardList, X, Send } from 'lucide-react';
 
 export const BuildTogetherSection: React.FC = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const [name, setName] = useState('');
   const [city, setCity] = useState('Bucaramanga');
   const [role, setRole] = useState('Aficionado');
@@ -10,12 +11,11 @@ export const BuildTogetherSection: React.FC = () => {
   const [comments, setComments] = useState('');
 
   const directWhatsappUrl =
-    'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Conoc%C3%AD%20RC%20HUB%20y%20me%20gustar%C3%ADa%20conversar%20contigo%20sobre%20el%20proyecto%20y%20compartir%20algunas%20ideas.';
+    'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Conoc%C3%AD%20RC%20HUB%20y%20me%20gustar%C3%ADa%20compartir%20algunas%20ideas%20sobre%20el%20proyecto.';
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Prepare formatted WhatsApp message with form answers
-    const message = `Hola! Quiero participar en las pruebas tempranas de RC HUB:
+    const message = `Hola, Camilo! Quiero participar en las pruebas tempranas de RC HUB:
 - Nombre: ${name || 'Piloto'}
 - Ciudad: ${city}
 - Perfil: ${role}
@@ -27,202 +27,229 @@ ${comments ? `- Comentarios: ${comments}` : ''}`;
   };
 
   return (
-    <section id="contacto" className="py-20 lg:py-28 bg-[#F4F2ED] text-[#17191C] border-b border-[#D9D8D3]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Vision & Direct Creator Contact */}
-          <div className="lg:col-span-5 space-y-6">
-            <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-semibold block">
-              Participación y Feedback
-            </span>
+    <section id="contacto" className="relative py-20 lg:py-28 overflow-hidden border-b border-[#26292E] bg-[#101214]">
+      {/* Background Cinematic Photo with deep dark gradient overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/images/community-crawler-bg.jpg"
+          alt="RC Crawler 4x4 sobre roca y barro"
+          className="w-full h-full object-cover object-center filter contrast-[1.1] brightness-[0.7]"
+        />
+        {/* Dark film overlay matching design system */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#101214] via-[#101214]/85 to-[#101214]/90" />
+        <div className="absolute inset-0 bg-[#101214]/40" />
+      </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#17191C] leading-[1.15] tracking-tight">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center justify-between">
+          {/* Left Column: Heading and Community Vision */}
+          <div className="lg:col-span-7 space-y-4">
+            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-sm bg-[#17191C]/90 border border-[#26292E] backdrop-blur-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#C65D2E]" />
+              <span className="text-[11px] font-tech text-[#C65D2E] uppercase tracking-widest font-semibold">
+                Construyamos juntos
+              </span>
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#F4F2ED] leading-[1.15] tracking-tight">
               RC HUB empieza con la comunidad.
             </h2>
 
-            <p className="text-base text-[#555A60] leading-relaxed">
+            <p className="text-sm sm:text-base text-[#8D949C] leading-relaxed max-w-2xl">
               Queremos escuchar a las personas que viven este hobby. Si tienes un RC, compites, vendes repuestos, administras una pista o simplemente disfrutas del radio control, cuéntanos qué te gustaría encontrar en esta plataforma.
             </p>
 
-            {/* Option 1: Direct Creator WhatsApp */}
-            <div className="p-6 rounded-lg bg-white border border-[#D9D8D3] space-y-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-md bg-[#17191C] flex items-center justify-center text-white">
-                  <MessageCircle className="w-5 h-5 text-[#C65D2E]" />
-                </div>
-                <div>
-                  <h3 className="font-editorial font-bold text-base text-[#17191C]">
-                    Hablar directamente con el creador
-                  </h3>
-                  <p className="text-xs text-[#8D949C] font-tech">
-                    Conversación abierta en WhatsApp (+57 313 223 3304)
-                  </p>
-                </div>
-              </div>
-
-              <p className="text-xs text-[#555A60] leading-relaxed">
-                Si prefieres charlar de forma directa, sugerir ideas o contarnos tus necesidades como piloto o vendedor en Colombia:
-              </p>
-
+            <div className="pt-2 flex flex-wrap items-center gap-3">
+              {/* Primary CTA button: Charla conmigo (WhatsApp) */}
               <a
                 href={directWhatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                id="cta-build-whatsapp-direct"
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md text-sm font-semibold text-white bg-[#17191C] hover:bg-[#101214] border border-[#17191C] transition-colors cursor-pointer"
+                id="cta-build-whatsapp-cinematic"
+                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-md text-sm font-semibold text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-all duration-150 cursor-pointer shadow-md"
               >
-                <MessageCircle className="w-4 h-4 text-[#C65D2E]" />
-                <span>Charla conmigo por WhatsApp</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-[#8D949C]" />
+                <MessageCircle className="w-4 h-4" />
+                <span>Charla conmigo</span>
+                <ArrowRight className="w-4 h-4 ml-0.5" />
               </a>
-            </div>
 
-            <div className="text-xs text-[#8D949C] font-tech">
-              * Nota: Tu número o datos no serán usados para spam comercial. Es una iniciativa comunitaria para diseñar una mejor herramienta.
+              {/* Secondary button: Open structured form */}
+              <button
+                onClick={() => setIsFormOpen(true)}
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-md text-xs font-tech font-semibold text-[#8D949C] hover:text-[#F4F2ED] bg-[#17191C]/80 hover:bg-[#17191C] border border-[#26292E] hover:border-[#8D949C] transition-colors cursor-pointer"
+              >
+                <ClipboardList className="w-4 h-4 text-[#C65D2E]" />
+                <span>Completar ficha de interés</span>
+              </button>
             </div>
           </div>
 
-          {/* Right Column: Early Interest Form */}
-          <div className="lg:col-span-7">
-            <div className="p-6 sm:p-10 rounded-lg bg-white border border-[#D9D8D3] shadow-sm">
-              <div className="mb-6">
-                <span className="text-xs font-tech text-[#8D949C] uppercase tracking-wider block mb-1">
-                  Registro de interés temprano
+          {/* Right Column: Brand Mark with Tagline */}
+          <div className="lg:col-span-5 flex lg:justify-end">
+            <div className="text-left lg:text-right space-y-2">
+              <div className="flex items-center lg:justify-end gap-3">
+                <div className="w-8 h-8 rounded-md bg-[#17191C] border border-[#26292E] flex items-center justify-center font-tech font-bold text-xs text-[#F4F2ED]">
+                  RC
+                </div>
+                <span className="font-editorial font-bold text-2xl sm:text-3xl text-[#F4F2ED] tracking-tight">
+                  RC HUB
                 </span>
-                <h3 className="font-editorial font-bold text-2xl text-[#17191C]">
-                  Quiero probar RC HUB
-                </h3>
-                <p className="text-xs sm:text-sm text-[#555A60] mt-1.5 leading-relaxed">
-                  Apuntarse significa manifestar interés en participar en futuras pruebas y compartir comentarios; no representa acceso inmediato a una aplicación terminada.
-                </p>
               </div>
-
-              <form onSubmit={handleFormSubmit} className="space-y-4 text-xs">
-                {/* Nombre & Ciudad */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block font-tech uppercase font-bold text-[#17191C] mb-1">
-                      Nombre *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      placeholder="Tu nombre o alias de piloto"
-                      className="w-full px-3.5 py-2.5 bg-[#F4F2ED] border border-[#D9D8D3] rounded-md text-[#17191C] focus:outline-none focus:border-[#C65D2E]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block font-tech uppercase font-bold text-[#17191C] mb-1">
-                      Ciudad (Colombia) *
-                    </label>
-                    <select
-                      value={city}
-                      onChange={(e) => setCity(e.target.value)}
-                      className="w-full px-3.5 py-2.5 bg-[#F4F2ED] border border-[#D9D8D3] rounded-md text-[#17191C] focus:outline-none focus:border-[#C65D2E]"
-                    >
-                      <option value="Bucaramanga">Bucaramanga</option>
-                      <option value="Bogotá">Bogotá</option>
-                      <option value="Medellín">Medellín</option>
-                      <option value="Cali">Cali</option>
-                      <option value="Barranquilla">Barranquilla</option>
-                      <option value="Otra ciudad">Otra ciudad de Colombia</option>
-                    </select>
-                  </div>
-                </div>
-
-                {/* Perfil & Correo */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block font-tech uppercase font-bold text-[#17191C] mb-1">
-                      Tu perfil en el hobby *
-                    </label>
-                    <select
-                      value={role}
-                      onChange={(e) => setRole(e.target.value)}
-                      className="w-full px-3.5 py-2.5 bg-[#F4F2ED] border border-[#D9D8D3] rounded-md text-[#17191C] focus:outline-none focus:border-[#C65D2E]"
-                    >
-                      <option value="Aficionado / Bashing">Aficionado (Bashing / Recreativo)</option>
-                      <option value="Piloto de competición">Piloto de competición</option>
-                      <option value="Vendedor independiente">Vendedor particular de repuestos</option>
-                      <option value="Tienda o taller RC">Tienda o taller especializado</option>
-                      <option value="Organizador de pista o eventos">Organizador de pista o club</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block font-tech uppercase font-bold text-[#17191C] mb-1">
-                      Correo electrónico (opcional)
-                    </label>
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="piloto@correo.com"
-                      className="w-full px-3.5 py-2.5 bg-[#F4F2ED] border border-[#D9D8D3] rounded-md text-[#17191C] focus:outline-none focus:border-[#C65D2E]"
-                    />
-                  </div>
-                </div>
-
-                {/* Función de mayor interés */}
-                <div>
-                  <label className="block font-tech uppercase font-bold text-[#17191C] mb-1">
-                    ¿Qué función te interesaría más encontrar? *
-                  </label>
-                  <select
-                    value={interest}
-                    onChange={(e) => setInterest(e.target.value)}
-                    className="w-full px-3.5 py-2.5 bg-[#F4F2ED] border border-[#D9D8D3] rounded-md text-[#17191C] focus:outline-none focus:border-[#C65D2E]"
-                  >
-                    <option value="Marketplace especializado con filtros técnicos">
-                      Marketplace especializado con filtros técnicos (escala, chasis, motor)
-                    </option>
-                    <option value="Mi Garage (historial de vehículos y mantenimiento)">
-                      Mi Garage (historial de vehículos, configuraciones y mantenimiento)
-                    </option>
-                    <option value="Directorio de pistas y calendario de carreras">
-                      Directorio de pistas y calendario de carreras en Colombia
-                    </option>
-                    <option value="Sistema de compatibilidad automática de repuestos">
-                      Sistema de compatibilidad automática de repuestos
-                    </option>
-                  </select>
-                </div>
-
-                {/* Comentarios */}
-                <div>
-                  <label className="block font-tech uppercase font-bold text-[#17191C] mb-1">
-                    Comentarios o ideas adicionales (opcional)
-                  </label>
-                  <textarea
-                    rows={3}
-                    value={comments}
-                    onChange={(e) => setComments(e.target.value)}
-                    placeholder="¿Qué problema sueles tener al buscar repuestos o salir a rodar?"
-                    className="w-full px-3.5 py-2.5 bg-[#F4F2ED] border border-[#D9D8D3] rounded-md text-[#17191C] focus:outline-none focus:border-[#C65D2E] resize-none"
-                  />
-                </div>
-
-                {/* Submit button */}
-                <div className="pt-2">
-                  <button
-                    type="submit"
-                    className="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-md font-semibold text-white bg-[#17191C] hover:bg-[#101214] transition-colors cursor-pointer text-xs uppercase tracking-wider font-tech"
-                  >
-                    <Send className="w-3.5 h-3.5 text-[#C65D2E]" />
-                    <span>Manifestar interés y conectar vía WhatsApp</span>
-                  </button>
-                  <p className="text-[11px] text-[#8D949C] text-center mt-2 font-tech">
-                    Al enviar, se abrirá WhatsApp con los datos que completaste listos para enviar al creador.
-                  </p>
-                </div>
-              </form>
+              <p className="text-xs font-tech text-[#8D949C] uppercase tracking-widest font-medium">
+                Radio Control Colombia
+              </p>
+              <p className="font-handwritten text-xl sm:text-2xl text-[#C8C4BC] pt-1">
+                «RC es más que un hobby»
+              </p>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Form Modal for early testing submission */}
+      {isFormOpen && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+          onClick={() => setIsFormOpen(false)}
+        >
+          <div
+            className="relative max-w-xl w-full bg-[#101214] border border-[#26292E] rounded-lg p-6 sm:p-8 space-y-4 shadow-2xl max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between pb-3 border-b border-[#26292E]">
+              <div>
+                <span className="text-[10px] font-tech text-[#C65D2E] uppercase font-bold tracking-wider block">
+                  Participación comunitaria
+                </span>
+                <h3 className="font-editorial font-bold text-xl text-[#F4F2ED]">
+                  Registro de interés temprano
+                </h3>
+              </div>
+              <button
+                onClick={() => setIsFormOpen(false)}
+                className="p-1.5 rounded-md hover:bg-[#17191C] text-[#8D949C] hover:text-white cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <p className="text-xs text-[#8D949C] leading-relaxed">
+              Comparte tus datos y te avisaremos cuando estemos listos para las primeras pruebas de la plataforma. Al enviar, tus datos se preparan en WhatsApp para conversar directamente con Camilo.
+            </p>
+
+            <form onSubmit={handleFormSubmit} className="space-y-4 text-xs font-tech">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block uppercase font-bold text-[#F4F2ED] mb-1">
+                    Nombre *
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Tu nombre o alias"
+                    className="w-full px-3.5 py-2.5 bg-[#17191C] border border-[#26292E] rounded-md text-[#F4F2ED] focus:outline-none focus:border-[#C65D2E]"
+                  />
+                </div>
+
+                <div>
+                  <label className="block uppercase font-bold text-[#F4F2ED] mb-1">
+                    Ciudad (Colombia) *
+                  </label>
+                  <select
+                    value={city}
+                    onChange={(e) => setCity(e.target.value)}
+                    className="w-full px-3.5 py-2.5 bg-[#17191C] border border-[#26292E] rounded-md text-[#F4F2ED] focus:outline-none focus:border-[#C65D2E]"
+                  >
+                    <option value="Bucaramanga">Bucaramanga</option>
+                    <option value="Bogotá">Bogotá</option>
+                    <option value="Medellín">Medellín</option>
+                    <option value="Cali">Cali</option>
+                    <option value="Barranquilla">Barranquilla</option>
+                    <option value="Otra ciudad">Otra ciudad de Colombia</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block uppercase font-bold text-[#F4F2ED] mb-1">
+                    Tu perfil en el hobby *
+                  </label>
+                  <select
+                    value={role}
+                    onChange={(e) => setRole(e.target.value)}
+                    className="w-full px-3.5 py-2.5 bg-[#17191C] border border-[#26292E] rounded-md text-[#F4F2ED] focus:outline-none focus:border-[#C65D2E]"
+                  >
+                    <option value="Aficionado / Bashing">Aficionado (Bashing / Recreativo)</option>
+                    <option value="Piloto de competición">Piloto de competición</option>
+                    <option value="Crawler & Escala">Crawler & Escala técnica</option>
+                    <option value="Vendedor particular">Vendedor particular de repuestos</option>
+                    <option value="Tienda o taller RC">Tienda o taller especializado</option>
+                    <option value="Organizador de pista">Organizador de pista o club</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block uppercase font-bold text-[#F4F2ED] mb-1">
+                    Correo electrónico (opcional)
+                  </label>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="piloto@correo.com"
+                    className="w-full px-3.5 py-2.5 bg-[#17191C] border border-[#26292E] rounded-md text-[#F4F2ED] focus:outline-none focus:border-[#C65D2E]"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block uppercase font-bold text-[#F4F2ED] mb-1">
+                  Módulo de mayor interés *
+                </label>
+                <select
+                  value={interest}
+                  onChange={(e) => setInterest(e.target.value)}
+                  className="w-full px-3.5 py-2.5 bg-[#17191C] border border-[#26292E] rounded-md text-[#F4F2ED] focus:outline-none focus:border-[#C65D2E]"
+                >
+                  <option value="Plataforma de compra y venta RC con filtros técnicos">
+                    Plataforma de compra y venta RC con filtros técnicos
+                  </option>
+                  <option value="Mi Garage digital (control de flota y mantenimientos)">
+                    Mi Garage digital (control de flota y mantenimientos)
+                  </option>
+                  <option value="Directorio de pistas y encuentros en Colombia">
+                    Directorio de pistas y encuentros en Colombia
+                  </option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block uppercase font-bold text-[#F4F2ED] mb-1">
+                  Comentarios o ideas adicionales (opcional)
+                </label>
+                <textarea
+                  rows={3}
+                  value={comments}
+                  onChange={(e) => setComments(e.target.value)}
+                  placeholder="¿Qué problema sueles tener al buscar repuestos o salir a rodar?"
+                  className="w-full px-3.5 py-2.5 bg-[#17191C] border border-[#26292E] rounded-md text-[#F4F2ED] focus:outline-none focus:border-[#C65D2E] resize-none"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-md font-semibold text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-colors cursor-pointer text-xs uppercase tracking-wider"
+              >
+                <Send className="w-3.5 h-3.5" />
+                <span>Enviar datos y abrir WhatsApp</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowDown, MessageCircle } from 'lucide-react';
 
 const WHATSAPP_URL =
-  'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Conoc%C3%AD%20RC%20HUB%20y%20me%20gustar%C3%ADa%20conversar%20contigo%20sobre%20el%20proyecto%20y%20compartir%20algunas%20ideas.';
+  'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Conoc%C3%AD%20RC%20HUB%20y%20me%20gustar%C3%ADa%20compartir%20algunas%20ideas%20sobre%20el%20proyecto.';
 
 interface HeroProps {
   onDiscoverVision: () => void;
@@ -30,7 +30,7 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
 
             {/* Description */}
             <p className="text-base sm:text-lg text-[#8D949C] leading-relaxed max-w-xl font-normal">
-              Una plataforma para conectar a los aficionados al radio control en Colombia: vehículos, repuestos, colecciones y comunidad, todo en un lugar especializado.
+              Estamos construyendo una plataforma para conectar a los aficionados al radio control en Colombia: vehículos, repuestos, colecciones y comunidad, en un mismo lugar especializado.
             </p>
 
             {/* Author attribution — discrete, below value prop */}
@@ -58,7 +58,7 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md text-sm font-semibold text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-all duration-150 cursor-pointer shadow-sm text-center"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>Participar en el proyecto</span>
+                <span>Charla conmigo</span>
               </a>
 
               {/* Secondary: Discover vision */}

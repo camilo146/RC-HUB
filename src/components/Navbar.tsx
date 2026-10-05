@@ -51,8 +51,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               <span className="font-editorial font-bold text-lg tracking-tight text-[#F4F2ED]">
                 RC HUB
               </span>
-              <span className="text-[10px] font-tech text-[#8D949C] uppercase tracking-wider -mt-0.5">
-                Plataforma en desarrollo
+              <span className="text-[10px] font-tech text-[#C65D2E] uppercase tracking-wider -mt-0.5 font-medium">
+                Radio Control Colombia
               </span>
             </div>
           </a>
