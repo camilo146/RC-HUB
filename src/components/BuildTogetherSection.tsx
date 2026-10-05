@@ -50,7 +50,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center justify-between">
           {/* Left Column: Heading and Community Vision */}
-          <div className="lg:col-span-7 space-y-5">
+          <div className="reveal-on-scroll lg:col-span-7 space-y-5">
             <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-sm bg-[#17191C]/90 border border-[#26292E] backdrop-blur-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-[#C65D2E]" />
               <span className="text-[11px] font-tech text-[#C65D2E] uppercase tracking-widest font-semibold">
@@ -79,7 +79,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                 target="_blank"
                 rel="noopener noreferrer"
                 id="cta-build-waitlist"
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-md text-sm font-semibold text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-all duration-150 cursor-pointer shadow-lg hover:shadow-[#C65D2E]/25 text-center"
+                className="animate-attention-wiggle inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-md text-sm font-semibold text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-all duration-150 cursor-pointer shadow-lg hover:shadow-[#C65D2E]/25 text-center"
               >
                 <span className="relative flex h-2.5 w-2.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -117,8 +117,8 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
           </div>
 
           {/* Right Column: Belonging Card "Sé parte desde el comienzo" */}
-          <div className="lg:col-span-5 flex lg:justify-end">
-            <div className="w-full max-w-md p-6 sm:p-8 rounded-xl bg-[#17191C]/80 border border-[#26292E] backdrop-blur-md space-y-4">
+          <div className="reveal-scale delay-150 lg:col-span-5 flex lg:justify-end">
+            <div className="hover-lift w-full max-w-md p-6 sm:p-8 rounded-xl bg-[#17191C]/80 border border-[#26292E] backdrop-blur-md space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
                   <div className="w-8 h-8 rounded-md bg-[#101214] border border-[#C65D2E]/40 flex items-center justify-center font-tech font-bold text-xs text-[#F4F2ED]">

@@ -73,7 +73,7 @@ export const WhatWeAreBuilding: React.FC = () => {
     <section id="que-construimos" className="py-20 lg:py-28 bg-[#17191C] border-b border-[#26292E]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Block */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-16 reveal-on-scroll">
           <div className="flex items-center gap-3 mb-3">
             <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-semibold">
               El beneficio para el aficionado
@@ -92,12 +92,13 @@ export const WhatWeAreBuilding: React.FC = () => {
 
         {/* 4 Pillars Grid (2x2 on desktop) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {FOUR_PILLARS.map((pillar) => {
+          {FOUR_PILLARS.map((pillar, idx) => {
             const Icon = pillar.icon;
+            const delays = ['delay-75', 'delay-150', 'delay-225', 'delay-300'];
             return (
               <div
                 key={pillar.number}
-                className="rounded-xl bg-[#101214] border border-[#26292E] hover:border-[#8D949C]/40 transition-all duration-200 overflow-hidden flex flex-col justify-between"
+                className={`reveal-on-scroll ${delays[idx % delays.length]} hover-lift rounded-xl bg-[#101214] border border-[#26292E] hover:border-[#8D949C]/40 transition-all duration-200 overflow-hidden flex flex-col justify-between`}
               >
                 {/* Image header with AI badge */}
                 <div className="relative aspect-[16/9] bg-[#17191C] overflow-hidden border-b border-[#26292E]">

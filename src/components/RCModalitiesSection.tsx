@@ -100,7 +100,7 @@ export const RCModalitiesSection: React.FC = () => {
     <section id="modalidades" className="py-20 lg:py-28 bg-[#101214] text-[#F4F2ED] border-b border-[#26292E]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="max-w-3xl mb-14">
+        <div className="max-w-3xl mb-14 reveal-on-scroll">
           <div className="flex items-center gap-3 mb-3">
             <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-semibold">
               El mundo RC completo
@@ -119,12 +119,13 @@ export const RCModalitiesSection: React.FC = () => {
 
         {/* Modalities Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {MODALITIES.map((mod) => {
+          {MODALITIES.map((mod, idx) => {
             const Icon = mod.icon;
+            const delays = ['delay-75', 'delay-150', 'delay-225', 'delay-300', 'delay-375', 'delay-450'];
             return (
               <div
                 key={mod.id}
-                className="p-6 rounded-xl bg-[#17191C] border border-[#26292E] hover:border-[#8D949C]/50 transition-all duration-200 flex flex-col justify-between space-y-4 group"
+                className={`reveal-on-scroll ${delays[idx % delays.length]} hover-lift p-6 rounded-xl bg-[#17191C] border border-[#26292E] hover:border-[#8D949C]/50 transition-all duration-200 flex flex-col justify-between space-y-4 group`}
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
@@ -160,7 +161,7 @@ export const RCModalitiesSection: React.FC = () => {
         </div>
 
         {/* Bottom Inclusive Callout */}
-        <div className="mt-10 p-5 rounded-lg bg-[#17191C]/50 border border-[#26292E] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs font-tech text-[#8D949C]">
+        <div className="reveal-scale delay-150 mt-10 p-5 rounded-lg bg-[#17191C]/50 border border-[#26292E] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs font-tech text-[#8D949C]">
           <div className="flex items-center gap-2">
             <Sparkles className="w-4 h-4 text-[#C65D2E] shrink-0" />
             <span>

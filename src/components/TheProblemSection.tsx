@@ -49,7 +49,7 @@ export const TheProblemSection: React.FC = () => {
     <section id="el-problema" className="py-20 lg:py-28 bg-[#101214] text-[#F4F2ED] border-b border-[#26292E]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Block */}
-        <div className="max-w-3xl mb-14">
+        <div className="max-w-3xl mb-14 reveal-on-scroll">
           <div className="flex items-center gap-3 mb-3">
             <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-semibold">
               Lo que vivimos los aficionados
@@ -68,36 +68,39 @@ export const TheProblemSection: React.FC = () => {
 
         {/* 6 Everyday Questions Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {QUESTIONS.map((item, idx) => (
-            <div
-              key={idx}
-              className="p-6 rounded-lg bg-[#17191C] border border-[#26292E] hover:border-[#C65D2E]/60 transition-all duration-200 flex flex-col justify-between space-y-4 group"
-            >
-              <div className="space-y-3">
-                <div className="flex items-center justify-between text-[11px] font-tech">
-                  <span className="text-[#C65D2E] uppercase font-bold tracking-wider">
-                    {item.category}
-                  </span>
-                  <HelpCircle className="w-4 h-4 text-[#8D949C] group-hover:text-[#C65D2E] transition-colors" />
+          {QUESTIONS.map((item, idx) => {
+            const delays = ['delay-75', 'delay-150', 'delay-225', 'delay-300', 'delay-375', 'delay-450'];
+            return (
+              <div
+                key={idx}
+                className={`reveal-on-scroll ${delays[idx % delays.length]} hover-lift p-6 rounded-lg bg-[#17191C] border border-[#26292E] hover:border-[#C65D2E]/60 transition-all duration-200 flex flex-col justify-between space-y-4 group`}
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between text-[11px] font-tech">
+                    <span className="text-[#C65D2E] uppercase font-bold tracking-wider">
+                      {item.category}
+                    </span>
+                    <HelpCircle className="w-4 h-4 text-[#8D949C] group-hover:text-[#C65D2E] transition-colors" />
+                  </div>
+                  <h3 className="font-editorial font-bold text-lg sm:text-xl text-[#F4F2ED] leading-snug group-hover:text-white transition-colors">
+                    {item.question}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#8D949C] leading-relaxed">
+                    {item.context}
+                  </p>
                 </div>
-                <h3 className="font-editorial font-bold text-lg sm:text-xl text-[#F4F2ED] leading-snug group-hover:text-white transition-colors">
-                  {item.question}
-                </h3>
-                <p className="text-xs sm:text-sm text-[#8D949C] leading-relaxed">
-                  {item.context}
-                </p>
-              </div>
 
-              <div className="pt-3 border-t border-[#26292E] flex items-center justify-between text-[11px] font-tech text-[#8D949C]">
-                <span>Situación recurrente</span>
-                <span className="text-[#C65D2E] font-medium">#{idx + 1}</span>
+                <div className="pt-3 border-t border-[#26292E] flex items-center justify-between text-[11px] font-tech text-[#8D949C]">
+                  <span>Situación recurrente</span>
+                  <span className="text-[#C65D2E] font-medium">#{idx + 1}</span>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* The Scattered Reality Banner */}
-        <div className="rounded-xl bg-[#17191C]/70 border border-[#26292E] p-6 sm:p-8 lg:p-10 relative overflow-hidden">
+        <div className="reveal-scale delay-150 rounded-xl bg-[#17191C]/70 border border-[#26292E] p-6 sm:p-8 lg:p-10 relative overflow-hidden">
           <div className="max-w-4xl space-y-6">
             <div className="inline-flex items-center gap-2 text-xs font-tech text-[#8D949C] uppercase tracking-wider font-semibold">
               <Layers className="w-4 h-4 text-[#C65D2E]" />

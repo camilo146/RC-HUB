@@ -24,6 +24,29 @@ export function App() {
       const id = window.location.hash.replace('#', '');
       setTimeout(() => scrollToSection(id), 100);
     }
+
+    // Scroll reveal observer for elements with .reveal-on-scroll or .reveal-scale
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.08,
+        rootMargin: '0px 0px -30px 0px',
+      }
+    );
+
+    const elements = document.querySelectorAll('.reveal-on-scroll, .reveal-scale');
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   return (

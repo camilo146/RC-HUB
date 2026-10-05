@@ -9,7 +9,7 @@ export const ConceptualPreview: React.FC = () => {
     <section id="vista-previa" className="py-20 lg:py-28 bg-[#101214] border-b border-[#26292E]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div className="reveal-on-scroll flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-3">
               <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-bold px-2.5 py-1 rounded bg-[#17191C] border border-[#26292E]">
@@ -53,7 +53,7 @@ export const ConceptualPreview: React.FC = () => {
         </div>
 
         {/* Conceptual Note Banner (as required) */}
-        <div className="mb-10 p-4 rounded-md bg-[#17191C] border border-[#26292E] flex items-start sm:items-center gap-3 text-xs text-[#8D949C]">
+        <div className="reveal-on-scroll delay-75 mb-10 p-4 rounded-md bg-[#17191C] border border-[#26292E] flex items-start sm:items-center gap-3 text-xs text-[#8D949C]">
           <Info className="w-4 h-4 text-[#C65D2E] shrink-0 mt-0.5 sm:mt-0" />
           <span>
             <strong>VISTA CONCEPTUAL:</strong> Las funcionalidades y el diseño pueden evolucionar según los comentarios de la comunidad. Los modelos, valores y ciudades mostrados son ejemplos de maquetación visual para ilustrar el prototipo; <strong>no representan publicaciones ni inventario real actualmente en venta</strong>.
@@ -66,7 +66,7 @@ export const ConceptualPreview: React.FC = () => {
             {CONCEPTUAL_PRODUCTS.map((item) => (
               <div
                 key={item.id}
-                className="rounded-lg bg-[#17191C] border border-[#26292E] hover:border-[#8D949C]/40 transition-colors overflow-hidden flex flex-col justify-between"
+                className="hover-lift rounded-lg bg-[#17191C] border border-[#26292E] hover:border-[#8D949C]/40 transition-all duration-200 overflow-hidden flex flex-col justify-between"
               >
                 <div>
                   {/* Image container */}
@@ -136,7 +136,7 @@ export const ConceptualPreview: React.FC = () => {
             {CONCEPTUAL_GARAGE_VEHICLES.map((vehicle) => (
               <div
                 key={vehicle.id}
-                className="rounded-lg bg-[#17191C] border border-[#26292E] p-6 space-y-5"
+                className="hover-lift rounded-lg bg-[#17191C] border border-[#26292E] p-6 space-y-5 transition-all duration-200"
               >
                 <div className="flex items-center justify-between border-b border-[#26292E] pb-3">
                   <div className="flex items-center gap-2">

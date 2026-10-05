@@ -15,8 +15,8 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
     <section className="relative pt-8 pb-12 lg:pt-14 lg:pb-18 overflow-hidden border-b border-[#26292E]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Editorial Headline & Actions */}
-          <div className="lg:col-span-6 space-y-6">
+          {/* Left Column: Editorial Headline & Actions with entrance animation */}
+          <div className="lg:col-span-6 space-y-6 animate-hero-fade">
             {/* Brand + Status Tag + Handwritten Accent */}
             <div className="flex flex-wrap items-center gap-3">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-[#101214] border border-[#26292E]">
@@ -62,13 +62,13 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
 
             {/* Action Buttons: Primary 'Quiero ser parte' & Secondary 'Hablar con Camilo' */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-              {/* Primary CTA */}
+              {/* Primary CTA with subtle attention wiggle */}
               <a
                 href={JOIN_WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 id="cta-hero-join"
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-md text-sm font-semibold text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-all duration-150 cursor-pointer shadow-lg hover:shadow-[#C65D2E]/25 text-center group"
+                className="animate-attention-wiggle inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-md text-sm font-semibold text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-all duration-150 cursor-pointer shadow-lg hover:shadow-[#C65D2E]/25 text-center group"
               >
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 <span>Quiero ser parte de BOX HUB</span>
@@ -107,13 +107,13 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
             </div>
           </div>
 
-          {/* Right Column: Hero Real Photography */}
-          <div className="lg:col-span-6">
-            <div className="relative rounded-lg overflow-hidden border border-[#26292E] bg-[#101214]">
+          {/* Right Column: Hero Real Photography with scale entrance */}
+          <div className="lg:col-span-6 animate-hero-scale">
+            <div className="relative rounded-lg overflow-hidden border border-[#26292E] bg-[#101214] shadow-2xl">
               <img
                 src="/images/hero-rc.jpg"
                 alt="Toyota Land Cruiser RC Crawler 4x4 a escala 1/10 en terreno de montaña"
-                className="w-full h-auto object-cover aspect-[16/10] sm:aspect-[16/11] contrast-[1.03]"
+                className="w-full h-auto object-cover aspect-[16/10] sm:aspect-[16/11] contrast-[1.03] hover:scale-105 transition-transform duration-700"
                 loading="eager"
               />
               <div className="p-3 bg-[#101214] border-t border-[#26292E] flex items-center justify-between text-xs text-[#8D949C] font-tech">

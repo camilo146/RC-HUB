@@ -64,7 +64,7 @@ export const RoadmapSection: React.FC = () => {
     <section id="hoja-de-ruta" className="py-20 lg:py-28 bg-[#17191C] border-b border-[#26292E]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-14">
+        <div className="max-w-3xl mb-14 reveal-on-scroll">
           <div className="flex items-center gap-3 mb-3">
             <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-sm bg-[#101214] border border-[#26292E]">
               <span className="w-1.5 h-1.5 rounded-full bg-[#C65D2E]" />
@@ -90,9 +90,10 @@ export const RoadmapSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
           {steps.map((step, idx) => {
             const Icon = step.icon;
+            const delays = ['delay-75', 'delay-150', 'delay-225', 'delay-300'];
 
             return (
-              <div key={step.number} className="relative flex flex-col">
+              <div key={step.number} className={`reveal-on-scroll ${delays[idx % delays.length]} hover-lift relative flex flex-col`}>
                 {/* Step Card Container */}
                 <div
                   className={`flex-1 rounded-xl bg-[#101214] border transition-all duration-200 overflow-hidden flex flex-col justify-between ${

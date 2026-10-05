@@ -12,7 +12,7 @@ export const BehindRCHUB: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Tag */}
-        <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-sm bg-[#17191C] border border-[#26292E] mb-8">
+        <div className="reveal-on-scroll inline-flex items-center gap-2 px-2.5 py-1 rounded-sm bg-[#17191C] border border-[#26292E] mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-[#C65D2E]" />
           <span className="text-[11px] font-tech text-[#C65D2E] uppercase tracking-widest font-semibold">
             Detrás de BOX HUB
@@ -22,13 +22,13 @@ export const BehindRCHUB: React.FC = () => {
         {/* 3-Column Editorial Grid matching mockup */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           {/* Left Column (5 cols): Cinematic Photo with Handwritten Slogan */}
-          <div className="lg:col-span-5 flex flex-col">
+          <div className="reveal-scale delay-75 lg:col-span-5 flex flex-col">
             <div className="relative rounded-lg overflow-hidden border border-[#26292E] bg-[#17191C] flex-1 flex flex-col justify-end group min-h-[380px] sm:min-h-[460px]">
               {/* Background Photo */}
               <img
                 src="/images/camilo-workshop.jpg"
                 alt="Camilo López Romero en su taller de radiocontrol con su Toyota Land Cruiser 70 Crawler Pro y buzo BOX HUB"
-                className="absolute inset-0 w-full h-full object-cover object-center filter contrast-[1.04]"
+                className="absolute inset-0 w-full h-full object-cover object-center filter contrast-[1.04] transition-transform duration-700 group-hover:scale-105"
               />
 
               {/* Gradient Scrim for Contrast */}
@@ -72,7 +72,7 @@ export const BehindRCHUB: React.FC = () => {
           </div>
 
           {/* Middle Column (4 cols): Human & Authentic Presentation Copy */}
-          <div className="lg:col-span-4 flex flex-col justify-between space-y-6">
+          <div className="reveal-on-scroll delay-150 lg:col-span-4 flex flex-col justify-between space-y-6">
             <div className="space-y-4">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-editorial font-bold text-[#F4F2ED] leading-tight tracking-tight">
                 Hola, soy Camilo.
@@ -113,7 +113,7 @@ export const BehindRCHUB: React.FC = () => {
           </div>
 
           {/* Right Column (3 cols): Contact Card & Handwritten "¡Hablemos!" */}
-          <div className="lg:col-span-3 flex flex-col justify-between p-6 rounded-lg bg-[#17191C] border border-[#26292E] space-y-6">
+          <div className="reveal-on-scroll delay-225 hover-lift lg:col-span-3 flex flex-col justify-between p-6 rounded-lg bg-[#17191C] border border-[#26292E] space-y-6">
             {/* Top WhatsApp Box */}
             <div className="space-y-3">
               <span className="text-[11px] font-tech text-[#8D949C] uppercase tracking-wider block">
@@ -125,7 +125,7 @@ export const BehindRCHUB: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 id="cta-whatsapp-behind"
-                className="w-full flex items-center justify-between p-3.5 rounded-md bg-[#101214] border border-[#26292E] hover:border-[#C65D2E] group transition-all cursor-pointer shadow-sm"
+                className="animate-attention-wiggle w-full flex items-center justify-between p-3.5 rounded-md bg-[#101214] border border-[#26292E] hover:border-[#C65D2E] group transition-all cursor-pointer shadow-sm"
               >
                 <div className="flex items-center gap-2.5">
                   <div className="relative w-8 h-8 rounded-full bg-[#C65D2E]/20 border border-[#C65D2E]/40 flex items-center justify-center text-[#C65D2E] group-hover:bg-[#C65D2E] group-hover:text-white transition-colors">
