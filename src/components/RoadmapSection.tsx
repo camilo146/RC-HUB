@@ -65,10 +65,15 @@ export const RoadmapSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-14">
-          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-sm bg-[#101214] border border-[#26292E] mb-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C65D2E]" />
-            <span className="text-[11px] font-tech text-[#C65D2E] uppercase tracking-widest font-semibold">
-              Hoja de ruta
+          <div className="flex items-center gap-3 mb-3">
+            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-sm bg-[#101214] border border-[#26292E]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#C65D2E]" />
+              <span className="text-[11px] font-tech text-[#C65D2E] uppercase tracking-widest font-semibold">
+                Hoja de ruta
+              </span>
+            </div>
+            <span className="font-handwritten text-xl text-[#C65D2E] -rotate-1 select-none">
+              «Vamos paso a paso»
             </span>
           </div>
 
@@ -77,7 +82,7 @@ export const RoadmapSection: React.FC = () => {
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-[#8D949C] leading-relaxed">
-            Estas son las etapas que queremos seguir para construir RC HUB, escuchando a la comunidad y priorizando las herramientas que realmente necesita.
+            Estas son las etapas que queremos seguir para construir <strong className="text-[#F4F2ED] font-semibold">BOX HUB</strong>, escuchando a la comunidad y priorizando las herramientas que realmente necesita.
           </p>
         </div>
 

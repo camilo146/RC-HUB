@@ -7,11 +7,16 @@ export const WhatWeAreBuilding: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-16">
-          <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-semibold block mb-3">
-            Estructura del producto
-          </span>
+          <div className="flex items-center gap-3 mb-3">
+            <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-semibold">
+              Estructura del producto
+            </span>
+            <span className="font-handwritten text-xl text-[#C65D2E] -rotate-1 select-none">
+              «Pensado para resolver lo que falta»
+            </span>
+          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#F4F2ED] leading-[1.15] tracking-tight">
-            Qué estamos construyendo.
+            Qué estamos construyendo en BOX HUB.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#8D949C] leading-relaxed">
             Una plataforma modular pensada para abordar cada aspecto fundamental de la experiencia de un piloto o coleccionista de radiocontrol.
@@ -34,7 +39,7 @@ export const WhatWeAreBuilding: React.FC = () => {
                 </div>
 
                 <h3 className="text-2xl sm:text-3xl font-editorial font-bold text-[#F4F2ED]">
-                  Marketplace Especializado
+                  Plataforma de compra y venta RC
                 </h3>
 
                 <p className="text-base text-[#8D949C] leading-relaxed">

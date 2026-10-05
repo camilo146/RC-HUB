@@ -40,7 +40,7 @@ export const GarageModal: React.FC<GarageModalProps> = ({
           transmission: '4WD Cardán Central',
           installedUpgrades: ['Configuración Inicial de Fábrica'],
           recommendedPartsCount: 6,
-          lastRun: 'Registrado hoy en RC HUB Colombia',
+          lastRun: 'Registrado hoy en BOX HUB Colombia',
         });
       }
       setIsSaved(false);

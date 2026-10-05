@@ -11,11 +11,11 @@ export const BuildTogetherSection: React.FC = () => {
   const [comments, setComments] = useState('');
 
   const directWhatsappUrl =
-    'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Conoc%C3%AD%20RC%20HUB%20y%20me%20gustar%C3%ADa%20compartir%20algunas%20ideas%20sobre%20el%20proyecto.';
+    'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Conoc%C3%AD%20BOX%20HUB%20y%20me%20gustar%C3%ADa%20compartir%20algunas%20ideas%20sobre%20el%20proyecto.';
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `Hola, Camilo! Quiero participar en las pruebas tempranas de RC HUB:
+    const message = `Hola, Camilo! Quiero participar en las pruebas tempranas de BOX HUB:
 - Nombre: ${name || 'Piloto'}
 - Ciudad: ${city}
 - Perfil: ${role}
@@ -36,8 +36,8 @@ ${comments ? `- Comentarios: ${comments}` : ''}`;
           className="w-full h-full object-cover object-center filter contrast-[1.1] brightness-[0.7]"
         />
         {/* Dark film overlay matching design system */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#101214] via-[#101214]/85 to-[#101214]/90" />
-        <div className="absolute inset-0 bg-[#101214]/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#101214] via-[#101214]/90 to-[#101214]/95" />
+        <div className="absolute inset-0 bg-[#101214]/50" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,54 +52,70 @@ ${comments ? `- Comentarios: ${comments}` : ''}`;
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#F4F2ED] leading-[1.15] tracking-tight">
-              RC HUB empieza con la comunidad.
+              BOX HUB empieza con la comunidad.
             </h2>
+
+            {/* Handwritten callout */}
+            <p className="font-handwritten text-xl sm:text-2xl text-[#C65D2E] select-none -rotate-1">
+              «Tu opinión y experiencia en la pista definen lo que programamos cada semana»
+            </p>
 
             <p className="text-sm sm:text-base text-[#8D949C] leading-relaxed max-w-2xl">
               Queremos escuchar a las personas que viven este hobby. Si tienes un RC, compites, vendes repuestos, administras una pista o simplemente disfrutas del radio control, cuéntanos qué te gustaría encontrar en esta plataforma.
             </p>
 
-            <div className="pt-2 flex flex-wrap items-center gap-3">
+            <div className="pt-2 flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3">
               {/* Primary CTA button: Charla conmigo (WhatsApp) */}
               <a
                 href={directWhatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 id="cta-build-whatsapp-cinematic"
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-md text-sm font-semibold text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-all duration-150 cursor-pointer shadow-md"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-md text-sm font-semibold text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-all duration-150 cursor-pointer shadow-lg hover:shadow-[#C65D2E]/20"
               >
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                </span>
                 <MessageCircle className="w-4 h-4" />
-                <span>Charla conmigo</span>
+                <span>Charla conmigo por WhatsApp</span>
                 <ArrowRight className="w-4 h-4 ml-0.5" />
               </a>
 
               {/* Secondary button: Open structured form */}
               <button
                 onClick={() => setIsFormOpen(true)}
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-md text-xs font-tech font-semibold text-[#8D949C] hover:text-[#F4F2ED] bg-[#17191C]/80 hover:bg-[#17191C] border border-[#26292E] hover:border-[#8D949C] transition-colors cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-md text-xs font-tech font-semibold text-[#8D949C] hover:text-[#F4F2ED] bg-[#17191C]/80 hover:bg-[#17191C] border border-[#26292E] hover:border-[#8D949C] transition-colors cursor-pointer"
               >
                 <ClipboardList className="w-4 h-4 text-[#C65D2E]" />
                 <span>Completar ficha de interés</span>
               </button>
             </div>
+
+            <p className="text-xs text-[#8D949C]/80 font-tech flex items-center gap-1.5 pt-1">
+              <span className="font-handwritten text-lg text-[#C8C4BC]">✍️ Sin intermediarios ni bots: Camilo responde directamente.</span>
+            </p>
           </div>
 
           {/* Right Column: Brand Mark with Tagline */}
           <div className="lg:col-span-5 flex lg:justify-end">
-            <div className="text-left lg:text-right space-y-2">
+            <div className="text-left lg:text-right space-y-2 p-6 rounded-lg bg-[#17191C]/60 border border-[#26292E] backdrop-blur-sm">
               <div className="flex items-center lg:justify-end gap-3">
-                <div className="w-8 h-8 rounded-md bg-[#17191C] border border-[#26292E] flex items-center justify-center font-tech font-bold text-xs text-[#F4F2ED]">
-                  RC
+                <div className="w-9 h-9 rounded-md bg-[#101214] border border-[#C65D2E]/40 flex items-center justify-center font-tech font-bold text-sm text-[#F4F2ED] shadow-inner">
+                  BH
                 </div>
                 <span className="font-editorial font-bold text-2xl sm:text-3xl text-[#F4F2ED] tracking-tight">
-                  RC HUB
+                  BOX HUB
                 </span>
               </div>
               <p className="text-xs font-tech text-[#8D949C] uppercase tracking-widest font-medium">
                 Radio Control Colombia
               </p>
-              <p className="font-handwritten text-xl sm:text-2xl text-[#C8C4BC] pt-1">
+              <p className="font-handwritten text-2xl sm:text-3xl text-[#F4F2ED] pt-1">
                 «RC es más que un hobby»
+              </p>
+              <p className="text-[11px] font-tech text-[#8D949C] pt-2 border-t border-[#26292E]">
+                Fase de validación comunitaria · 2026
               </p>
             </div>
           </div>

@@ -39,7 +39,7 @@ export const PublishModal: React.FC<PublishModalProps> = ({
           category,
           scale,
           image: '/images/slash-4x4.jpg',
-          description: description || 'Publicación creada exitosamente en el prototipo de RC HUB.',
+          description: description || 'Publicación creada exitosamente en el prototipo de BOX HUB.',
           seller: {
             name: 'Piloto Registrado',
             verified: true,
@@ -82,7 +82,7 @@ export const PublishModal: React.FC<PublishModalProps> = ({
                 ¡Publicación Creada con Éxito!
               </h3>
               <p className="text-sm text-slate-300 max-w-md mx-auto">
-                Tu artículo ha sido añadido al Marketplace de prueba de RC HUB Colombia.
+                Tu artículo ha sido añadido al Marketplace de prueba de BOX HUB Colombia.
               </p>
             </div>
           ) : (
@@ -93,7 +93,7 @@ export const PublishModal: React.FC<PublishModalProps> = ({
                   Nueva Publicación
                 </div>
                 <h3 className="font-display font-extrabold text-2xl text-white">
-                  Vende en la comunidad RC HUB
+                  Vende en la comunidad BOX HUB
                 </h3>
                 <p className="text-xs text-slate-400 mt-1">
                   Llega a pilotos y compradores calificados en toda Colombia.

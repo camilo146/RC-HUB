@@ -78,7 +78,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                 {product.name}
               </h3>
               <p className="text-xs text-slate-400 mt-1 font-mono-tech">
-                ID de Publicación: {product.id.toUpperCase()} · Revisado por RC HUB
+                ID de Publicación: {product.id.toUpperCase()} · Revisado por BOX HUB
               </p>
             </div>
 
@@ -143,7 +143,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                     {product.seller.rating}
                   </span>
                   <span>•</span>
-                  <span>{product.seller.salesCount} ventas en RC HUB</span>
+                  <span>{product.seller.salesCount} ventas en BOX HUB</span>
                 </div>
               </div>
             </div>
@@ -166,7 +166,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
           {/* Bottom actions */}
           <div className="flex items-center justify-between pt-2">
             <span className="text-xs text-slate-400 font-mono-tech">
-              Transacción protegida por la comunidad RC HUB
+              Transacción protegida por la comunidad BOX HUB
             </span>
             <button
               onClick={onClose}

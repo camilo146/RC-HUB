@@ -7,9 +7,14 @@ export const TheProblemSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Block */}
         <div className="max-w-3xl mb-16">
-          <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-semibold block mb-3">
-            El contexto del hobby
-          </span>
+          <div className="flex items-center gap-3 mb-3">
+            <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-semibold">
+              El contexto del hobby
+            </span>
+            <span className="font-handwritten text-xl text-[#C65D2E] -rotate-1 select-none">
+              — ¿te ha pasado esto?
+            </span>
+          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#F4F2ED] leading-[1.15] tracking-tight">
             Un hobby especializado merece mejores herramientas.
           </h2>
@@ -23,9 +28,14 @@ export const TheProblemSection: React.FC = () => {
           {/* Card 1 */}
           <div className="p-6 rounded-md bg-[#17191C] border border-[#26292E] flex flex-col justify-between space-y-6 hover:border-[#8D949C]/40 transition-colors">
             <div className="space-y-3">
-              <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-wider block font-semibold">
-                01 · Mercado
-              </span>
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-wider font-semibold">
+                  01 · Mercado
+                </span>
+                <span className="font-handwritten text-sm text-[#8D949C]">
+                  Grupos dispersos
+                </span>
+              </div>
               <h3 className="font-editorial font-bold text-lg text-[#F4F2ED]">
                 Búsqueda fragmentada
               </h3>

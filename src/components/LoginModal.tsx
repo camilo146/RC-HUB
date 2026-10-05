@@ -42,7 +42,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
               <CheckCircle2 className="w-7 h-7" />
             </div>
             <h3 className="font-display font-extrabold text-xl text-white">
-              ¡Bienvenido a RC HUB!
+              ¡Bienvenido a BOX HUB!
             </h3>
             <p className="text-xs text-slate-400">Sesión iniciada correctamente.</p>
           </div>
@@ -52,7 +52,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
               <div className="w-12 h-12 mx-auto rounded-2xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400 mb-3">
                 <User className="w-6 h-6" />
               </div>
-              <h3 className="font-display font-black text-2xl text-white">Ingresar a RC HUB</h3>
+              <h3 className="font-display font-black text-2xl text-white">Ingresar a BOX HUB</h3>
               <p className="text-xs text-slate-400 mt-1">
                 Accede a tus publicaciones, garage y mensajes de la comunidad.
               </p>
@@ -69,7 +69,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                     required
                     value={phoneOrEmail}
                     onChange={(e) => setPhoneOrEmail(e.target.value)}
-                    placeholder="310 123 4567 o piloto@rchub.co"
+                    placeholder="310 123 4567 o piloto@boxhub.co"
                     className="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-white text-sm focus:outline-none focus:border-orange-500"
                   />
                 </div>

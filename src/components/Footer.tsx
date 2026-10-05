@@ -7,7 +7,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   const whatsappUrl =
-    'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Conoc%C3%AD%20RC%20HUB%20y%20me%20gustar%C3%ADa%20compartir%20algunas%20ideas%20sobre%20el%20proyecto.';
+    'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Conoc%C3%AD%20BOX%20HUB%20y%20me%20gustar%C3%ADa%20compartir%20algunas%20ideas%20sobre%20el%20proyecto.';
 
   return (
     <footer className="bg-[#101214] border-t border-[#26292E] py-14 text-slate-400">
@@ -17,11 +17,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="md:col-span-6 space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-md bg-[#17191C] border border-[#26292E] flex items-center justify-center font-tech font-bold text-xs text-[#F4F2ED]">
-                RC
+                BH
               </div>
               <div className="flex flex-col">
                 <span className="font-editorial font-bold text-xl text-[#F4F2ED] tracking-tight">
-                  RC HUB
+                  BOX HUB
                 </span>
                 <span className="text-[10px] font-tech text-[#C65D2E] uppercase tracking-widest font-semibold">
                   Radio Control Colombia
@@ -113,7 +113,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
         {/* Bottom bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-tech text-[#8D949C]">
-          <p>© {new Date().getFullYear()} RC HUB — Radio Control Colombia. Proyecto en desarrollo.</p>
+          <p>© {new Date().getFullYear()} BOX HUB — Radio Control Colombia. Proyecto en desarrollo.</p>
           <div className="flex items-center gap-2">
             <span>Construido junto a la comunidad</span>
             <span>🇨🇴</span>

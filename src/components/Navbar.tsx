@@ -23,7 +23,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   };
 
   const whatsappUrl =
-    'https://wa.me/573132233304?text=Hola%2C%20vi%20el%20proyecto%20RC%20HUB%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20y%20compartir%20algunas%20ideas.';
+    'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Conoc%C3%AD%20BOX%20HUB%20y%20me%20gustar%C3%ADa%20compartir%20algunas%20ideas%20sobre%20el%20proyecto.';
 
   return (
     <header
@@ -45,11 +45,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             className="flex items-center gap-3 group focus:outline-none"
           >
             <div className="w-8 h-8 rounded-md bg-[#101214] border border-[#26292E] flex items-center justify-center font-tech font-bold text-xs text-[#F4F2ED] tracking-wider group-hover:border-[#C65D2E] transition-colors">
-              RC
+              BH
             </div>
             <div className="flex flex-col">
               <span className="font-editorial font-bold text-lg tracking-tight text-[#F4F2ED]">
-                RC HUB
+                BOX HUB
               </span>
               <span className="text-[10px] font-tech text-[#C65D2E] uppercase tracking-wider -mt-0.5 font-medium">
                 Radio Control Colombia
@@ -97,10 +97,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md text-xs font-semibold text-[#F4F2ED] bg-[#101214] border border-[#26292E] hover:border-[#C65D2E] hover:text-white transition-all duration-150 cursor-pointer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-md text-xs font-semibold text-[#F4F2ED] bg-[#101214] border border-[#26292E] hover:border-[#C65D2E] hover:text-white transition-all duration-150 cursor-pointer group"
             >
-              <span>Participar en el proyecto</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-[#C65D2E]" />
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span>Charla conmigo</span>
+              <ArrowUpRight className="w-3.5 h-3.5 text-[#C65D2E] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </div>
 
@@ -158,9 +159,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-2 py-2.5 rounded-md text-xs font-semibold text-[#F4F2ED] bg-[#C65D2E] hover:bg-[#B34F24] transition-colors"
+              className="w-full flex items-center justify-center gap-2 py-3 rounded-md text-xs font-semibold text-[#F4F2ED] bg-[#C65D2E] hover:bg-[#B34F24] transition-colors shadow-sm"
             >
-              <span>Participar en el proyecto (WhatsApp)</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span>Charla conmigo por WhatsApp</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>

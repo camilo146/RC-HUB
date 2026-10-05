@@ -11,11 +11,16 @@ export const ConceptualPreview: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="max-w-3xl">
-            <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-semibold block mb-3">
-              Diseño de Interfaz
-            </span>
+            <div className="flex items-center gap-3 mb-3">
+              <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-semibold">
+                Diseño de Interfaz
+              </span>
+              <span className="font-handwritten text-xl text-[#C65D2E] rotate-1 select-none">
+                ¡Vistas preliminares!
+              </span>
+            </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#F4F2ED] leading-[1.15] tracking-tight">
-              Así imaginamos RC HUB.
+              Así imaginamos BOX HUB.
             </h2>
             <p className="mt-4 text-base sm:text-lg text-[#8D949C] leading-relaxed">
               Exploración de la futura experiencia de usuario para explorar el catálogo y gestionar vehículos.

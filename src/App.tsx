@@ -8,6 +8,7 @@ import { RoadmapSection } from './components/RoadmapSection';
 import { BehindRCHUB } from './components/BehindRCHUB';
 import { BuildTogetherSection } from './components/BuildTogetherSection';
 import { Footer } from './components/Footer';
+import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 export function App() {
   const scrollToSection = (sectionId: string) => {
@@ -46,7 +47,7 @@ export function App() {
         {/* 5. Roadmap — Plan de desarrollo */}
         <RoadmapSection />
 
-        {/* 6. Behind RC HUB — Camilo López Romero, historia y motivaciones */}
+        {/* 6. Behind BOX HUB — Camilo López Romero, historia y motivaciones */}
         <BehindRCHUB />
 
         {/* 7. Build Together / Contact — Formulario de interés temprano */}
@@ -55,6 +56,9 @@ export function App() {
 
       {/* Footer */}
       <Footer onNavigate={scrollToSection} />
+
+      {/* Floating WhatsApp Action for quick direct chat */}
+      <FloatingWhatsApp />
     </div>
   );
 }

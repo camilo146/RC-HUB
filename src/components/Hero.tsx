@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowDown, MessageCircle } from 'lucide-react';
 
 const WHATSAPP_URL =
-  'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Conoc%C3%AD%20RC%20HUB%20y%20me%20gustar%C3%ADa%20compartir%20algunas%20ideas%20sobre%20el%20proyecto.';
+  'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Conoc%C3%AD%20BOX%20HUB%20y%20me%20gustar%C3%ADa%20compartir%20algunas%20ideas%20sobre%20el%20proyecto.';
 
 interface HeroProps {
   onDiscoverVision: () => void;
@@ -15,11 +15,16 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Editorial Headline & Actions */}
           <div className="lg:col-span-6 space-y-6">
-            {/* Project Status Tag */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-[#101214] border border-[#26292E]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#C65D2E]" />
-              <span className="text-[11px] font-tech text-[#8D949C] uppercase tracking-widest font-medium">
-                Proyecto en desarrollo · Colombia
+            {/* Project Status Tag + Handwritten Accent */}
+            <div className="flex flex-wrap items-center gap-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-[#101214] border border-[#26292E]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#C65D2E]" />
+                <span className="text-[11px] font-tech text-[#8D949C] uppercase tracking-widest font-medium">
+                  Proyecto en desarrollo · Colombia
+                </span>
+              </div>
+              <span className="font-handwritten text-xl text-[#C65D2E] inline-block -rotate-2 select-none">
+                «RC es más que un hobby»
               </span>
             </div>
 
@@ -30,7 +35,7 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
 
             {/* Description */}
             <p className="text-base sm:text-lg text-[#8D949C] leading-relaxed max-w-xl font-normal">
-              Estamos construyendo una plataforma para conectar a los aficionados al radio control en Colombia: vehículos, repuestos, colecciones y comunidad, en un mismo lugar especializado.
+              Estamos construyendo <strong className="text-[#F4F2ED] font-semibold">BOX HUB</strong> para conectar a los aficionados al radio control en Colombia: vehículos, repuestos, colecciones y comunidad, en un mismo lugar especializado.
             </p>
 
             {/* Author attribution — discrete, below value prop */}
@@ -55,10 +60,11 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 id="cta-hero-whatsapp"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md text-sm font-semibold text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-all duration-150 cursor-pointer shadow-sm text-center"
+                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-md text-sm font-semibold text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-all duration-150 cursor-pointer shadow-sm text-center group"
               >
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 <MessageCircle className="w-4 h-4" />
-                <span>Charla conmigo</span>
+                <span>Charla conmigo por WhatsApp</span>
               </a>
 
               {/* Secondary: Discover vision */}
@@ -71,6 +77,11 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
                 <ArrowDown className="w-4 h-4 text-[#8D949C]" />
               </button>
             </div>
+
+            {/* Encouraging micro note */}
+            <p className="text-[11px] font-tech text-[#8D949C]">
+              💬 Respondo personalmente · ¡Hablemos de tus carros RC o de lo que falta en el hobby!
+            </p>
 
             {/* Micro metadata footer note */}
             <div className="pt-6 border-t border-[#26292E]/60 flex items-center gap-6 text-xs text-[#8D949C] font-tech">
