@@ -51,8 +51,13 @@ export const TheProblemSection: React.FC = () => {
         {/* Header Block */}
         <div className="max-w-3xl mb-14 reveal-on-scroll">
           <div className="flex items-center gap-3 mb-3">
-            <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-semibold">
-              Lo que vivimos los aficionados
+            <span className="inline-flex h-2 w-3.5 rounded-2xs overflow-hidden opacity-90">
+              <span className="w-1/2 bg-[#FCD116]" />
+              <span className="w-1/4 bg-[#003893]" />
+              <span className="w-1/4 bg-[#CE1126]" />
+            </span>
+            <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-bold">
+              Lo que vivimos los aficionados en Colombia
             </span>
             <span className="font-handwritten text-xl text-[#C65D2E] -rotate-1 select-none">
               — ¿te ha pasado esto?

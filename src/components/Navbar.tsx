@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
+import { ZonaRcLogo } from './ZonaRcLogo';
 
 interface NavbarProps {
   onNavigate: (sectionId: string) => void;
@@ -27,9 +28,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
       className={`sticky top-0 z-50 transition-all duration-200 ${
         isScrolled
           ? 'bg-[#101214]/95 backdrop-blur-md border-b border-[#26292E] shadow-lg shadow-black/40'
-          : 'bg-transparent border-b border-transparent'
+          : 'bg-[#17191C]/80 backdrop-blur-sm border-b border-[#26292E]/60'
       }`}
     >
+      {/* Subtle Colombian Tricolor micro-line at the very top of the header */}
+      <div className="h-[2px] w-full colombia-stripe opacity-90" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
@@ -39,19 +43,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="flex items-center gap-2.5 group focus:outline-none"
+            className="flex items-center group focus:outline-none transition-transform hover:scale-[1.02]"
+            aria-label="ZONA RC COL — Inicio"
           >
-            <div className="w-8 h-8 rounded-md bg-[#101214] border border-[#26292E] flex items-center justify-center font-tech font-bold text-xs text-[#F4F2ED] tracking-wider group-hover:border-[#C65D2E] transition-colors">
-              ZRC
-            </div>
-            <div className="flex items-baseline gap-1.5">
-              <span className="font-editorial font-bold text-lg sm:text-xl tracking-tight text-[#F4F2ED]">
-                ZONA RC
-              </span>
-              <span className="text-[10px] font-tech font-bold text-[#C65D2E] uppercase tracking-wider">
-                COL
-              </span>
-            </div>
+            <ZonaRcLogo size="md" showTricolor={true} />
           </a>
 
           {/* Desktop Navigation Links */}

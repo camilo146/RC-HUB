@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MessageCircle, ArrowRight, ClipboardList, X, Send, Sparkles } from 'lucide-react';
+import { ZonaRcLogo } from './ZonaRcLogo';
 
 const WAITLIST_WHATSAPP_URL =
   'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Quiero%20ser%20parte%20de%20ZONA%20RC%20desde%20el%20comienzo%20y%20enterarme%20antes%20que%20nadie.';
@@ -51,10 +52,14 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center justify-between">
           {/* Left Column: Heading and Community Vision */}
           <div className="reveal-on-scroll lg:col-span-7 space-y-5">
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-sm bg-[#17191C]/90 border border-[#26292E] backdrop-blur-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#C65D2E]" />
-              <span className="text-[11px] font-tech text-[#C65D2E] uppercase tracking-widest font-semibold">
-                Construyamos juntos
+            <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded bg-[#17191C]/90 border border-[#26292E] backdrop-blur-sm">
+              <span className="inline-flex h-2 w-3.5 rounded-2xs overflow-hidden opacity-90">
+                <span className="w-1/2 bg-[#FCD116]" />
+                <span className="w-1/4 bg-[#003893]" />
+                <span className="w-1/4 bg-[#CE1126]" />
+              </span>
+              <span className="text-[11px] font-tech text-[#C65D2E] uppercase tracking-widest font-bold">
+                Construyamos juntos · Colombia
               </span>
             </div>
 
@@ -120,19 +125,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
           <div className="reveal-scale delay-150 lg:col-span-5 flex lg:justify-end">
             <div className="hover-lift w-full max-w-md p-6 sm:p-8 rounded-xl bg-[#17191C]/80 border border-[#26292E] backdrop-blur-md space-y-4">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-md bg-[#101214] border border-[#C65D2E]/40 flex items-center justify-center font-tech font-bold text-xs text-[#F4F2ED]">
-                    ZRC
-                  </div>
-                  <div className="flex items-baseline gap-1.5">
-                    <span className="font-editorial font-bold text-lg text-[#F4F2ED] block leading-tight">
-                      ZONA RC
-                    </span>
-                    <span className="text-[10px] font-tech font-bold text-[#C65D2E] uppercase tracking-wider">
-                      COL
-                    </span>
-                  </div>
-                </div>
+                <ZonaRcLogo size="md" showTricolor={true} />
 
                 <span className="px-2 py-0.5 rounded text-[10px] font-tech uppercase font-bold text-[#C65D2E] bg-[#C65D2E]/10 border border-[#C65D2E]/30">
                   En desarrollo

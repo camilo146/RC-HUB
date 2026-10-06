@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUpRight, MessageCircle, ArrowRight } from 'lucide-react';
+import { ZonaRcLogo } from './ZonaRcLogo';
 
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
@@ -42,25 +43,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-10 border-b border-[#26292E]">
           {/* Brand Info */}
           <div className="md:col-span-6 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-md bg-[#17191C] border border-[#26292E] flex items-center justify-center font-tech font-bold text-xs text-[#F4F2ED]">
-                ZRC
-              </div>
-              <div className="flex items-baseline gap-1.5">
-                <span className="font-editorial font-bold text-xl text-[#F4F2ED] tracking-tight">
-                  ZONA RC
-                </span>
-                <span className="text-[10px] font-tech font-bold text-[#C65D2E] uppercase tracking-wider">
-                  COL
-                </span>
-              </div>
-            </div>
+            <ZonaRcLogo size="lg" showSlogan={true} showTricolor={true} />
 
-            <p className="font-handwritten text-2xl text-[#F4F2ED] pt-1">
-              «RC es más que un hobby»
-            </p>
-
-            <p className="text-xs text-[#8D949C] max-w-md leading-relaxed">
+            <p className="text-xs text-[#8D949C] max-w-md leading-relaxed pt-2">
               Iniciativa independiente creada por Camilo López Romero para conectar a la comunidad del radio control en Colombia: vehículos, repuestos, colecciones, pistas y modalidades.
             </p>
           </div>
@@ -159,7 +144,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <p>© {new Date().getFullYear()} ZONA RC COL — Radio Control Colombia. Proyecto independiente en construcción.</p>
           <div className="flex items-center gap-2">
             <span>Construido junto a la comunidad</span>
-            <span>🇨🇴</span>
+            <span className="inline-flex h-2.5 w-4 rounded-2xs overflow-hidden opacity-90 shadow-xs">
+              <span className="w-1/2 bg-[#FCD116]" />
+              <span className="w-1/4 bg-[#003893]" />
+              <span className="w-1/4 bg-[#CE1126]" />
+            </span>
           </div>
         </div>
       </div>

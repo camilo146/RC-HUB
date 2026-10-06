@@ -66,10 +66,14 @@ export const RoadmapSection: React.FC = () => {
         {/* Section Header */}
         <div className="max-w-3xl mb-14 reveal-on-scroll">
           <div className="flex items-center gap-3 mb-3">
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-sm bg-[#101214] border border-[#26292E]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#C65D2E]" />
-              <span className="text-[11px] font-tech text-[#C65D2E] uppercase tracking-widest font-semibold">
-                Hoja de ruta comunitaria
+            <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded bg-[#101214] border border-[#26292E]">
+              <span className="inline-flex h-2 w-3.5 rounded-2xs overflow-hidden opacity-90">
+                <span className="w-1/2 bg-[#FCD116]" />
+                <span className="w-1/4 bg-[#003893]" />
+                <span className="w-1/4 bg-[#CE1126]" />
+              </span>
+              <span className="text-[11px] font-tech text-[#C65D2E] uppercase tracking-widest font-bold">
+                Hoja de ruta comunitaria · Colombia
               </span>
             </div>
             <span className="font-handwritten text-xl text-[#C65D2E] -rotate-1 select-none">

@@ -111,8 +111,13 @@ export const RCModalitiesSection: React.FC = () => {
         {/* Header */}
         <div className="max-w-3xl mb-14 reveal-on-scroll">
           <div className="flex items-center gap-3 mb-3">
-            <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-semibold">
-              El mundo RC completo
+            <span className="inline-flex h-2 w-3.5 rounded-2xs overflow-hidden opacity-90">
+              <span className="w-1/2 bg-[#FCD116]" />
+              <span className="w-1/4 bg-[#003893]" />
+              <span className="w-1/4 bg-[#CE1126]" />
+            </span>
+            <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-bold">
+              El mundo RC completo · ZONA RC COL
             </span>
             <span className="font-handwritten text-xl text-[#C65D2E] -rotate-1 select-none">
               «Todas las disciplinas en un solo lugar»
@@ -122,7 +127,7 @@ export const RCModalitiesSection: React.FC = () => {
             No importa qué tipo de RC tengas.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#8D949C] leading-relaxed">
-            Si te apasiona el radio control, <strong className="text-[#F4F2ED] font-semibold">ZONA RC también es para ti</strong>. No somos un espacio cerrado para una sola categoría; estamos diseñando la plataforma para que cada disciplina encuentre su espacio, sus repuestos y su comunidad.
+            Si te apasiona el radio control, <strong className="text-[#F4F2ED] font-semibold">ZONA RC también es para ti</strong>. No somos un espacio cerrado para una sola categoría; estamos diseñando la plataforma para que cada disciplina encuentre su espacio, sus repuestos y su comunidad en Colombia.
           </p>
         </div>
 
@@ -134,20 +139,28 @@ export const RCModalitiesSection: React.FC = () => {
             return (
               <div
                 key={mod.id}
-                className={`reveal-on-scroll ${delays[idx % delays.length]} hover-lift p-6 rounded-xl bg-[#17191C] border border-[#26292E] hover:border-[#8D949C]/50 transition-all duration-200 flex flex-col justify-between space-y-4 group`}
+                className={`reveal-on-scroll ${delays[idx % delays.length]} hover-lift p-6 rounded-xl bg-[#17191C] border border-[#26292E] hover:border-[#C65D2E]/60 transition-all duration-200 flex flex-col justify-between space-y-4 group relative overflow-hidden`}
               >
+                {/* Subtle top indicator line on hover */}
+                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C65D2E] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-tech text-[#C65D2E] uppercase tracking-wider font-bold">
-                      {mod.category}
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <span className="font-tech font-bold text-[11px] text-[#C65D2E] tracking-widest">
+                        #{String(idx + 1).padStart(2, '0')}
+                      </span>
+                      <span className="text-[10px] font-tech text-[#8D949C] uppercase tracking-wider font-semibold">
+                        {mod.category}
+                      </span>
+                    </div>
                     <span className="text-[10px] font-tech text-[#8D949C] bg-[#101214] px-2 py-0.5 rounded border border-[#26292E]">
                       {mod.scales}
                     </span>
                   </div>
 
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-[#101214] border border-[#26292E] flex items-center justify-center text-[#C65D2E] group-hover:border-[#C65D2E] transition-colors">
+                    <div className="w-10 h-10 rounded-lg bg-[#101214] border border-[#26292E] flex items-center justify-center text-[#C65D2E] group-hover:border-[#C65D2E] group-hover:bg-[#C65D2E]/10 transition-colors">
                       <Icon className="w-5 h-5" />
                     </div>
                     <h3 className="font-editorial font-bold text-lg text-[#F4F2ED] group-hover:text-white transition-colors">

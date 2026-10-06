@@ -33,6 +33,10 @@
   font-family: var(--font-heading);
 }
 
+.font-display {
+  font-family: 'Barlow Condensed', var(--font-heading), sans-serif;
+}
+
 .font-body {
   font-family: var(--font-sans);
 }
@@ -43,6 +47,25 @@
 
 .font-handwritten {
   font-family: 'Caveat', cursive;
+}
+
+/* Subtle Colombian Tricolor Accents (Amarillo, Azul, Rojo) */
+.colombia-stripe {
+  background: linear-gradient(90deg, #FCD116 0%, #FCD116 50%, #003893 50%, #003893 75%, #CE1126 75%, #CE1126 100%);
+}
+
+.colombia-accent-line {
+  position: relative;
+}
+.colombia-accent-line::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  background: linear-gradient(90deg, #FCD116 0%, #FCD116 50%, #003893 50%, #003893 75%, #CE1126 75%, #CE1126 100%);
+  border-radius: 1px;
 }
 
 /* Subtle editorial borders and accents */

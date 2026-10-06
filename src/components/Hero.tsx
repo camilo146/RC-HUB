@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowDown, MessageCircle, Sparkles } from 'lucide-react';
+import { ZonaRcLogo } from './ZonaRcLogo';
 
 const JOIN_WHATSAPP_URL =
   'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Quiero%20ser%20parte%20de%20ZONA%20RC%20desde%20el%20comienzo%20y%20estar%20cuando%20salga.';
@@ -17,17 +18,20 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Editorial Headline & Actions with entrance animation */}
           <div className="lg:col-span-6 space-y-6 animate-hero-fade">
-            {/* Brand + Status Tag + Handwritten Accent */}
-            <div className="flex flex-wrap items-center gap-3">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-[#101214] border border-[#26292E]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#C65D2E]" />
-                <span className="text-[11px] font-tech text-[#8D949C] uppercase tracking-widest font-medium">
-                  <strong className="text-[#F4F2ED] font-semibold">ZONA RC</strong> <span className="text-[#C65D2E] text-[10px]">COL</span> · Radio Control Colombia
+            {/* Motorsport Brand Header */}
+            <div className="space-y-3">
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+                <ZonaRcLogo size="lg" showSlogan={false} showTricolor={true} />
+                <span className="font-handwritten text-2xl text-[#C65D2E] inline-block -rotate-2 select-none self-end pb-1">
+                  «RC es más que un hobby»
                 </span>
               </div>
-              <span className="font-handwritten text-xl text-[#C65D2E] inline-block -rotate-2 select-none">
-                «RC es más que un hobby»
-              </span>
+              <div className="flex items-center gap-2">
+                <div className="h-[2px] w-28 colombia-stripe rounded-full opacity-90" />
+                <span className="text-[10px] font-tech uppercase tracking-widest text-[#8D949C]">
+                  Comunidad Oficial · Colombia
+                </span>
+              </div>
             </div>
 
             {/* Main Headline */}
@@ -100,10 +104,20 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
             </div>
 
             {/* Micro metadata footer note */}
-            <div className="pt-4 border-t border-[#26292E]/60 flex items-center gap-6 text-xs text-[#8D949C] font-tech">
-              <span>Etapa: Validación con la comunidad</span>
+            <div className="pt-4 border-t border-[#26292E]/60 flex flex-wrap items-center gap-3 sm:gap-5 text-xs text-[#8D949C] font-tech">
+              <span className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#C65D2E]" />
+                <span>Etapa: Validación comunitaria</span>
+              </span>
               <span>·</span>
-              <span>Construido para pilotos de toda Colombia</span>
+              <span className="flex items-center gap-1.5">
+                <span className="inline-flex h-2 w-3.5 rounded-2xs overflow-hidden opacity-90">
+                  <span className="w-1/2 bg-[#FCD116]" />
+                  <span className="w-1/4 bg-[#003893]" />
+                  <span className="w-1/4 bg-[#CE1126]" />
+                </span>
+                <span>Pilotos de toda Colombia</span>
+              </span>
             </div>
           </div>
 

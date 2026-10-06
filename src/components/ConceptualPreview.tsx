@@ -12,11 +12,16 @@ export const ConceptualPreview: React.FC = () => {
         <div className="reveal-on-scroll flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-3">
+              <span className="inline-flex h-2 w-3.5 rounded-2xs overflow-hidden opacity-90">
+                <span className="w-1/2 bg-[#FCD116]" />
+                <span className="w-1/4 bg-[#003893]" />
+                <span className="w-1/4 bg-[#CE1126]" />
+              </span>
               <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-bold px-2.5 py-1 rounded bg-[#17191C] border border-[#26292E]">
-                CONCEPTO — ASÍ PODRÍA VERSE ZONA RC
+                CONCEPTO — ASÍ PODRÍA VERSE ZONA RC COL
               </span>
               <span className="font-handwritten text-xl text-[#C65D2E] rotate-1 select-none">
-                ¡Vistas preliminares!
+                «Vistas preliminares»
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#F4F2ED] leading-[1.15] tracking-tight">
