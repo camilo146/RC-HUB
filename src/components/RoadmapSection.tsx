@@ -78,7 +78,7 @@ export const RoadmapSection: React.FC = () => {
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#F4F2ED] leading-[1.15] tracking-tight">
-            El camino para hacer realidad BOX HUB.
+            El camino para hacer realidad ZONA RC.
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-[#8D949C] leading-relaxed">

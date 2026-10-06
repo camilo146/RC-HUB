@@ -39,17 +39,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="flex items-center gap-3 group focus:outline-none"
+            className="flex items-center gap-2.5 group focus:outline-none"
           >
             <div className="w-8 h-8 rounded-md bg-[#101214] border border-[#26292E] flex items-center justify-center font-tech font-bold text-xs text-[#F4F2ED] tracking-wider group-hover:border-[#C65D2E] transition-colors">
-              BH
+              ZRC
             </div>
-            <div className="flex flex-col">
-              <span className="font-editorial font-bold text-lg tracking-tight text-[#F4F2ED]">
-                BOX HUB
+            <div className="flex items-baseline gap-1.5">
+              <span className="font-editorial font-bold text-lg sm:text-xl tracking-tight text-[#F4F2ED]">
+                ZONA RC
               </span>
-              <span className="text-[10px] font-tech text-[#C65D2E] uppercase tracking-wider -mt-0.5 font-medium">
-                Radio Control Colombia
+              <span className="text-[10px] font-tech font-bold text-[#C65D2E] uppercase tracking-wider">
+                COL
               </span>
             </div>
           </a>
@@ -60,7 +60,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               onClick={() => handleLinkClick('el-problema')}
               className="text-xs uppercase font-tech tracking-wider text-[#8D949C] hover:text-[#F4F2ED] transition-colors cursor-pointer"
             >
-              ¿Por qué BOX HUB?
+              ¿Por qué ZONA RC?
             </button>
             <button
               onClick={() => handleLinkClick('que-construimos')}
@@ -133,7 +133,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               onClick={() => handleLinkClick('el-problema')}
               className="px-3 py-2 text-left text-sm text-[#8D949C] hover:text-[#F4F2ED] hover:bg-[#17191C] rounded-md transition-colors"
             >
-              ¿Por qué BOX HUB?
+              ¿Por qué ZONA RC?
             </button>
             <button
               onClick={() => handleLinkClick('que-construimos')}

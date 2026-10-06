@@ -13,7 +13,7 @@ export const ConceptualPreview: React.FC = () => {
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-3">
               <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-bold px-2.5 py-1 rounded bg-[#17191C] border border-[#26292E]">
-                CONCEPTO — ASÍ PODRÍA VERSE BOX HUB
+                CONCEPTO — ASÍ PODRÍA VERSE ZONA RC
               </span>
               <span className="font-handwritten text-xl text-[#C65D2E] rotate-1 select-none">
                 ¡Vistas preliminares!

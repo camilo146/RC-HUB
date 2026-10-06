@@ -32,13 +32,13 @@ export const LegalModal: React.FC<LegalModalProps> = ({ type, onClose }) => {
 
           <h3 className="font-display font-extrabold text-2xl text-white">
             {type === 'terminos'
-              ? 'Términos y Condiciones de BOX HUB Colombia'
+              ? 'Términos y Condiciones de ZONA RC Colombia'
               : 'Privacidad y Protección de Datos'}
           </h3>
 
           <div className="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed max-h-80 overflow-y-auto pr-2 bg-slate-950/60 p-4 rounded-xl border border-slate-800">
             <p>
-              Bienvenido a BOX HUB. Al acceder o utilizar nuestra plataforma de comunidad y marketplace de vehículos a radio control en Colombia, aceptas estos lineamientos creados para proteger la confianza y seguridad de todos los aficionados.
+              Bienvenido a ZONA RC. Al acceder o utilizar nuestra plataforma de comunidad y marketplace de vehículos a radio control en Colombia, aceptas estos lineamientos creados para proteger la confianza y seguridad de todos los aficionados.
             </p>
             <p>
               <strong>1. Publicaciones verídicas:</strong> Todas las fotos, estados de desgaste, capacidad de baterías LiPo y motorizaciones deben ser reales y corresponder exactamente al modelo en venta.

@@ -95,7 +95,7 @@ export const GarageMarketplaceBridge: React.FC<BridgeProps> = ({ onExploreCompat
                   </span>
                 </div>
                 <p className="text-xs text-slate-400 mt-1 max-w-xl">
-                  Se acabaron las dudas sobre si un piñón métrico, un combo brushless o unos brazos de suspensión le sirven a tu chasis. BOX HUB verificará la compatibilidad antes de comprar.
+                  Se acabaron las dudas sobre si un piñón métrico, un combo brushless o unos brazos de suspensión le sirven a tu chasis. ZONA RC verificará la compatibilidad antes de comprar.
                 </p>
               </div>
             </div>

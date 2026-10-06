@@ -86,7 +86,7 @@ export const WhatWeAreBuilding: React.FC = () => {
             Cuatro pilares para vivir el radio control al máximo.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#8D949C] leading-relaxed">
-            BOX HUB reúne las herramientas esenciales del hobby en una sola experiencia fluida, pensada por y para aficionados al radio control en Colombia.
+            ZONA RC reúne las herramientas esenciales del hobby en una sola experiencia fluida, pensada por y para aficionados al radio control en Colombia.
           </p>
         </div>
 

@@ -127,7 +127,7 @@ export const TheProblemSection: React.FC = () => {
             <div className="pt-6 border-t border-[#26292E] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
                 <p className="font-editorial text-xl sm:text-2xl font-bold text-[#F4F2ED]">
-                  BOX HUB nace para conectar todo esto.
+                  ZONA RC nace para conectar todo esto.
                 </p>
                 <p className="text-xs sm:text-sm text-[#8D949C] mt-1">
                   Un solo espacio pensado exclusivamente para el radio control en Colombia.

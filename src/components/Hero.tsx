@@ -2,9 +2,9 @@ import React from 'react';
 import { ArrowDown, MessageCircle, Sparkles } from 'lucide-react';
 
 const JOIN_WHATSAPP_URL =
-  'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Quiero%20ser%20parte%20de%20BOX%20HUB%20desde%20el%20comienzo%20y%20estar%20cuando%20salga.';
+  'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Quiero%20ser%20parte%20de%20ZONA%20RC%20desde%20el%20comienzo%20y%20estar%20cuando%20salga.';
 const CHAT_WHATSAPP_URL =
-  'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Me%20gustar%C3%ADa%20hablar%20contigo%20sobre%20el%20proyecto%20BOX%20HUB.';
+  'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Me%20gustar%C3%ADa%20hablar%20contigo%20sobre%20el%20proyecto%20ZONA%20RC.';
 
 interface HeroProps {
   onDiscoverVision: () => void;
@@ -22,7 +22,7 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-[#101214] border border-[#26292E]">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C65D2E]" />
                 <span className="text-[11px] font-tech text-[#8D949C] uppercase tracking-widest font-medium">
-                  BOX HUB · Radio Control Colombia
+                  <strong className="text-[#F4F2ED] font-semibold">ZONA RC</strong> <span className="text-[#C65D2E] text-[10px]">COL</span> · Radio Control Colombia
                 </span>
               </div>
               <span className="font-handwritten text-xl text-[#C65D2E] inline-block -rotate-2 select-none">
@@ -41,7 +41,7 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
                 Un lugar para encontrar vehículos, repuestos, personas, clubes, eventos y todo lo que hace parte del mundo del radio control.
               </p>
               <p className="text-[#F4F2ED] font-medium text-sm sm:text-base">
-                Estamos construyendo BOX HUB junto a la comunidad RC colombiana.
+                Estamos construyendo ZONA RC junto a la comunidad RC colombiana.
               </p>
             </div>
 
@@ -71,7 +71,7 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
                 className="animate-attention-wiggle inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-md text-sm font-semibold text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-all duration-150 cursor-pointer shadow-lg hover:shadow-[#C65D2E]/25 text-center group"
               >
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Quiero ser parte de BOX HUB</span>
+                <span>Quiero ser parte de ZONA RC</span>
               </a>
 
               {/* Secondary CTA */}

@@ -74,7 +74,7 @@ export function App() {
         {/* 6. Roadmap — Hoja de ruta construida con la comunidad */}
         <RoadmapSection />
 
-        {/* 7. Behind BOX HUB — Camilo López Romero, historia y motivaciones */}
+        {/* 7. Behind ZONA RC — Camilo López Romero, historia y motivaciones */}
         <BehindRCHUB />
 
         {/* 8. Build Together / Contact — Participación comunitaria */}

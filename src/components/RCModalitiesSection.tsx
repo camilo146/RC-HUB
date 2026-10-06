@@ -1,5 +1,5 @@
 import React from 'react';
-import { Compass, Zap, Flame, Gauge, Shield, Truck, Plane, Ship, Sparkles } from 'lucide-react';
+import { Compass, Zap, Flame, Gauge, Shield, Truck, Plane, Ship, Radio, Sparkles } from 'lucide-react';
 
 interface Modality {
   id: string;
@@ -93,6 +93,15 @@ const MODALITIES: Modality[] = [
     focus: 'Sellado estanco y lagos autorizados',
     icon: Ship,
   },
+  {
+    id: 'drones',
+    name: 'Drones & Vuelo FPV',
+    category: 'Aire · Carreras & Freestyle',
+    description: 'Quads de carreras 5", drones de freestyle, micro-whoops indoor y sistemas de video digital HD.',
+    scales: '5" · 3.5" · Tiny Whoop',
+    focus: 'Electrónica, VTX, hélices y spots de vuelo',
+    icon: Radio,
+  },
 ];
 
 export const RCModalitiesSection: React.FC = () => {
@@ -113,7 +122,7 @@ export const RCModalitiesSection: React.FC = () => {
             No importa qué tipo de RC tengas.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#8D949C] leading-relaxed">
-            Si te apasiona el radio control, <strong className="text-[#F4F2ED] font-semibold">BOX HUB también es para ti</strong>. No somos un espacio cerrado para una sola categoría; estamos diseñando la plataforma para que cada disciplina encuentre su espacio, sus repuestos y su comunidad.
+            Si te apasiona el radio control, <strong className="text-[#F4F2ED] font-semibold">ZONA RC también es para ti</strong>. No somos un espacio cerrado para una sola categoría; estamos diseñando la plataforma para que cada disciplina encuentre su espacio, sus repuestos y su comunidad.
           </p>
         </div>
 
@@ -152,7 +161,7 @@ export const RCModalitiesSection: React.FC = () => {
                 </div>
 
                 <div className="pt-3 border-t border-[#26292E] flex items-center justify-between text-[11px] font-tech">
-                  <span className="text-[#8D949C]">Enfoque en BOX HUB:</span>
+                  <span className="text-[#8D949C]">Enfoque en ZONA RC:</span>
                   <span className="text-[#F4F2ED] truncate ml-2 font-medium">{mod.focus}</span>
                 </div>
               </div>
@@ -169,7 +178,7 @@ export const RCModalitiesSection: React.FC = () => {
             </span>
           </div>
           <a
-            href="https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Me%20gustar%C3%ADa%20que%20BOX%20HUB%20incluya%20mi%20modalidad%20RC:"
+            href="https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Me%20gustar%C3%ADa%20que%20ZONA%20RC%20incluya%20mi%20modalidad%20RC:"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#C65D2E] hover:text-[#F4F2ED] font-semibold underline underline-offset-4 decoration-[#C65D2E]/40 shrink-0"

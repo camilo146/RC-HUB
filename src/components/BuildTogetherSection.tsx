@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { MessageCircle, ArrowRight, ClipboardList, X, Send, Sparkles } from 'lucide-react';
 
 const WAITLIST_WHATSAPP_URL =
-  'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Quiero%20estar%20cuando%20salga%20BOX%20HUB%20y%20enterarme%20antes%20que%20nadie.';
+  'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Quiero%20ser%20parte%20de%20ZONA%20RC%20desde%20el%20comienzo%20y%20enterarme%20antes%20que%20nadie.';
 const TALK_WHATSAPP_URL =
-  'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Me%20gustar%C3%ADa%20hablar%20contigo%20y%20compartir%20ideas%20sobre%20BOX%20HUB.';
+  'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Me%20gustar%C3%ADa%20hablar%20contigo%20y%20compartir%20ideas%20sobre%20ZONA%20RC.';
 
 export const BuildTogetherSection: React.FC = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -17,7 +17,7 @@ export const BuildTogetherSection: React.FC = () => {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `Hola, Camilo! Quiero ser parte de BOX HUB desde el comienzo:
+    const message = `Hola, Camilo! Quiero ser parte de ZONA RC desde el comienzo:
 - Nombre: ${name || 'Piloto'}
 - Ciudad: ${city}
 - Modalidad / Perfil: ${role}
@@ -59,7 +59,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#F4F2ED] leading-[1.15] tracking-tight">
-              BOX HUB empieza con la comunidad.
+              ZONA RC empieza con la comunidad.
             </h2>
 
             <div className="space-y-3 text-sm sm:text-base text-[#8D949C] leading-relaxed max-w-2xl font-normal">
@@ -122,14 +122,14 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
                   <div className="w-8 h-8 rounded-md bg-[#101214] border border-[#C65D2E]/40 flex items-center justify-center font-tech font-bold text-xs text-[#F4F2ED]">
-                    BH
+                    ZRC
                   </div>
-                  <div>
+                  <div className="flex items-baseline gap-1.5">
                     <span className="font-editorial font-bold text-lg text-[#F4F2ED] block leading-tight">
-                      BOX HUB
+                      ZONA RC
                     </span>
-                    <span className="text-[10px] font-tech text-[#8D949C] uppercase tracking-widest">
-                      Radio Control Colombia
+                    <span className="text-[10px] font-tech font-bold text-[#C65D2E] uppercase tracking-wider">
+                      COL
                     </span>
                   </div>
                 </div>
@@ -144,7 +144,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                   Sé parte desde el comienzo.
                 </h3>
                 <p className="text-xs text-[#8D949C] leading-relaxed">
-                  Construyamos BOX HUB juntos. Los primeros pilotos y entusiastas que participen tendrán acceso prioritario a las pruebas y ayudarán a definir cada detalle.
+                  Construyamos ZONA RC juntos. Los primeros pilotos y entusiastas que participen tendrán acceso prioritario a las pruebas y ayudarán a definir cada detalle.
                 </p>
               </div>
 
@@ -184,7 +184,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                   Participación comunitaria
                 </span>
                 <h3 className="font-editorial font-bold text-xl text-[#F4F2ED]">
-                  Sé parte de BOX HUB
+                  Sé parte de ZONA RC
                 </h3>
               </div>
               <button
@@ -246,6 +246,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                     <option value="Drift / Touring On-road">Drift / Touring On-road</option>
                     <option value="Monster Truck">Monster Truck</option>
                     <option value="Aeromodelismo / Náutica">Aeromodelismo / Náutica RC</option>
+                    <option value="Drones & FPV">Drones & Vuelo FPV</option>
                     <option value="Tienda o Taller">Tienda o taller especializado</option>
                   </select>
                 </div>
@@ -296,7 +297,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                   rows={3}
                   value={comments}
                   onChange={(e) => setComments(e.target.value)}
-                  placeholder="Cuéntanos qué te gustaría que tuviera BOX HUB..."
+                  placeholder="Cuéntanos qué te gustaría que tuviera ZONA RC..."
                   className="w-full px-3.5 py-2.5 bg-[#17191C] border border-[#26292E] rounded-md text-[#F4F2ED] focus:outline-none focus:border-[#C65D2E] resize-none"
                 />
               </div>
