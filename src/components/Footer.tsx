@@ -144,11 +144,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <p>© {new Date().getFullYear()} ZONA RC COL — Radio Control Colombia. Proyecto independiente en construcción.</p>
           <div className="flex items-center gap-2">
             <span>Construido junto a la comunidad</span>
-            <span className="inline-flex h-2.5 w-4 rounded-2xs overflow-hidden opacity-90 shadow-xs">
-              <span className="w-1/2 bg-[#FCD116]" />
-              <span className="w-1/4 bg-[#003893]" />
-              <span className="w-1/4 bg-[#CE1126]" />
-            </span>
+            <img
+              src="/images/colombia-brush-flag.png"
+              alt="Bandera Colombia pincelazo"
+              className="h-4 w-7 object-contain -rotate-3"
+            />
           </div>
         </div>
       </div>

@@ -26,8 +26,12 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
                   «RC es más que un hobby»
                 </span>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="h-[2px] w-28 colombia-stripe rounded-full opacity-90" />
+              <div className="flex items-center gap-2.5">
+                <img
+                  src="/images/colombia-brush-flag.png"
+                  alt="Colombia"
+                  className="h-4 w-7 object-contain -rotate-2"
+                />
                 <span className="text-[10px] font-tech uppercase tracking-widest text-[#8D949C]">
                   Comunidad Oficial · Colombia
                 </span>
@@ -111,11 +115,11 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
               </span>
               <span>·</span>
               <span className="flex items-center gap-1.5">
-                <span className="inline-flex h-2 w-3.5 rounded-2xs overflow-hidden opacity-90">
-                  <span className="w-1/2 bg-[#FCD116]" />
-                  <span className="w-1/4 bg-[#003893]" />
-                  <span className="w-1/4 bg-[#CE1126]" />
-                </span>
+                <img
+                  src="/images/colombia-brush-flag.png"
+                  alt="Colombia"
+                  className="h-3.5 w-6 object-contain -rotate-2"
+                />
                 <span>Pilotos de toda Colombia</span>
               </span>
             </div>

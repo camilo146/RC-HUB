@@ -13,11 +13,11 @@ export const BehindRCHUB: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Tag */}
         <div className="reveal-on-scroll inline-flex items-center gap-2.5 px-3 py-1 rounded bg-[#17191C] border border-[#26292E] mb-8">
-          <span className="inline-flex h-2.5 w-4 rounded-2xs overflow-hidden opacity-90">
-            <span className="w-1/2 bg-[#FCD116]" />
-            <span className="w-1/4 bg-[#003893]" />
-            <span className="w-1/4 bg-[#CE1126]" />
-          </span>
+          <img
+            src="/images/colombia-brush-flag.png"
+            alt="Bandera Colombia pincelazo"
+            className="h-3.5 w-6 object-contain -rotate-3"
+          />
           <span className="text-[11px] font-tech text-[#C65D2E] uppercase tracking-widest font-bold">
             Detrás de ZONA RC <span className="text-[#8D949C] text-[10px]">COL</span>
           </span>
@@ -25,26 +25,32 @@ export const BehindRCHUB: React.FC = () => {
 
         {/* 3-Column Editorial Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
-          {/* Left Column (5 cols): Authentic Photo of Camilo in workshop tuning his MN82 crawler */}
+          {/* Left Column (5 cols): Authentic Photo of Camilo & his upgraded MN82 crawler */}
           <div className="reveal-scale delay-75 lg:col-span-5 flex flex-col">
             <div className="relative rounded-lg overflow-hidden border border-[#26292E] bg-[#17191C] flex-1 flex flex-col justify-between group min-h-[460px] sm:min-h-[520px]">
-              {/* Photo of Camilo at his workbench */}
+              {/* Photo of Camilo with clean studio background */}
               <div className="relative w-full h-full min-h-[400px] bg-[#101214] overflow-hidden">
                 <img
-                  src="/images/camilo-mn82-workshop.jpg"
-                  alt="Camilo López Romero en su taller ajustando su crawler MN82 Toyota Land Cruiser LC79"
-                  className="w-full h-full object-cover object-center filter contrast-[1.02]"
+                  src="/images/camilo-portrait-clean.jpg"
+                  alt="Camilo López Romero, creador de ZONA RC COL"
+                  className="w-full h-full object-cover object-top filter contrast-[1.03]"
                 />
                 {/* Gradient Scrim for Contrast */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#101214] via-[#101214]/30 to-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-r from-[#101214]/20 via-transparent to-transparent" />
 
-                {/* Technical MN82 Crawler Tag */}
-                <div className="absolute top-4 right-4 z-10 rounded-md overflow-hidden border border-[#26292E] bg-[#101214]/90 backdrop-blur-md px-3 py-1.5 shadow-xl flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C65D2E] animate-pulse" />
-                  <div className="text-[10px] font-tech text-[#8D949C] leading-tight">
-                    <span className="block font-bold text-[#F4F2ED]">MN82 Crawler · LC79</span>
-                    <span className="text-[#C65D2E]">En banco de trabajo</span>
+                {/* Inset Photo Card: Camilo's actual upgraded Toyota Land Cruiser LC79 MN82 Crawler */}
+                <div className="absolute bottom-16 right-4 sm:right-6 w-36 sm:w-44 rounded-lg overflow-hidden border border-[#26292E] bg-[#101214]/95 shadow-2xl backdrop-blur-md p-1.5 transition-transform duration-300 hover:scale-105 z-20">
+                  <div className="relative aspect-[4/3] rounded overflow-hidden">
+                    <img
+                      src="/images/camilo-mn82-pro.jpg"
+                      alt="MN82 Toyota Land Cruiser LC79 Crawler de Camilo López Romero con llantas trail y defensa off-road"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="pt-1.5 px-1 text-[9px] font-tech text-[#8D949C] leading-tight">
+                    <span className="block font-bold text-[#F4F2ED] truncate">Toyota LC79 · MN82</span>
+                    <span className="text-[#C65D2E]">Mi crawler con llantas trail</span>
                   </div>
                 </div>
 
@@ -74,18 +80,18 @@ export const BehindRCHUB: React.FC = () => {
                 </div>
               </div>
 
-              {/* Discrete CREADOR badge with Colombian micro-accent */}
+              {/* Discrete CREADOR badge with Colombian brush stroke */}
               <div className="relative z-10 px-4 py-2.5 bg-[#101214] border-t border-[#26292E] flex items-center justify-between text-xs font-tech text-[#8D949C]">
                 <div className="flex items-center gap-1.5">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                   <span className="truncate text-[#F4F2ED] font-medium">Camilo López Romero</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="inline-flex h-2 w-3.5 rounded-xs overflow-hidden opacity-90">
-                    <span className="w-1/2 bg-[#FCD116]" />
-                    <span className="w-1/4 bg-[#003893]" />
-                    <span className="w-1/4 bg-[#CE1126]" />
-                  </span>
+                  <img
+                    src="/images/colombia-brush-flag.png"
+                    alt="Colombia"
+                    className="h-3.5 w-6 object-contain -rotate-3"
+                  />
                   <span className="text-[10px] font-tech text-[#C65D2E] font-bold uppercase tracking-wider">
                     CREADOR
                   </span>
@@ -102,23 +108,23 @@ export const BehindRCHUB: React.FC = () => {
               </h2>
 
               <p className="text-xs sm:text-sm font-tech text-[#C65D2E] uppercase tracking-wider font-semibold">
-                Aficionado al radio control y creador de ZONA RC COL.
+                Creador de ZONA RC COL.
               </p>
 
               <div className="space-y-3.5 text-xs sm:text-sm text-[#8D949C] leading-relaxed">
                 <p>
-                  Vivo este hobby desde adentro: desarmando diferenciales, probando mejoras en mi crawler <strong className="text-[#F4F2ED] font-semibold">MN82</strong>, buscando repuestos compatibles y compartiendo con otros pilotos en trochas y pistas.
+                  No llevo décadas en el radio control ni voy a decir que soy un veterano de toda la vida. Entré a este hobby hace un tiempo con mi crawler <strong className="text-[#F4F2ED] font-semibold">MN82</strong>; me atrapó por completo, me gusta muchísimo y desde el primer día quise aprenderlo todo.
                 </p>
                 <p>
-                  Sé de primera mano lo que cuesta conseguir una pieza exacta en Colombia, organizar una rodada o comprar y vender un carro sin desconfianza. Por eso nace <strong className="text-[#F4F2ED] font-semibold">ZONA RC</strong>: uno de nosotros intentando construir algo que de verdad nos sirva a todos.
+                  Pero al entrar como alguien nuevo me encontré de frente con la realidad: una comunidad increíble pero <strong className="text-[#F4F2ED] font-semibold">muy fragmentada</strong>. Grupos de chat donde los repuestos se pierden, desconfianza al comprar y vender de segunda mano, dudas sobre compatibilidad de piezas y la dificultad de enterarse de pistas o con quién rodar.
                 </p>
                 <p>
-                  Esto no es una empresa lejana ni una startup corporativa. Es un punto de encuentro pensado por y para la comunidad del radio control en Colombia.
+                  Precisamente porque viví esos vacíos en carne propia nació la idea de <strong className="text-[#F4F2ED] font-semibold">ZONA RC COL</strong>: una plataforma pensada para solucionar esos problemas, conectar a toda la comunidad y hacer que disfrutar del hobby sea mucho más fácil para todos.
                 </p>
 
                 <div className="pt-2 border-t border-[#26292E] space-y-2 text-[#C8C4BC]">
                   <p className="font-semibold text-xs text-[#F4F2ED]">
-                    Ya sea que ruedes crawler, buggy, drift, touring, vueles aviones o drones, o tengas una tienda de repuestos:
+                    Ya sea que lleves años en esto o apenas estés empezando como yo:
                   </p>
                   <p className="font-editorial text-base text-[#C65D2E] italic">
                     Quiero escucharte personalmente para que construyamos ZONA RC juntos.
@@ -131,7 +137,7 @@ export const BehindRCHUB: React.FC = () => {
             <div className="pt-4 border-t border-[#26292E] flex items-center gap-4 text-[11px] font-tech text-[#8D949C]">
               <span className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                <span>Comunidad activa en Colombia</span>
+                <span>Construido junto a la comunidad</span>
               </span>
               <span>·</span>
               <span>Bucaramanga, Santander</span>

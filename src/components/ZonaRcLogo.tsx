@@ -13,108 +13,55 @@ export const ZonaRcLogo: React.FC<ZonaRcLogoProps> = ({
   showTricolor = false,
   className = '',
 }) => {
-  // Dimension tokens
-  const sizeConfig = {
-    sm: {
-      zWidth: 18,
-      zHeight: 20,
-      textSize: 'text-base sm:text-lg',
-      colSize: 'text-[9px] sm:text-[10px]',
-      colOffset: 'mb-0.5',
-      sloganSize: 'text-[9px]',
-      gap: 'gap-1',
-    },
-    md: {
-      zWidth: 24,
-      zHeight: 27,
-      textSize: 'text-xl sm:text-2xl',
-      colSize: 'text-[11px] sm:text-xs',
-      colOffset: 'mb-1',
-      sloganSize: 'text-[11px]',
-      gap: 'gap-1.5',
-    },
-    lg: {
-      zWidth: 34,
-      zHeight: 38,
-      textSize: 'text-3xl sm:text-4xl',
-      colSize: 'text-sm sm:text-base',
-      colOffset: 'mb-1.5',
-      sloganSize: 'text-xs sm:text-sm',
-      gap: 'gap-2',
-    },
-    xl: {
-      zWidth: 46,
-      zHeight: 52,
-      textSize: 'text-4xl sm:text-5xl lg:text-6xl',
-      colSize: 'text-lg sm:text-xl',
-      colOffset: 'mb-2',
-      sloganSize: 'text-sm sm:text-base',
-      gap: 'gap-2.5',
-    },
+  // Height sizing for the logo image
+  const heightClass = {
+    sm: 'h-6 sm:h-7',
+    md: 'h-8 sm:h-9',
+    lg: 'h-10 sm:h-12',
+    xl: 'h-14 sm:h-16 lg:h-18',
+  }[size];
+
+  const sloganClass = {
+    sm: 'text-[9px]',
+    md: 'text-[11px]',
+    lg: 'text-xs sm:text-sm',
+    xl: 'text-sm sm:text-base',
+  }[size];
+
+  // Size of the Colombian paint brush stroke
+  const brushSize = {
+    sm: 'h-4 w-7 -mt-0.5',
+    md: 'h-5 w-9 -mt-1',
+    lg: 'h-7 w-12 -mt-1.5',
+    xl: 'h-9 w-16 -mt-2',
   }[size];
 
   return (
     <div className={`inline-flex flex-col ${className}`}>
       {/* Brand Line */}
-      <div className={`flex items-end ${sizeConfig.gap} select-none leading-none`}>
-        {/* Stylized Motorsport 'Z' with aggressive orange diagonal bar */}
-        <svg
-          width={sizeConfig.zWidth}
-          height={sizeConfig.zHeight}
-          viewBox="0 0 38 44"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="shrink-0 drop-shadow-sm transform -skew-x-6"
-          aria-hidden="true"
-        >
-          {/* Top Bar: Crisp White with Angled Cut */}
-          <path
-            d="M0 0 L36 0 L28 11 L0 11 Z"
-            fill="#F4F2ED"
-          />
-          {/* Diagonal Slash: High-Impact Terracotta Racing Orange */}
-          <path
-            d="M33 7 L38 7 L7 37 L0 37 Z"
-            fill="#C65D2E"
-          />
-          {/* Bottom Bar: Crisp White with Angled Cut */}
-          <path
-            d="M8 33 L38 33 L38 44 L2 44 Z"
-            fill="#F4F2ED"
-          />
-        </svg>
+      <div className="flex items-center gap-2 select-none">
+        {/* Exact logo image from user reference */}
+        <img
+          src="/images/zona-rc-col-logo@2x.png"
+          alt="ZONA RC COL"
+          className={`${heightClass} w-auto object-contain drop-shadow-md`}
+          loading="eager"
+        />
 
-        {/* 'ONA RC' Text — Bold, Italic Motorsport Typography */}
-        <span
-          className={`font-display font-black italic tracking-tighter uppercase text-[#F4F2ED] drop-shadow-sm ${sizeConfig.textSize}`}
-          style={{ letterSpacing: '-0.04em' }}
-        >
-          ONA RC
-        </span>
-
-        {/* 'COL' Identifier — Compact, Italic Orange */}
-        <span
-          className={`font-tech font-black italic uppercase text-[#C65D2E] tracking-tight ${sizeConfig.colSize} ${sizeConfig.colOffset} -ml-0.5`}
-        >
-          COL
-        </span>
-
-        {/* Subtle Colombian Tricolor Accent */}
+        {/* Colombian Flag Paint Brush Stroke ('pincelazo de pintura') */}
         {showTricolor && (
-          <span
-            className="inline-flex h-[3px] w-5 rounded-full overflow-hidden ml-1 mb-1.5 opacity-90 shadow-sm shrink-0"
+          <img
+            src="/images/colombia-brush-flag.png"
+            alt="Bandera pincelazo Colombia"
+            className={`${brushSize} object-contain shrink-0 filter drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] transform -rotate-3 hover:scale-105 transition-transform`}
             title="Colombia"
-          >
-            <span className="w-1/2 bg-[#FCD116]" />
-            <span className="w-1/4 bg-[#003893]" />
-            <span className="w-1/4 bg-[#CE1126]" />
-          </span>
+          />
         )}
       </div>
 
-      {/* Slogan Line: 'RC es más que un hobby.' matching user reference */}
+      {/* Slogan Line: 'RC es más que un hobby.' */}
       {showSlogan && (
-        <div className={`tracking-wide italic select-none mt-1 ${sizeConfig.sloganSize}`}>
+        <div className={`tracking-wide italic select-none mt-1.5 ${sloganClass}`}>
           <span className="text-[#C65D2E] font-bold">RC</span>{' '}
           <span className="text-[#C8C4BC] font-medium">es más que un hobby.</span>
         </div>

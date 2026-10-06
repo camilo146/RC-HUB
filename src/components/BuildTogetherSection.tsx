@@ -53,11 +53,11 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
           {/* Left Column: Heading and Community Vision */}
           <div className="reveal-on-scroll lg:col-span-7 space-y-5">
             <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded bg-[#17191C]/90 border border-[#26292E] backdrop-blur-sm">
-              <span className="inline-flex h-2 w-3.5 rounded-2xs overflow-hidden opacity-90">
-                <span className="w-1/2 bg-[#FCD116]" />
-                <span className="w-1/4 bg-[#003893]" />
-                <span className="w-1/4 bg-[#CE1126]" />
-              </span>
+              <img
+                src="/images/colombia-brush-flag.png"
+                alt="Bandera Colombia pincelazo"
+                className="h-3.5 w-6 object-contain -rotate-3"
+              />
               <span className="text-[11px] font-tech text-[#C65D2E] uppercase tracking-widest font-bold">
                 Construyamos juntos · Colombia
               </span>
