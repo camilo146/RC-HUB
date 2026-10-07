@@ -69,7 +69,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
 
             <div className="space-y-3 text-sm sm:text-base text-[#8D949C] leading-relaxed max-w-2xl font-normal">
               <p>
-                Esto todavía no es una aplicación terminada. La estamos construyendo. Y antes de seguir desarrollando queremos saber qué necesita realmente la comunidad RC colombiana.
+                Esto todavía no es una aplicación terminada. Estamos construyendo el proyecto y queremos hacerlo junto a la comunidad RC colombiana.
               </p>
               <p className="text-[#F4F2ED] font-medium font-editorial text-lg">
                 Tu opinión puede cambiar lo que construimos.
@@ -78,7 +78,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
 
             {/* CTAs: Principal + Secundario */}
             <div className="pt-2 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3">
-              {/* Primary CTA button: QUIERO ESTAR CUANDO SALGA */}
+              {/* Primary CTA button: QUIERO SER PARTE */}
               <a
                 href={WAITLIST_WHATSAPP_URL}
                 target="_blank"
@@ -90,7 +90,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
                 </span>
-                <span>QUIERO ESTAR CUANDO SALGA</span>
+                <span>QUIERO SER PARTE</span>
                 <ArrowRight className="w-4 h-4 ml-0.5" />
               </a>
 
@@ -106,18 +106,18 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                 <span>HABLAR CON CAMILO</span>
               </a>
 
-              {/* Secondary button: Open structured form */}
+              {/* Tertiary button: Déjanos saber qué debería tener ZONA RC */}
               <button
                 onClick={() => setIsFormOpen(true)}
                 className="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-md text-xs font-tech text-[#8D949C] hover:text-[#F4F2ED] border border-dashed border-[#26292E] hover:border-[#8D949C] transition-colors cursor-pointer text-center"
               >
                 <ClipboardList className="w-4 h-4 text-[#C65D2E]" />
-                <span>Dejar ficha de interés</span>
+                <span>Déjanos saber qué debería tener ZONA RC</span>
               </button>
             </div>
 
             <p className="text-xs text-[#8D949C]/80 font-tech flex items-center gap-1.5 pt-1">
-              <span className="font-handwritten text-lg text-[#C8C4BC]">✍️ Sin formularios complicados: conversemos directamente por WhatsApp.</span>
+              <span className="font-handwritten text-lg text-[#C8C4BC]">✍️ Sin registros complicados: conversemos directamente por WhatsApp.</span>
             </p>
           </div>
 

@@ -3,34 +3,34 @@ import { HelpCircle, ArrowRight, Layers } from 'lucide-react';
 
 const QUESTIONS = [
   {
+    question: '“¿Dónde están los demás?”',
+    context: 'Quieres salir a rodar o conocer a otros aficionados en tu misma ciudad, pero no sabes quién más comparte tu pasión ni en qué canales se reúnen.',
+    category: 'Personas & Aficionados',
+  },
+  {
+    question: '“¿Dónde podemos practicar?”',
+    context: 'Buscar rutas de crawler, pistas de drift, circuitos de tierra o espejos de agua depende casi siempre del boca a boca o coordenadas en chats privados.',
+    category: 'Lugares & Pistas',
+  },
+  {
     question: '“¿Dónde encuentro ese repuesto?”',
-    context: 'Se te rompió un brazo o necesitas un engranaje y tienes que preguntar en diez chats distintos a ver quién lo tiene disponible en el país.',
-    category: 'Repuestos & Partes',
+    context: 'Se te rompe una pieza o necesitas un upgrade específico y tienes que preguntar en diez grupos distintos a ver quién lo tiene disponible en Colombia.',
+    category: 'Repuestos & Upgrades',
   },
   {
-    question: '“¿Ese componente será compatible con mi RC?”',
-    context: 'Dudas sobre si una batería cabe en la bandeja, si el piñón tiene el pitch correcto o si el combo brushless es adecuado para tu chasis.',
-    category: 'Mecánica & Compatibilidad',
+    question: '“¿Quién tiene un RC como el mío?”',
+    context: 'Quieres resolver dudas de compatibilidad, ajustes de suspensión o comparar configuraciones con alguien que arme y conozca el mismo chasis.',
+    category: 'Chasis & Compatibilidad',
   },
   {
-    question: '“¿Dónde puedo vender mi vehículo con confianza?”',
-    context: 'Publicar en plataformas genéricas se llena de regateos, desinformación o desconfianza sobre el estado real del carro y su electrónica.',
+    question: '“¿Dónde puedo compartir mi proyecto?”',
+    context: 'Semanas armando, pintando o mejorando tu vehículo y no hay un espacio dedicado donde documentar el proceso, modificaciones y evolución.',
+    category: 'Proyectos & Garage',
+  },
+  {
+    question: '“¿Dónde puedo encontrar o vender un vehículo?”',
+    context: 'Publicar en plataformas genéricas se llena de regateos, desinformación o compradores que no entienden el verdadero valor del radio control.',
     category: 'Compra & Venta',
-  },
-  {
-    question: '“¿Dónde hay una pista o un encuentro?”',
-    context: 'Quieres salir a rodar el fin de semana pero enterarte de circuitos activos, rutas de crawler o carreras depende únicamente del boca a boca.',
-    category: 'Pistas & Eventos',
-  },
-  {
-    question: '“¿Cómo llevo el historial de mis vehículos?”',
-    context: 'Qué silicona pusiste en los amortiguadores, qué modificaciones hiciste o cuándo lubricaste diferenciales se queda en la memoria.',
-    category: 'Garage & Mantenimiento',
-  },
-  {
-    question: '“¿Dónde encuentro gente que comparta este hobby?”',
-    context: 'El radio control se disfruta mucho más en compañía, pero a veces ruedas solo porque no conoces a otros pilotos en tu misma ciudad.',
-    category: 'Comunidad & Amigos',
   },
 ];
 
@@ -60,14 +60,14 @@ export const TheProblemSection: React.FC = () => {
               Lo que vivimos los aficionados en Colombia
             </span>
             <span className="font-handwritten text-xl text-[#C65D2E] -rotate-1 select-none">
-              — ¿te ha pasado esto?
+              — la fragmentación actual
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#F4F2ED] leading-[1.15] tracking-tight">
-            Disfrutar del radio control no debería ser tan difícil.
+            La comunidad existe. Lo que está fragmentado es la forma de encontrarla.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#8D949C] leading-relaxed">
-            El radio control es una pasión increíble, pero hoy la información, los repuestos y los pilotos estamos dispersos. Cada aficionado en Colombia se ha hecho estas mismas preguntas:
+            El radio control es una afición apasionante, pero hoy los aficionados, los lugares, los repuestos y los proyectos estamos dispersos en decenas de canales aislados:
           </p>
         </div>
 
@@ -96,7 +96,7 @@ export const TheProblemSection: React.FC = () => {
                 </div>
 
                 <div className="pt-3 border-t border-[#26292E] flex items-center justify-between text-[11px] font-tech text-[#8D949C]">
-                  <span>Situación recurrente</span>
+                  <span>Pregunta común</span>
                   <span className="text-[#C65D2E] font-medium">#{idx + 1}</span>
                 </div>
               </div>
@@ -109,11 +109,11 @@ export const TheProblemSection: React.FC = () => {
           <div className="max-w-4xl space-y-6">
             <div className="inline-flex items-center gap-2 text-xs font-tech text-[#8D949C] uppercase tracking-wider font-semibold">
               <Layers className="w-4 h-4 text-[#C65D2E]" />
-              <span>La realidad actual del hobby</span>
+              <span>La realidad del hobby</span>
             </div>
 
             <h3 className="text-2xl sm:text-3xl font-editorial font-bold text-[#F4F2ED] leading-snug">
-              Hoy, toda esta información está repartida entre:
+              Hoy, todo esto está repartido entre:
             </h3>
 
             {/* Channels Chips */}
@@ -132,10 +132,10 @@ export const TheProblemSection: React.FC = () => {
             <div className="pt-6 border-t border-[#26292E] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
                 <p className="font-editorial text-xl sm:text-2xl font-bold text-[#F4F2ED]">
-                  ZONA RC nace para conectar todo esto.
+                  ZONA RC nace para empezar a conectar todo eso.
                 </p>
                 <p className="text-xs sm:text-sm text-[#8D949C] mt-1">
-                  Un solo espacio pensado exclusivamente para el radio control en Colombia.
+                  Todo lo que hoy está repartido podría empezar a estar reunido en un mismo lugar.
                 </p>
               </div>
 

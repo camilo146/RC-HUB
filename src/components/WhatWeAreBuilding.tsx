@@ -1,70 +1,70 @@
 import React from 'react';
-import { ShoppingCart, Wrench, Users, Flag, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Users, MapPin, Wrench, ShoppingBag, Sparkles, CheckCircle2 } from 'lucide-react';
 
 const FOUR_PILLARS = [
   {
     number: '01',
-    title: 'COMPRA Y VENDE',
-    tagline: 'Encuentra vehículos, repuestos y accesorios.',
+    title: 'PERSONAS RC',
+    tagline: 'Descubre y conoce personas que comparten tu afición.',
     description:
-      'Un espacio ordenado para buscar y ofrecer artículos de radio control sin perderte entre publicaciones efímeras o spam en redes.',
+      'Un perfil para cada aficionado donde ver sus modalidades favoritas, ciudad, proyectos y garage. Para que rodar acompañado o intercambiar ideas sea mucho más fácil.',
     benefits: [
-      'Filtros por escala (1/10, 1/8, 1/7, 1/24), tracción y tipo de chasis',
-      'Detalles mecánicos claros: motorización, ESC, piñonería y baterías LiPo',
-      'Contacto directo entre compradores y vendedores de toda Colombia',
+      'Encuentra pilotos y entusiastas según la modalidad que practicas',
+      'Conecta con aficionados en tu misma ciudad o región de Colombia',
+      'Comparte experiencias, trucos y pasión por el radio control',
     ],
-    highlight: 'RTR, Kits, Repuestos, Rines, Combos Brushless',
-    icon: ShoppingCart,
-    image: '/images/slash-4x4.jpg',
-    imageAlt: 'Vehículo RC Short Course en taller',
+    highlight: 'Perfiles · Ciudad · Modalidades · Garage',
+    icon: Users,
+    image: '/images/pillar-personas-rc.jpg',
+    imageAlt: 'Interfaz conceptual de perfil de usuario en ZONA RC',
   },
   {
     number: '02',
-    title: 'MI GARAGE',
-    tagline: 'Organiza tus vehículos, componentes, modificaciones y mantenimiento.',
+    title: 'LUGARES RC',
+    tagline: 'Descubre dónde practicar y comparte lugares con la comunidad.',
     description:
-      'Tu espacio personal para registrar tu flota, anotar qué cambios le hiciste a cada carro y saber siempre qué repuesto le sirve.',
+      'Mucho más que pistas formales: senderos crawler, rectas para drift, circuitos de arcilla, espacios para camiones, spots de vuelo FPV y espejos de agua.',
     benefits: [
-      'Ficha técnica de cada vehículo: relación de transmisión, siliconas y mejoras',
-      'Registro de mantenimientos, cambio de rodamientos y ciclos de baterías',
-      'Verificación de compatibilidad de repuestos antes de comprar',
+      'Filtros por modalidad: crawler, drift, off-road, camiones, aviones, barcos y drones',
+      'Fichas con ubicación, tipo de suelo y recomendaciones prácticas',
+      'Lugares descubiertos y compartidos por la misma comunidad',
     ],
-    highlight: 'Control de flota, Registro de mejoras, Alertas de servicio',
-    icon: Wrench,
-    image: '/images/kraton-6s.jpg',
-    imageAlt: 'Chasis Monster Truck RC con componentes en revisión',
+    highlight: 'Directorio de spots · Senderos · Pistas · Encuentros',
+    icon: MapPin,
+    image: '/images/pillar-lugares-rc.jpg',
+    imageAlt: 'Interfaz conceptual de mapa y directorio de lugares RC en Colombia',
   },
   {
     number: '03',
-    title: 'COMUNIDAD',
-    tagline: 'Conecta con otros aficionados, clubes y grupos.',
+    title: 'MI GARAGE',
+    tagline: 'Este es tu espacio para mostrar tus RC y proyectos.',
     description:
-      'El radio control se vive mejor acompañado. Un punto de encuentro para conocer quién más comparte tu pasión en tu misma ciudad o región.',
+      'Un garage digital donde registrar tu flota, exhibir tus vehículos con fotos, escala y modalidad, y mostrar la evolución de tus armados y mejoras.',
     benefits: [
-      'Encuentra pilotos aficionados y veteranos cerca de ti',
-      'Conecta con clubes y grupos según la modalidad que corres',
-      'Comparte puestas a punto, trucos mecánicos y experiencias en pista',
+      'Exhibe todos tus modelos: crawlers, drift cars, buggies, trucks y más',
+      'Ficha visual con escala, modalidad, motorización y componentes',
+      'Muestra el progreso de tus armados, pintura y modificaciones',
     ],
-    highlight: 'Clubes locales, Grupos por modalidad, Conocimiento compartido',
-    icon: Users,
-    image: '/images/roadmap-stage-1.jpg',
-    imageAlt: 'Aficionados conversando y preparando vehículos RC',
+    highlight: 'Flota digital · Proyectos · Escala · Especificaciones',
+    icon: Wrench,
+    image: '/images/pillar-mi-garage.jpg',
+    imageAlt: 'Interfaz conceptual de Mi Garage digital con vehículos y proyectos',
   },
   {
     number: '04',
-    title: 'PISTAS Y EVENTOS',
-    tagline: 'Descubre lugares, encuentros, competencias y actividades.',
+    title: 'COMPRA Y VENTA',
+    tagline: 'Compra y vende dentro de la comunidad.',
     description:
-      'Se acabaron las dudas sobre a dónde ir a rodar el fin de semana. Un directorio vivo de pistas y eventos en Colombia.',
+      'Una funcionalidad dentro de la comunidad para encontrar vehículos, repuestos y accesorios directamente entre aficionados, con descripciones claras y trato directo.',
     benefits: [
-      'Mapa y directorio de pistas de asfalto, arcilla, senderos crawler y off-road',
-      'Calendario de válidas regionales, carreras amistosas y quedadas de fin de semana',
-      'Información práctica: horarios, costos, tipo de suelo y servicios disponibles',
+      'Vehículos completos, repuestos específicos, chasis y accesorios',
+      'Publicaciones con fotografía real, especificaciones, ubicación y precio en COP',
+      'Contacto directo entre aficionados de toda Colombia, sin intermediarios',
     ],
-    highlight: 'Pistas activas, Circuitos de escala, Calendario de carreras',
-    icon: Flag,
-    image: '/images/roadmap-stage-4.jpg',
-    imageAlt: 'Pista de carreras y circuito de radio control',
+    highlight: 'Vehículos · Repuestos · Accesorios · Contacto directo',
+    icon: ShoppingBag,
+    image: '/images/pillar-compra-venta.jpg',
+    imageAlt: 'Interfaz conceptual de compra y venta entre aficionados RC',
   },
 ];
 
@@ -84,14 +84,14 @@ export const WhatWeAreBuilding: React.FC = () => {
               Los 4 pilares de ZONA RC COL
             </span>
             <span className="font-handwritten text-xl text-[#C65D2E] -rotate-1 select-none">
-              «Pensado para resolver lo que falta»
+              «Pensado para conectar la comunidad»
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#F4F2ED] leading-[1.15] tracking-tight">
-            Cuatro pilares para vivir el radio control al máximo.
+            Cuatro formas de conectar la comunidad RC.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#8D949C] leading-relaxed">
-            ZONA RC reúne las herramientas esenciales del hobby en una sola experiencia fluida, pensada por y para aficionados al radio control en Colombia.
+            Personas, lugares, proyectos y oportunidades para una comunidad RC que hoy está repartida entre muchos lugares.
           </p>
         </div>
 
@@ -105,7 +105,7 @@ export const WhatWeAreBuilding: React.FC = () => {
                 key={pillar.number}
                 className={`reveal-on-scroll ${delays[idx % delays.length]} hover-lift rounded-xl bg-[#101214] border border-[#26292E] hover:border-[#8D949C]/40 transition-all duration-200 overflow-hidden flex flex-col justify-between`}
               >
-                {/* Image header with AI badge */}
+                {/* Image header with conceptual badge */}
                 <div className="relative aspect-[16/9] bg-[#17191C] overflow-hidden border-b border-[#26292E]">
                   <img
                     src={pillar.image}
@@ -125,11 +125,11 @@ export const WhatWeAreBuilding: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* AI badge */}
+                  {/* Concept Badge */}
                   <div className="absolute top-3 right-3 z-10">
                     <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#101214]/85 backdrop-blur-sm border border-[#26292E] text-[9px] font-tech text-[#C65D2E] font-semibold uppercase tracking-wider">
                       <Sparkles className="w-2.5 h-2.5 text-[#C65D2E]" />
-                      <span>Imagen conceptual</span>
+                      <span>CONCEPTO</span>
                     </span>
                   </div>
 

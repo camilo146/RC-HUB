@@ -93,7 +93,7 @@ export const BehindRCHUB: React.FC = () => {
                     className="h-3.5 w-6 object-contain -rotate-3"
                   />
                   <span className="text-[10px] font-tech text-[#C65D2E] font-bold uppercase tracking-wider">
-                    CREADOR
+                    CREADOR DE ZONA RC COL
                   </span>
                 </div>
               </div>
@@ -113,13 +113,16 @@ export const BehindRCHUB: React.FC = () => {
 
               <div className="space-y-3.5 text-xs sm:text-sm text-[#8D949C] leading-relaxed">
                 <p>
-                  No llevo décadas en el radio control ni voy a decir que soy un veterano de toda la vida. Entré a este hobby hace un tiempo con mi crawler <strong className="text-[#F4F2ED] font-semibold">MN82</strong>; me atrapó por completo, me gusta muchísimo y desde el primer día quise aprenderlo todo.
+                  No llevo décadas en el radio control ni pretendo presentarme como un veterano de toda la vida. Entré a este hobby con mi crawler <strong className="text-[#F4F2ED] font-semibold">MN82</strong>; me apasionó de inmediato, disfruto cada modificación y desde el primer día quise aprenderlo todo.
                 </p>
                 <p>
-                  Pero al entrar como alguien nuevo me encontré de frente con la realidad: una comunidad increíble pero <strong className="text-[#F4F2ED] font-semibold">muy fragmentada</strong>. Grupos de chat donde los repuestos se pierden, desconfianza al comprar y vender de segunda mano, dudas sobre compatibilidad de piezas y la dificultad de enterarse de pistas o con quién rodar.
+                  Al vivir el hobby en carne propia me encontré con lo mismo que muchos vivimos: una afición increíble pero <strong className="text-[#F4F2ED] font-semibold">muy fragmentada</strong> entre chats, grupos y publicaciones temporales.
                 </p>
                 <p>
-                  Precisamente porque viví esos vacíos en carne propia nació la idea de <strong className="text-[#F4F2ED] font-semibold">ZONA RC COL</strong>: una plataforma pensada para solucionar esos problemas, conectar a toda la comunidad y hacer que disfrutar del hobby sea mucho más fácil para todos.
+                  <strong className="text-[#F4F2ED] font-semibold">ZONA RC nace de una idea sencilla:</strong> ¿qué pasaría si tuviéramos un espacio pensado específicamente para nuestra comunidad?
+                </p>
+                <p>
+                  No tengo todas las respuestas. Por eso quiero construirlo escuchando a la comunidad: reuniendo personas, lugares, proyectos y oportunidades para que disfrutar del radio control sea mucho más fácil para todos.
                 </p>
 
                 <div className="pt-2 border-t border-[#26292E] space-y-2 text-[#C8C4BC]">
@@ -127,7 +130,7 @@ export const BehindRCHUB: React.FC = () => {
                     Ya sea que lleves años en esto o apenas estés empezando como yo:
                   </p>
                   <p className="font-editorial text-base text-[#C65D2E] italic">
-                    Quiero escucharte personalmente para que construyamos ZONA RC juntos.
+                    Conversemos directamente y construyamos ZONA RC juntos.
                   </p>
                 </div>
               </div>

@@ -43,13 +43,13 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
               El mundo RC merece su propio espacio.
             </h1>
 
-            {/* Description */}
+            {/* Description — Community First */}
             <div className="space-y-3 text-base sm:text-lg text-[#8D949C] leading-relaxed max-w-xl font-normal">
               <p>
-                Un lugar para encontrar vehículos, repuestos, personas, clubes, eventos y todo lo que hace parte del mundo del radio control.
+                Un punto de encuentro para reunir a la comunidad del radio control: conectar con otros aficionados, descubrir lugares donde rodar, compartir tus proyectos y garajes, y también comprar y vender vehículos y repuestos en un solo lugar.
               </p>
               <p className="text-[#F4F2ED] font-medium text-sm sm:text-base">
-                Estamos construyendo ZONA RC junto a la comunidad RC colombiana.
+                Para todas las modalidades — crawlers, drift, buggies, camiones, aviones, barcos y drones. Construido junto a los aficionados de Colombia.
               </p>
             </div>
 
@@ -97,12 +97,12 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
 
             {/* Encouraging micro note + quick jump to vision */}
             <div className="flex items-center justify-between text-[11px] font-tech text-[#8D949C] pt-1">
-              <span>💬 Contacto directo sin bots</span>
+              <span>💬 Contacto directo sin intermediarios</span>
               <button
                 onClick={onDiscoverVision}
                 className="hover:text-[#F4F2ED] transition-colors inline-flex items-center gap-1 cursor-pointer"
               >
-                <span>Ver de qué se trata</span>
+                <span>Conocer los 4 pilares</span>
                 <ArrowDown className="w-3.5 h-3.5 text-[#C65D2E]" />
               </button>
             </div>
@@ -111,7 +111,7 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
             <div className="pt-4 border-t border-[#26292E]/60 flex flex-wrap items-center gap-3 sm:gap-5 text-xs text-[#8D949C] font-tech">
               <span className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C65D2E]" />
-                <span>Etapa: Validación comunitaria</span>
+                <span>Etapa: Validación con la comunidad</span>
               </span>
               <span>·</span>
               <span className="flex items-center gap-1.5">
@@ -120,25 +120,25 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
                   alt="Colombia"
                   className="h-3.5 w-6 object-contain -rotate-2"
                 />
-                <span>Pilotos de toda Colombia</span>
+                <span>Pilotos y creadores de toda Colombia</span>
               </span>
             </div>
           </div>
 
-          {/* Right Column: Hero Real Photography with scale entrance */}
+          {/* Right Column: Hero Multi-Modality Ecosystem Image */}
           <div className="lg:col-span-6 animate-hero-scale">
             <div className="relative rounded-lg overflow-hidden border border-[#26292E] bg-[#101214] shadow-2xl">
               <img
-                src="/images/hero-rc.jpg"
-                alt="Toyota Land Cruiser RC Crawler 4x4 a escala 1/10 en terreno de montaña"
-                className="w-full h-auto object-cover aspect-[16/10] sm:aspect-[16/11] contrast-[1.03] hover:scale-105 transition-transform duration-700"
+                src="/images/hero-rc-ecosystem.jpg"
+                alt="Ecosistema de radio control ZONA RC: crawler, drift, buggy, camión, avión y drone FPV"
+                className="w-full h-auto object-cover aspect-[16/9] contrast-[1.03] hover:scale-105 transition-transform duration-700"
                 loading="eager"
               />
               <div className="p-3 bg-[#101214] border-t border-[#26292E] flex items-center justify-between text-xs text-[#8D949C] font-tech">
-                <span className="truncate">Toyota Land Cruiser RC Crawler · Escala 1/10</span>
+                <span className="truncate">Ecosistema ZONA RC · Todas las modalidades del hobby</span>
                 <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#17191C] border border-[#26292E] text-[10px] text-[#C65D2E] font-semibold uppercase tracking-wider shrink-0 ml-2">
                   <Sparkles className="w-3 h-3 text-[#C65D2E]" />
-                  <span>Imagen generada con IA</span>
+                  <span>Concepto visual</span>
                 </span>
               </div>
             </div>
