@@ -130,7 +130,7 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
             <div className="relative rounded-lg overflow-hidden border border-[#26292E] bg-[#101214] shadow-2xl">
               <img
                 src="/images/hero-rc-ecosystem.jpg"
-                alt="Ecosistema de radio control ZONA RC: crawler, drift, buggy, camión, avión y drone FPV"
+                alt="Ecosistema de radio control ZONA RC: crawler, buggy, drift, lancha rápida, avión y drone FPV en paisaje colombiano"
                 className="w-full h-auto object-cover aspect-[16/9] contrast-[1.03] hover:scale-105 transition-transform duration-700"
                 loading="eager"
               />
