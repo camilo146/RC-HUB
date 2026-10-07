@@ -98,7 +98,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               href="https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Quiero%20unirme%20a%20la%20comunidad%20ZONA%20RC."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-tech font-bold uppercase tracking-wider text-white bg-gradient-to-r from-[#FF5500] to-[#E64A19] hover:from-[#FF6A1A] hover:to-[#FF5500] shadow-lg shadow-orange-950/40 hover:scale-105 active:scale-95 transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-tech font-bold uppercase tracking-wider text-white bg-[#FF5500] hover:bg-[#E64A19] shadow-md shadow-black/40 hover:scale-105 active:scale-95 transition-all cursor-pointer"
             >
               <Users className="w-3.5 h-3.5" />
               <span>ÚNETE A LA COMUNIDAD</span>

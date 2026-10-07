@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Info, Sparkles, Users, Wrench, ShoppingBag, Compass, Layout } from 'lucide-react';
+import { MapPin, Info } from 'lucide-react';
 import { CONCEPTUAL_PRODUCTS, CONCEPTUAL_GARAGE_VEHICLES } from '../data/conceptualData';
 
 type ConceptualTab = 'inicio' | 'perfiles' | 'lugares' | 'garage' | 'marketplace';
@@ -35,51 +35,46 @@ export const ConceptualPreview: React.FC = () => {
           </div>
 
           {/* Interactive Navigation Tabs */}
-          <div className="flex flex-wrap gap-1.5 rounded-lg bg-[#17191C] border border-[#26292E] p-1.5 text-xs font-tech self-start md:self-auto">
+          <div className="flex flex-wrap gap-1 rounded-lg bg-[#141619] border border-[#26292E] p-1 text-xs font-tech self-start md:self-auto">
             <button
               onClick={() => setActiveTab('inicio')}
-              className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-md font-semibold transition-colors cursor-pointer ${
+              className={`px-3.5 py-2 rounded font-bold uppercase tracking-wider transition-colors cursor-pointer text-[11px] ${
                 activeTab === 'inicio' ? 'bg-[#FF5500] text-white' : 'text-[#8D949C] hover:text-[#F4F2ED]'
               }`}
             >
-              <Layout className="w-3.5 h-3.5" />
-              <span>Inicio</span>
+              Inicio
             </button>
             <button
               onClick={() => setActiveTab('perfiles')}
-              className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-md font-semibold transition-colors cursor-pointer ${
+              className={`px-3.5 py-2 rounded font-bold uppercase tracking-wider transition-colors cursor-pointer text-[11px] ${
                 activeTab === 'perfiles' ? 'bg-[#FF5500] text-white' : 'text-[#8D949C] hover:text-[#F4F2ED]'
               }`}
             >
-              <Users className="w-3.5 h-3.5" />
-              <span>Perfiles RC</span>
+              Perfiles RC
             </button>
             <button
               onClick={() => setActiveTab('lugares')}
-              className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-md font-semibold transition-colors cursor-pointer ${
+              className={`px-3.5 py-2 rounded font-bold uppercase tracking-wider transition-colors cursor-pointer text-[11px] ${
                 activeTab === 'lugares' ? 'bg-[#FF5500] text-white' : 'text-[#8D949C] hover:text-[#F4F2ED]'
               }`}
             >
-              <Compass className="w-3.5 h-3.5" />
-              <span>Lugares RC</span>
+              Lugares RC
             </button>
             <button
               onClick={() => setActiveTab('garage')}
-              className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-md font-semibold transition-colors cursor-pointer ${
+              className={`px-3.5 py-2 rounded font-bold uppercase tracking-wider transition-colors cursor-pointer text-[11px] ${
                 activeTab === 'garage' ? 'bg-[#FF5500] text-white' : 'text-[#8D949C] hover:text-[#F4F2ED]'
               }`}
             >
-              <Wrench className="w-3.5 h-3.5" />
-              <span>Mi Garage</span>
+              Mi Garage
             </button>
             <button
               onClick={() => setActiveTab('marketplace')}
-              className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-md font-semibold transition-colors cursor-pointer ${
+              className={`px-3.5 py-2 rounded font-bold uppercase tracking-wider transition-colors cursor-pointer text-[11px] ${
                 activeTab === 'marketplace' ? 'bg-[#FF5500] text-white' : 'text-[#8D949C] hover:text-[#F4F2ED]'
               }`}
             >
-              <ShoppingBag className="w-3.5 h-3.5" />
-              <span>Compra y Venta</span>
+              Compra y Venta
             </button>
           </div>
         </div>
@@ -137,9 +132,8 @@ export const ConceptualPreview: React.FC = () => {
               </div>
 
               <div className="w-full lg:w-1/2 space-y-4">
-                <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-[#101214] border border-[#26292E] text-xs font-tech text-[#FF5500] font-bold uppercase tracking-wider">
-                  <Users className="w-3.5 h-3.5" />
-                  <span>Módulo conceptual: Personas RC</span>
+                <div className="inline-block px-2.5 py-1 rounded bg-[#0E1012] border border-[#26292E] text-[10px] font-tech text-[#FF5500] font-bold uppercase tracking-widest">
+                  Módulo // Personas RC
                 </div>
 
                 <h3 className="text-2xl sm:text-3xl font-editorial font-bold text-[#F4F2ED]">
@@ -187,9 +181,8 @@ export const ConceptualPreview: React.FC = () => {
               </div>
 
               <div className="w-full lg:w-1/2 space-y-4">
-                <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-[#101214] border border-[#26292E] text-xs font-tech text-[#FF5500] font-bold uppercase tracking-wider">
-                  <MapPin className="w-3.5 h-3.5" />
-                  <span>Módulo conceptual: Lugares RC</span>
+                <div className="inline-block px-2.5 py-1 rounded bg-[#0E1012] border border-[#26292E] text-[10px] font-tech text-[#FF5500] font-bold uppercase tracking-widest">
+                  Módulo // Lugares RC
                 </div>
 
                 <h3 className="text-2xl sm:text-3xl font-editorial font-bold text-[#F4F2ED]">
@@ -296,9 +289,8 @@ export const ConceptualPreview: React.FC = () => {
                       </span>
                     </div>
                     <div className="absolute top-2.5 right-2.5">
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-sm bg-[#101214]/90 text-[9px] font-tech text-[#FF5500] border border-[#26292E] uppercase font-semibold tracking-wider">
-                        <Sparkles className="w-2.5 h-2.5 text-[#FF5500]" />
-                        <span>Referencia</span>
+                      <span className="px-2 py-0.5 rounded text-[9px] font-tech text-[#8D949C] bg-[#0E1012]/90 border border-[#26292E] uppercase tracking-wider font-semibold">
+                        PREVIEW
                       </span>
                     </div>
                   </div>

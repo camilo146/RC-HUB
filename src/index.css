@@ -100,32 +100,7 @@
    CINEMATIC ENTRANCE ANIMATIONS & MICRO-INTERACTIONS
    ============================================================== */
 
-/* Attention shake/wiggle for WhatsApp buttons */
-@keyframes attentionWiggle {
-  0%, 72%, 100% {
-    transform: rotate(0deg) scale(1);
-  }
-  75% {
-    transform: rotate(-4.5deg) scale(1.04);
-  }
-  78% {
-    transform: rotate(4.5deg) scale(1.04);
-  }
-  81% {
-    transform: rotate(-3deg) scale(1.02);
-  }
-  84% {
-    transform: rotate(3deg) scale(1.02);
-  }
-  87% {
-    transform: rotate(0deg) scale(1);
-  }
-}
 
-.animate-attention-wiggle {
-  animation: attentionWiggle 4.2s ease-in-out infinite;
-  transform-origin: center center;
-}
 
 /* Hero entrance animations */
 @keyframes heroFadeUp {
@@ -208,7 +183,6 @@
     transform: none !important;
     transition: none !important;
   }
-  .animate-attention-wiggle,
   .animate-hero-fade,
   .animate-hero-scale {
     animation: none !important;

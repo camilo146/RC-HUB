@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageCircle, ArrowRight, ClipboardList, X, Send, Sparkles } from 'lucide-react';
+import { MessageCircle, ArrowRight, ClipboardList, X, Send } from 'lucide-react';
 import { ZonaRcLogo } from './ZonaRcLogo';
 
 const WAITLIST_WHATSAPP_URL =
@@ -41,11 +41,6 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
         {/* Dark film overlay matching design system */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#101214] via-[#101214]/90 to-[#101214]/95" />
         <div className="absolute inset-0 bg-[#101214]/50" />
-        {/* Subtle AI background note */}
-        <div className="absolute bottom-3 left-4 z-10 hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#101214]/80 backdrop-blur-sm border border-[#26292E]/60 text-[10px] font-tech text-[#8D949C]">
-          <Sparkles className="w-3 h-3 text-[#FF5500]" />
-          <span>Fondo ilustrativo generado con IA</span>
-        </div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,12 +79,8 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                 target="_blank"
                 rel="noopener noreferrer"
                 id="cta-build-waitlist"
-                className="animate-attention-wiggle inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full text-xs font-tech font-bold uppercase tracking-wider text-white bg-[#FF5500] hover:bg-[#E64A19] transition-all duration-150 cursor-pointer shadow-xl shadow-orange-900/40 hover:scale-105 active:scale-95 text-center"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-xs font-tech font-bold uppercase tracking-wider text-white bg-[#FF5500] hover:bg-[#E64A19] transition-all cursor-pointer shadow-lg shadow-black/40 hover:scale-105 active:scale-95 text-center"
               >
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                </span>
                 <span>QUIERO SER PARTE</span>
                 <ArrowRight className="w-4 h-4 ml-0.5" />
               </a>
@@ -146,7 +137,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                   href={WAITLIST_WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-md font-tech font-bold text-xs uppercase tracking-wider text-white bg-[#FF5500] hover:bg-[#E64A19] transition-colors"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-full font-tech font-bold text-xs uppercase tracking-wider text-white bg-[#FF5500] hover:bg-[#E64A19] transition-colors"
                 >
                   <span>QUIERO SER PARTE</span>
                   <ArrowRight className="w-3.5 h-3.5" />

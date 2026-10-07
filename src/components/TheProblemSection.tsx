@@ -1,5 +1,5 @@
 import React from 'react';
-import { HelpCircle, ArrowRight, Layers } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const QUESTIONS = [
   {
@@ -76,21 +76,23 @@ export const TheProblemSection: React.FC = () => {
           </p>
         </div>
 
-        {/* 6 Everyday Questions Grid */}
+        {/* 6 Everyday Questions Grid - Editorial Motorsport Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {QUESTIONS.map((item, idx) => {
             const delays = ['delay-75', 'delay-150', 'delay-225', 'delay-300', 'delay-375', 'delay-450'];
             return (
               <div
                 key={idx}
-                className={`reveal-on-scroll ${delays[idx % delays.length]} hover-lift p-6 rounded-lg bg-[#17191C] border border-[#26292E] hover:border-[#FF5500]/60 transition-all duration-200 flex flex-col justify-between space-y-4 group`}
+                className={`reveal-on-scroll ${delays[idx % delays.length]} p-6 sm:p-7 rounded-lg bg-[#141619] border border-[#26292E] hover:border-[#FF5500]/50 transition-all duration-200 flex flex-col justify-between space-y-5 group`}
               >
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between text-[11px] font-tech">
-                    <span className="text-[#FF5500] uppercase font-bold tracking-wider">
+                <div className="space-y-3.5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-tech text-[#FF5500] uppercase font-bold tracking-widest">
                       {item.category}
                     </span>
-                    <HelpCircle className="w-4 h-4 text-[#8D949C] group-hover:text-[#FF5500] transition-colors" />
+                    <span className="font-tech text-xl font-black text-[#26292E] group-hover:text-[#FF5500]/40 transition-colors select-none">
+                      0{idx + 1}
+                    </span>
                   </div>
                   <h3 className="font-editorial font-bold text-lg sm:text-xl text-[#F4F2ED] leading-snug group-hover:text-white transition-colors">
                     {item.question}
@@ -100,33 +102,32 @@ export const TheProblemSection: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-[#26292E] flex items-center justify-between text-[11px] font-tech text-[#8D949C]">
-                  <span>Pregunta común</span>
-                  <span className="text-[#FF5500] font-medium">#{idx + 1}</span>
+                <div className="pt-3 border-t border-[#26292E]/60 flex items-center justify-between text-[11px] font-tech text-[#8D949C]">
+                  <span className="text-[10px] uppercase tracking-wider text-[#8D949C]/80">Fricción del hobby</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF5500]/60 group-hover:bg-[#FF5500] transition-colors" />
                 </div>
               </div>
             );
           })}
         </div>
 
-        {/* The Scattered Reality Banner */}
-        <div className="reveal-scale delay-150 rounded-xl bg-[#17191C]/70 border border-[#26292E] p-6 sm:p-8 lg:p-10 relative overflow-hidden">
+        {/* The Scattered Reality Banner - Clean Editorial Roster */}
+        <div className="reveal-scale delay-150 rounded-xl bg-[#141619] border border-[#26292E] p-6 sm:p-8 lg:p-10 relative overflow-hidden">
           <div className="max-w-4xl space-y-6">
-            <div className="inline-flex items-center gap-2 text-xs font-tech text-[#8D949C] uppercase tracking-wider font-semibold">
-              <Layers className="w-4 h-4 text-[#FF5500]" />
-              <span>La realidad del hobby</span>
-            </div>
+            <span className="text-xs font-tech text-[#FF5500] uppercase tracking-widest font-bold block">
+              La realidad actual del hobby en Colombia
+            </span>
 
             <h3 className="text-2xl sm:text-3xl font-editorial font-bold text-[#F4F2ED] leading-snug">
               Hoy, todo esto está repartido entre:
             </h3>
 
-            {/* Channels Chips */}
-            <div className="flex flex-wrap gap-2.5 pt-1">
+            {/* Channels Roster */}
+            <div className="flex flex-wrap gap-2 pt-1">
               {SCATTERED_CHANNELS.map((channel, i) => (
                 <span
                   key={i}
-                  className="px-3.5 py-1.5 rounded-full text-xs font-tech bg-[#101214] border border-[#26292E] text-[#8D949C] hover:text-[#F4F2ED] hover:border-[#8D949C]/60 transition-colors"
+                  className="px-3 py-1.5 rounded text-xs font-tech bg-[#0E1012] border border-[#26292E] text-[#C8C4BC]"
                 >
                   {channel}
                 </span>

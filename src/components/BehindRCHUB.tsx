@@ -165,15 +165,11 @@ export const BehindRCHUB: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 id="cta-whatsapp-behind"
-                className="animate-attention-wiggle w-full flex items-center justify-between p-3.5 rounded-md bg-[#101214] border border-[#26292E] hover:border-[#FF5500] group transition-all cursor-pointer shadow-sm"
+                className="w-full flex items-center justify-between p-3.5 rounded-md bg-[#101214] border border-[#26292E] hover:border-[#FF5500] group transition-all cursor-pointer shadow-sm"
               >
                 <div className="flex items-center gap-2.5">
-                  <div className="relative w-8 h-8 rounded-full bg-[#FF5500]/20 border border-[#FF5500]/40 flex items-center justify-center text-[#FF5500] group-hover:bg-[#FF5500] group-hover:text-white transition-colors">
+                  <div className="w-8 h-8 rounded-full bg-[#FF5500]/15 border border-[#FF5500]/30 flex items-center justify-center text-[#FF5500] group-hover:bg-[#FF5500] group-hover:text-white transition-colors">
                     <MessageCircle className="w-4 h-4" />
-                    <span className="absolute -top-0.5 -right-0.5 flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                    </span>
                   </div>
                   <div className="text-left">
                     <span className="block text-xs font-semibold text-[#F4F2ED] group-hover:text-white">

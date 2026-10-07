@@ -1,20 +1,32 @@
 import React from 'react';
-import { ArrowRight, Play, Compass, Zap, Flame, Gauge, Shield, Sparkles, Truck, Plane, Ship, Radio } from 'lucide-react';
+import { ArrowRight, Play } from 'lucide-react';
+import {
+  IconCrawler,
+  IconBuggy,
+  IconDrift,
+  IconTouring,
+  IconShortCourse,
+  IconMonster,
+  IconTrucks,
+  IconAviation,
+  IconMarine,
+  IconDrones,
+} from './icons/TechnicalRCIcons';
 
 const JOIN_WHATSAPP_URL =
   'https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Quiero%20ser%20parte%20de%20ZONA%20RC%20desde%20el%20comienzo%20y%20estar%20cuando%20salga.';
 
 const MODALITIES_DOCK = [
-  { id: 'crawler', name: 'Crawler', sub: 'Escala técnica', icon: Compass },
-  { id: 'buggy', name: 'Buggy / Truggy', sub: 'Competición', icon: Zap },
-  { id: 'drift', name: 'Drift', sub: 'On-road', icon: Flame },
-  { id: 'touring', name: 'Touring', sub: 'Asfalto', icon: Gauge },
-  { id: 'short-course', name: 'Short Course', sub: 'Off-road', icon: Shield },
-  { id: 'monster', name: 'Monster Truck', sub: 'Potencia', icon: Sparkles },
-  { id: 'trucks', name: 'Camiones', sub: 'y maquinaria pesada', icon: Truck },
-  { id: 'aviation', name: 'Aviones', sub: 'Aeromodelismo', icon: Plane },
-  { id: 'marine', name: 'Barcos', sub: 'Náutica RC', icon: Ship },
-  { id: 'drones', name: 'Drones / FPV', sub: 'Vuelo', icon: Radio },
+  { id: 'crawler', code: '01', name: 'Crawler', sub: 'Escala técnica', icon: IconCrawler },
+  { id: 'buggy', code: '02', name: 'Buggy / Truggy', sub: 'Competición', icon: IconBuggy },
+  { id: 'drift', code: '03', name: 'Drift', sub: 'On-road', icon: IconDrift },
+  { id: 'touring', code: '04', name: 'Touring', sub: 'Asfalto', icon: IconTouring },
+  { id: 'short-course', code: '05', name: 'Short Course', sub: 'Off-road', icon: IconShortCourse },
+  { id: 'monster', code: '06', name: 'Monster Truck', sub: 'Potencia', icon: IconMonster },
+  { id: 'trucks', code: '07', name: 'Camiones', sub: 'Escala pesada', icon: IconTrucks },
+  { id: 'aviation', code: '08', name: 'Aviones', sub: 'Aeromodelismo', icon: IconAviation },
+  { id: 'marine', code: '09', name: 'Barcos', sub: 'Náutica RC', icon: IconMarine },
+  { id: 'drones', code: '10', name: 'Drones / FPV', sub: 'Vuelo FPV', icon: IconDrones },
 ];
 
 interface HeroProps {
@@ -89,7 +101,7 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
       {/* Bottom Modalities Dock (Horizontal Strip) */}
       <div className="relative z-10 w-full border-t border-white/10 bg-black/70 backdrop-blur-md py-3.5 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4 overflow-x-auto scrollbar-none">
-          <div className="flex items-center gap-5 sm:gap-7 shrink-0">
+          <div className="flex items-center gap-6 sm:gap-7 shrink-0">
             {MODALITIES_DOCK.map((m) => {
               const Icon = m.icon;
               return (
@@ -99,13 +111,13 @@ export const Hero: React.FC<HeroProps> = ({ onDiscoverVision }) => {
                     const el = document.getElementById('modalidades');
                     if (el) el.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="flex items-center gap-2 text-left group hover:scale-105 transition-transform cursor-pointer shrink-0"
+                  className="flex items-center gap-2.5 text-left group transition-colors cursor-pointer shrink-0 py-1"
                 >
-                  <div className="w-7 h-7 rounded-md bg-[#17191C]/80 border border-[#26292E] flex items-center justify-center text-[#FF5500] group-hover:border-[#FF5500] transition-colors">
-                    <Icon className="w-3.5 h-3.5" />
+                  <div className="text-[#FF5500] group-hover:text-white transition-colors">
+                    <Icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   </div>
                   <div className="leading-tight">
-                    <span className="block text-[11px] font-tech font-bold text-[#F4F2ED] group-hover:text-[#FF5500] transition-colors truncate">
+                    <span className="block text-[11px] font-tech font-bold uppercase tracking-wider text-[#F4F2ED] group-hover:text-[#FF5500] transition-colors truncate">
                       {m.name}
                     </span>
                     <span className="block text-[9px] font-tech text-[#8D949C] truncate">

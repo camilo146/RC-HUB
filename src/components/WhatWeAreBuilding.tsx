@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, MapPin, Wrench, ShoppingBag, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Users, MapPin, Wrench, ShoppingBag } from 'lucide-react';
 
 const FOUR_PILLARS = [
   {
@@ -98,45 +98,33 @@ export const WhatWeAreBuilding: React.FC = () => {
         {/* 4 Pillars Grid (2x2 on desktop) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {FOUR_PILLARS.map((pillar, idx) => {
-            const Icon = pillar.icon;
             const delays = ['delay-75', 'delay-150', 'delay-225', 'delay-300'];
             return (
               <div
                 key={pillar.number}
-                className={`reveal-on-scroll ${delays[idx % delays.length]} hover-lift rounded-xl bg-[#101214] border border-[#26292E] hover:border-[#8D949C]/40 transition-all duration-200 overflow-hidden flex flex-col justify-between`}
+                className={`reveal-on-scroll ${delays[idx % delays.length]} rounded-xl bg-[#141619] border border-[#26292E] hover:border-[#8D949C]/40 transition-all duration-200 overflow-hidden flex flex-col justify-between`}
               >
-                {/* Image header with conceptual badge */}
-                <div className="relative aspect-[16/9] bg-[#17191C] overflow-hidden border-b border-[#26292E]">
+                {/* Image preview with discreet editorial tag */}
+                <div className="relative aspect-[16/9] bg-[#0E1012] overflow-hidden border-b border-[#26292E]">
                   <img
                     src={pillar.image}
                     alt={pillar.imageAlt}
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#101214] via-[#101214]/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#141619] via-[#141619]/25 to-transparent" />
 
-                  {/* Pillar number badge */}
-                  <div className="absolute top-3 left-3 z-10 flex items-center gap-2">
-                    <div className="px-2.5 py-1 rounded bg-[#101214]/90 backdrop-blur-sm border border-[#26292E] flex items-center gap-2">
-                      <Icon className="w-3.5 h-3.5 text-[#FF5500]" />
-                      <span className="text-[11px] font-tech text-[#F4F2ED] font-bold">
-                        Pilar {pillar.number}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Concept Badge */}
-                  <div className="absolute top-3 right-3 z-10">
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#101214]/85 backdrop-blur-sm border border-[#26292E] text-[9px] font-tech text-[#FF5500] font-semibold uppercase tracking-wider">
-                      <Sparkles className="w-2.5 h-2.5 text-[#FF5500]" />
-                      <span>CONCEPTO</span>
+                  {/* Clean Technical Tag */}
+                  <div className="absolute top-3 left-3 z-10">
+                    <span className="px-2.5 py-1 rounded text-[11px] font-tech text-[#F4F2ED] bg-[#0E1012]/90 border border-[#26292E] font-bold tracking-wider">
+                      {pillar.number} · {pillar.title}
                     </span>
                   </div>
 
-                  {/* Highlight tag over image */}
-                  <div className="absolute bottom-3 left-4 right-4 z-10">
-                    <span className="text-[11px] font-tech text-[#C8C4BC] bg-[#101214]/80 backdrop-blur-sm px-2.5 py-1 rounded border border-[#26292E]/60 inline-block truncate max-w-full">
-                      {pillar.highlight}
+                  {/* Concept Tag */}
+                  <div className="absolute top-3 right-3 z-10">
+                    <span className="px-2 py-0.5 rounded text-[9px] font-tech text-[#8D949C] bg-[#0E1012]/90 border border-[#26292E] uppercase tracking-wider font-semibold">
+                      CONCEPTO
                     </span>
                   </div>
                 </div>
@@ -155,14 +143,20 @@ export const WhatWeAreBuilding: React.FC = () => {
                     </p>
                   </div>
 
-                  {/* Benefits bullet points */}
-                  <div className="pt-4 border-t border-[#26292E] space-y-2.5 text-xs text-[#8D949C]">
+                  {/* Benefits bullet points with clean typography */}
+                  <div className="pt-4 border-t border-[#26292E] space-y-2 text-xs text-[#C8C4BC]">
                     {pillar.benefits.map((benefit, i) => (
-                      <div key={i} className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#FF5500] shrink-0 mt-0.5" />
-                        <span className="leading-snug text-[#C8C4BC]">{benefit}</span>
+                      <div key={i} className="flex items-start gap-2">
+                        <span className="text-[#FF5500] font-tech font-bold select-none leading-none mt-0.5">—</span>
+                        <span className="leading-snug">{benefit}</span>
                       </div>
                     ))}
+                  </div>
+
+                  {/* Highlight meta */}
+                  <div className="pt-3 border-t border-[#26292E]/60 text-[11px] font-tech text-[#8D949C]">
+                    <span className="text-[#FF5500] font-bold uppercase tracking-wider text-[10px] mr-2">Ecosistema:</span>
+                    <span className="text-[#A0A6B2]">{pillar.highlight}</span>
                   </div>
                 </div>
               </div>

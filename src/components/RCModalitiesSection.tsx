@@ -1,5 +1,16 @@
 import React from 'react';
-import { Compass, Zap, Flame, Gauge, Shield, Truck, Plane, Ship, Radio, Sparkles } from 'lucide-react';
+import {
+  IconCrawler,
+  IconBuggy,
+  IconDrift,
+  IconTouring,
+  IconShortCourse,
+  IconMonster,
+  IconTrucks,
+  IconAviation,
+  IconMarine,
+  IconDrones,
+} from './icons/TechnicalRCIcons';
 
 interface Modality {
   id: string;
@@ -19,7 +30,7 @@ const MODALITIES: Modality[] = [
     description: 'Bloqueos de diferencial, desmultiplicación, rutas en piedra, barro y fidelidad visual a escala real.',
     scales: '1/10 · 1/24 · 1/18 · 1/6',
     focus: 'Rutas técnicas y accesorios de escala',
-    icon: Compass,
+    icon: IconCrawler,
   },
   {
     id: 'buggy',
@@ -28,7 +39,7 @@ const MODALITIES: Modality[] = [
     description: 'Circuitos de arcilla compactada, saltos gigantes, amortiguadores big bore y velocidad pura en pista.',
     scales: '1/8 Nitro/Eléctrico · 1/10',
     focus: 'Setups de carrera y repuestos de competición',
-    icon: Zap,
+    icon: IconBuggy,
   },
   {
     id: 'drift',
@@ -37,7 +48,7 @@ const MODALITIES: Modality[] = [
     description: 'Chasis balanceados para derrape controlado en pista pulida, giroscopios, carrocerías detalladas y luces LED.',
     scales: '1/10',
     focus: 'Pistas indoor y piezas de alta precisión',
-    icon: Flame,
+    icon: IconDrift,
   },
   {
     id: 'touring',
@@ -46,7 +57,7 @@ const MODALITIES: Modality[] = [
     description: 'Chasis de fibra de carbono, neumáticos de espuma o goma con aditivo, paso por curva y aceleración instantánea.',
     scales: '1/10 · 1/8 · 1/7',
     focus: 'Competición en asfalto y telemetría',
-    icon: Gauge,
+    icon: IconTouring,
   },
   {
     id: 'short-course',
@@ -55,7 +66,7 @@ const MODALITIES: Modality[] = [
     description: 'Carrocerías cerradas inspiradas en trofeos Baja, carreras rueda a rueda en tierra y resistencia ante impactos.',
     scales: '1/10 · 1/7 4WD/2WD',
     focus: 'Bashing y válidas de contacto',
-    icon: Shield,
+    icon: IconShortCourse,
   },
   {
     id: 'monster',
@@ -64,7 +75,7 @@ const MODALITIES: Modality[] = [
     description: 'Electrónica 4S/6S/8S capaz de superar los 100 km/h, llantas sobredimensionadas y chasis reforzados.',
     scales: '1/8 · 1/5 · 1/10',
     focus: 'Combos brushless, baterías LiPo y piñonería',
-    icon: Zap,
+    icon: IconMonster,
   },
   {
     id: 'trucks',
@@ -73,7 +84,7 @@ const MODALITIES: Modality[] = [
     description: 'Tractocamiones 6x4, volquetas hidráulicas, excavadoras funcionales y sonido real con módulos de luces.',
     scales: '1/14 · 1/16',
     focus: 'Sistemas hidráulicos y cajas de cambio',
-    icon: Truck,
+    icon: IconTrucks,
   },
   {
     id: 'aviation',
@@ -82,7 +93,7 @@ const MODALITIES: Modality[] = [
     description: 'Entrenadores de ala alta, cazas a reacción EDF, aviones 3D acrobáticos y planeadores térmicos.',
     scales: 'Foam · Balsa · Turbina',
     focus: 'Servos, receptores y pistas de despegue',
-    icon: Plane,
+    icon: IconAviation,
   },
   {
     id: 'marine',
@@ -91,7 +102,7 @@ const MODALITIES: Modality[] = [
     description: 'Lanchas deep-V refrigeradas por agua, catamaranes de alta velocidad y veleros teledirigidos.',
     scales: 'Mono · Cat · Veleros',
     focus: 'Sellado estanco y lagos autorizados',
-    icon: Ship,
+    icon: IconMarine,
   },
   {
     id: 'drones',
@@ -100,7 +111,7 @@ const MODALITIES: Modality[] = [
     description: 'Quads de carreras 5", drones de freestyle, micro-whoops indoor y sistemas de video digital HD.',
     scales: '5" · 3.5" · Tiny Whoop',
     focus: 'Electrónica, VTX, hélices y spots de vuelo',
-    icon: Radio,
+    icon: IconDrones,
   },
 ];
 
@@ -136,7 +147,7 @@ export const RCModalitiesSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Modalities Grid */}
+        {/* Modalities Grid - Technical Motorsport Classification */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {MODALITIES.map((mod, idx) => {
             const Icon = mod.icon;
@@ -144,28 +155,22 @@ export const RCModalitiesSection: React.FC = () => {
             return (
               <div
                 key={mod.id}
-                className={`reveal-on-scroll ${delays[idx % delays.length]} hover-lift p-6 rounded-xl bg-[#17191C] border border-[#26292E] hover:border-[#FF5500]/60 transition-all duration-200 flex flex-col justify-between space-y-4 group relative overflow-hidden`}
+                className={`reveal-on-scroll ${delays[idx % delays.length]} p-6 rounded-lg bg-[#141619] border border-[#26292E] hover:border-[#FF5500]/50 transition-all duration-200 flex flex-col justify-between space-y-4 group relative overflow-hidden`}
               >
-                {/* Subtle top indicator line on hover */}
-                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FF5500] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="font-tech font-bold text-[11px] text-[#FF5500] tracking-widest">
-                        #{String(idx + 1).padStart(2, '0')}
-                      </span>
-                      <span className="text-[10px] font-tech text-[#8D949C] uppercase tracking-wider font-semibold">
-                        {mod.category}
-                      </span>
-                    </div>
-                    <span className="text-[10px] font-tech text-[#8D949C] bg-[#101214] px-2 py-0.5 rounded border border-[#26292E]">
+                <div className="space-y-3.5">
+                  {/* Technical Header */}
+                  <div className="flex items-center justify-between pb-2.5 border-b border-[#26292E]/60 text-[10px] font-tech">
+                    <span className="text-[#FF5500] font-bold tracking-widest uppercase">
+                      {String(idx + 1).padStart(2, '0')} // {mod.category}
+                    </span>
+                    <span className="text-[#8D949C] bg-[#0E1012] px-2 py-0.5 rounded border border-[#26292E]/80">
                       {mod.scales}
                     </span>
                   </div>
 
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-[#101214] border border-[#26292E] flex items-center justify-center text-[#FF5500] group-hover:border-[#FF5500] group-hover:bg-[#FF5500]/10 transition-colors">
+                  {/* Discipline Title with Technical SVG Icon */}
+                  <div className="flex items-center gap-3 pt-0.5">
+                    <div className="text-[#FF5500] group-hover:scale-110 transition-transform shrink-0">
                       <Icon className="w-5 h-5" />
                     </div>
                     <h3 className="font-editorial font-bold text-lg text-[#F4F2ED] group-hover:text-white transition-colors">
@@ -178,9 +183,10 @@ export const RCModalitiesSection: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-[#26292E] flex items-center justify-between text-[11px] font-tech">
-                  <span className="text-[#8D949C]">Enfoque en ZONA RC:</span>
-                  <span className="text-[#F4F2ED] truncate ml-2 font-medium">{mod.focus}</span>
+                {/* Technical Focus Spec Footer */}
+                <div className="pt-3 border-t border-[#26292E]/60 flex items-center justify-between text-[11px] font-tech">
+                  <span className="text-[#8D949C] text-[10px] uppercase tracking-wider">Enfoque:</span>
+                  <span className="text-[#C8C4BC] truncate ml-2 font-medium">{mod.focus}</span>
                 </div>
               </div>
             );
@@ -188,9 +194,9 @@ export const RCModalitiesSection: React.FC = () => {
         </div>
 
         {/* Bottom Inclusive Callout */}
-        <div className="reveal-scale delay-150 mt-10 p-5 rounded-lg bg-[#17191C]/50 border border-[#26292E] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs font-tech text-[#8D949C]">
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-[#FF5500] shrink-0" />
+        <div className="reveal-scale delay-150 mt-10 p-5 rounded-lg bg-[#141619] border border-[#26292E] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs font-tech text-[#8D949C]">
+          <div className="flex items-center gap-2.5">
+            <span className="w-2 h-2 rounded-full bg-[#FF5500] shrink-0" />
             <span>
               ¿Practicas otra modalidad como tanques de combate, motos RC o proyectos artesanales? Tu voz también cuenta para incluirlos.
             </span>

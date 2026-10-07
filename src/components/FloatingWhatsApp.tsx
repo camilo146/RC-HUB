@@ -13,7 +13,7 @@ export const FloatingWhatsApp: React.FC = () => {
         rel="noopener noreferrer"
         aria-label="Hablar con Camilo por WhatsApp"
         id="floating-whatsapp-btn"
-        className="animate-attention-wiggle flex items-center gap-2.5 p-3 sm:px-4 sm:py-2.5 rounded-full bg-[#17191C]/95 hover:bg-[#101214] text-[#F4F2ED] border border-[#26292E] hover:border-[#25D366] shadow-2xl backdrop-blur-md transition-all duration-200 cursor-pointer group hover:scale-105 active:scale-95"
+        className="flex items-center gap-2.5 p-3 sm:px-4 sm:py-2.5 rounded-full bg-[#17191C]/95 hover:bg-[#101214] text-[#F4F2ED] border border-[#26292E] hover:border-[#25D366] shadow-2xl backdrop-blur-md transition-all duration-200 cursor-pointer group hover:scale-105 active:scale-95"
       >
         {/* Pulsing online indicator */}
         <span className="relative flex h-2.5 w-2.5">
