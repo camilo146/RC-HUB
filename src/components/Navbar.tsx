@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X, Users, ArrowRight } from 'lucide-react';
 import { ZonaRcLogo } from './ZonaRcLogo';
 
 interface NavbarProps {
@@ -12,7 +12,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 30);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -25,14 +25,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-200 ${
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#101214]/95 backdrop-blur-md border-b border-[#26292E] shadow-lg shadow-black/40'
-          : 'bg-[#17191C]/80 backdrop-blur-sm border-b border-[#26292E]/60'
+          ? 'bg-[#0E1012]/95 backdrop-blur-md border-b border-[#26292E] shadow-2xl shadow-black/60 py-2 sm:py-3'
+          : 'bg-gradient-to-b from-black/90 via-black/45 to-transparent border-b border-white/5 py-3 sm:py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
           <a
             href="#"
@@ -47,61 +47,62 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-7">
             <button
               onClick={() => handleLinkClick('el-problema')}
-              className="text-xs uppercase font-tech tracking-wider text-[#8D949C] hover:text-[#F4F2ED] transition-colors cursor-pointer"
+              className="text-xs uppercase font-tech tracking-wider text-[#A0A6B2] hover:text-white transition-colors cursor-pointer"
             >
               ¿Por qué ZONA RC?
             </button>
             <button
               onClick={() => handleLinkClick('que-construimos')}
-              className="text-xs uppercase font-tech tracking-wider text-[#8D949C] hover:text-[#F4F2ED] transition-colors cursor-pointer"
+              className="text-xs uppercase font-tech tracking-wider text-[#A0A6B2] hover:text-white transition-colors cursor-pointer"
             >
               Los 4 pilares
             </button>
             <button
               onClick={() => handleLinkClick('modalidades')}
-              className="text-xs uppercase font-tech tracking-wider text-[#8D949C] hover:text-[#F4F2ED] transition-colors cursor-pointer"
+              className="text-xs uppercase font-tech tracking-wider text-[#A0A6B2] hover:text-white transition-colors cursor-pointer"
             >
               Modalidades
             </button>
             <button
               onClick={() => handleLinkClick('vista-previa')}
-              className="text-xs uppercase font-tech tracking-wider text-[#8D949C] hover:text-[#F4F2ED] transition-colors cursor-pointer"
+              className="text-xs uppercase font-tech tracking-wider text-[#A0A6B2] hover:text-white transition-colors cursor-pointer"
             >
-              Prototipo
+              Vista preliminar
             </button>
             <button
               onClick={() => handleLinkClick('hoja-de-ruta')}
-              className="text-xs uppercase font-tech tracking-wider text-[#8D949C] hover:text-[#F4F2ED] transition-colors cursor-pointer"
+              className="text-xs uppercase font-tech tracking-wider text-[#A0A6B2] hover:text-white transition-colors cursor-pointer"
             >
               Hoja de ruta
             </button>
             <button
               onClick={() => handleLinkClick('detras-de-rchub')}
-              className="text-xs uppercase font-tech tracking-wider text-[#8D949C] hover:text-[#F4F2ED] transition-colors cursor-pointer"
+              className="text-xs uppercase font-tech tracking-wider text-[#A0A6B2] hover:text-white transition-colors cursor-pointer"
             >
               El creador
             </button>
             <button
               onClick={() => handleLinkClick('contacto')}
-              className="text-xs uppercase font-tech tracking-wider text-[#C65D2E] hover:text-white font-bold transition-colors cursor-pointer"
+              className="text-xs uppercase font-tech tracking-wider text-[#FF5500] hover:text-white font-bold transition-colors cursor-pointer"
             >
               Participa
             </button>
           </nav>
 
-          {/* Desktop Right Action: Participa */}
+          {/* Desktop Right Action: Únete a la comunidad */}
           <div className="hidden sm:flex items-center gap-4">
-            <button
-              onClick={() => handleLinkClick('contacto')}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-md text-xs font-tech font-bold uppercase tracking-wider text-[#F4F2ED] bg-[#17191C] border border-[#26292E] hover:border-[#C65D2E] hover:text-white transition-all duration-150 cursor-pointer group"
+            <a
+              href="https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Quiero%20unirme%20a%20la%20comunidad%20ZONA%20RC."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-tech font-bold uppercase tracking-wider text-white bg-gradient-to-r from-[#FF5500] to-[#E64A19] hover:from-[#FF6A1A] hover:to-[#FF5500] shadow-lg shadow-orange-950/40 hover:scale-105 active:scale-95 transition-all cursor-pointer"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Quiero ser parte</span>
-              <ArrowRight className="w-3.5 h-3.5 text-[#C65D2E] group-hover:translate-x-0.5 transition-transform" />
-            </button>
+              <Users className="w-3.5 h-3.5" />
+              <span>ÚNETE A LA COMUNIDAD</span>
+            </a>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -159,7 +160,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             </button>
             <button
               onClick={() => handleLinkClick('contacto')}
-              className="px-3 py-2 text-left text-sm font-semibold text-[#C65D2E] hover:text-white hover:bg-[#17191C] rounded-md transition-colors"
+              className="px-3 py-2 text-left text-sm font-semibold text-[#FF5500] hover:text-white hover:bg-[#17191C] rounded-md transition-colors"
             >
               Participa
             </button>
@@ -168,7 +169,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
           <div className="pt-3 border-t border-[#26292E]">
             <button
               onClick={() => handleLinkClick('contacto')}
-              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-md text-xs font-tech font-bold uppercase tracking-wider text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-colors"
+              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full text-xs font-tech font-bold uppercase tracking-wider text-white bg-[#FF5500] hover:bg-[#E64A19] transition-colors"
             >
               <span>Quiero ser parte</span>
               <ArrowRight className="w-3.5 h-3.5" />

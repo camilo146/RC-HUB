@@ -43,7 +43,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
         <div className="absolute inset-0 bg-[#101214]/50" />
         {/* Subtle AI background note */}
         <div className="absolute bottom-3 left-4 z-10 hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#101214]/80 backdrop-blur-sm border border-[#26292E]/60 text-[10px] font-tech text-[#8D949C]">
-          <Sparkles className="w-3 h-3 text-[#C65D2E]" />
+          <Sparkles className="w-3 h-3 text-[#FF5500]" />
           <span>Fondo ilustrativo generado con IA</span>
         </div>
       </div>
@@ -58,13 +58,13 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                 alt="Bandera Colombia pincelazo"
                 className="h-3.5 w-6 object-contain -rotate-3"
               />
-              <span className="text-[11px] font-tech text-[#C65D2E] uppercase tracking-widest font-bold">
+              <span className="text-[11px] font-tech text-[#FF5500] uppercase tracking-widest font-bold">
                 Construyamos juntos · Colombia
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#F4F2ED] leading-[1.15] tracking-tight">
-              ZONA RC empieza con la comunidad.
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display italic font-black uppercase text-[#F4F2ED] leading-[1.05] tracking-tight">
+              ZONA RC empieza <span className="text-[#FF5500]">con la comunidad.</span>
             </h2>
 
             <div className="space-y-3 text-sm sm:text-base text-[#8D949C] leading-relaxed max-w-2xl font-normal">
@@ -84,7 +84,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                 target="_blank"
                 rel="noopener noreferrer"
                 id="cta-build-waitlist"
-                className="animate-attention-wiggle inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-md text-sm font-semibold text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-all duration-150 cursor-pointer shadow-lg hover:shadow-[#C65D2E]/25 text-center"
+                className="animate-attention-wiggle inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full text-xs font-tech font-bold uppercase tracking-wider text-white bg-[#FF5500] hover:bg-[#E64A19] transition-all duration-150 cursor-pointer shadow-xl shadow-orange-900/40 hover:scale-105 active:scale-95 text-center"
               >
                 <span className="relative flex h-2.5 w-2.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -100,9 +100,9 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                 target="_blank"
                 rel="noopener noreferrer"
                 id="cta-build-talk"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-md text-sm font-medium text-[#F4F2ED] bg-[#17191C]/90 hover:bg-[#17191C] border border-[#26292E] hover:border-[#8D949C] transition-colors cursor-pointer text-center"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-xs font-tech font-bold uppercase tracking-wider text-white bg-black/60 hover:bg-black/85 border border-white/20 hover:border-white/40 backdrop-blur-md transition-all cursor-pointer text-center"
               >
-                <MessageCircle className="w-4 h-4 text-[#C65D2E]" />
+                <MessageCircle className="w-4 h-4 text-[#FF5500]" />
                 <span>HABLAR CON CAMILO</span>
               </a>
 
@@ -111,7 +111,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                 onClick={() => setIsFormOpen(true)}
                 className="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-md text-xs font-tech text-[#8D949C] hover:text-[#F4F2ED] border border-dashed border-[#26292E] hover:border-[#8D949C] transition-colors cursor-pointer text-center"
               >
-                <ClipboardList className="w-4 h-4 text-[#C65D2E]" />
+                <ClipboardList className="w-4 h-4 text-[#FF5500]" />
                 <span>Déjanos saber qué debería tener ZONA RC</span>
               </button>
             </div>
@@ -127,7 +127,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
               <div className="flex items-center justify-between">
                 <ZonaRcLogo size="md" showTricolor={true} />
 
-                <span className="px-2 py-0.5 rounded text-[10px] font-tech uppercase font-bold text-[#C65D2E] bg-[#C65D2E]/10 border border-[#C65D2E]/30">
+                <span className="px-2 py-0.5 rounded text-[10px] font-tech uppercase font-bold text-[#FF5500] bg-[#FF5500]/10 border border-[#FF5500]/30">
                   En desarrollo
                 </span>
               </div>
@@ -146,7 +146,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                   href={WAITLIST_WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-md font-tech font-bold text-xs uppercase tracking-wider text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-colors"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-md font-tech font-bold text-xs uppercase tracking-wider text-white bg-[#FF5500] hover:bg-[#E64A19] transition-colors"
                 >
                   <span>QUIERO SER PARTE</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -173,7 +173,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
           >
             <div className="flex items-center justify-between pb-3 border-b border-[#26292E]">
               <div>
-                <span className="text-[10px] font-tech text-[#C65D2E] uppercase font-bold tracking-wider block">
+                <span className="text-[10px] font-tech text-[#FF5500] uppercase font-bold tracking-wider block">
                   Participación comunitaria
                 </span>
                 <h3 className="font-editorial font-bold text-xl text-[#F4F2ED]">
@@ -204,7 +204,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Ej: Camilo"
-                    className="w-full px-3.5 py-2.5 bg-[#17191C] border border-[#26292E] rounded-md text-[#F4F2ED] focus:outline-none focus:border-[#C65D2E]"
+                    className="w-full px-3.5 py-2.5 bg-[#17191C] border border-[#26292E] rounded-md text-[#F4F2ED] focus:outline-none focus:border-[#FF5500]"
                   />
                 </div>
 
@@ -218,7 +218,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
                     placeholder="Bucaramanga, Bogotá, Medellín..."
-                    className="w-full px-3.5 py-2.5 bg-[#17191C] border border-[#26292E] rounded-md text-[#F4F2ED] focus:outline-none focus:border-[#C65D2E]"
+                    className="w-full px-3.5 py-2.5 bg-[#17191C] border border-[#26292E] rounded-md text-[#F4F2ED] focus:outline-none focus:border-[#FF5500]"
                   />
                 </div>
               </div>
@@ -231,7 +231,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                   <select
                     value={role}
                     onChange={(e) => setRole(e.target.value)}
-                    className="w-full px-3.5 py-2.5 bg-[#17191C] border border-[#26292E] rounded-md text-[#F4F2ED] focus:outline-none focus:border-[#C65D2E]"
+                    className="w-full px-3.5 py-2.5 bg-[#17191C] border border-[#26292E] rounded-md text-[#F4F2ED] focus:outline-none focus:border-[#FF5500]"
                   >
                     <option value="Crawler & Escala">Crawler & Escala técnica</option>
                     <option value="Buggy & Truggy">Buggy & Truggy</option>
@@ -253,7 +253,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="piloto@correo.com"
-                    className="w-full px-3.5 py-2.5 bg-[#17191C] border border-[#26292E] rounded-md text-[#F4F2ED] focus:outline-none focus:border-[#C65D2E]"
+                    className="w-full px-3.5 py-2.5 bg-[#17191C] border border-[#26292E] rounded-md text-[#F4F2ED] focus:outline-none focus:border-[#FF5500]"
                   />
                 </div>
               </div>
@@ -265,7 +265,7 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                 <select
                   value={interest}
                   onChange={(e) => setInterest(e.target.value)}
-                  className="w-full px-3.5 py-2.5 bg-[#17191C] border border-[#26292E] rounded-md text-[#F4F2ED] focus:outline-none focus:border-[#C65D2E]"
+                  className="w-full px-3.5 py-2.5 bg-[#17191C] border border-[#26292E] rounded-md text-[#F4F2ED] focus:outline-none focus:border-[#FF5500]"
                 >
                   <option value="Compra y venta especializada">
                     Compra y venta especializada (repuestos y carros verificables)
@@ -291,13 +291,13 @@ ${comments ? `- Mi opinión / necesidad: ${comments}` : ''}`;
                   value={comments}
                   onChange={(e) => setComments(e.target.value)}
                   placeholder="Cuéntanos qué te gustaría que tuviera ZONA RC..."
-                  className="w-full px-3.5 py-2.5 bg-[#17191C] border border-[#26292E] rounded-md text-[#F4F2ED] focus:outline-none focus:border-[#C65D2E] resize-none"
+                  className="w-full px-3.5 py-2.5 bg-[#17191C] border border-[#26292E] rounded-md text-[#F4F2ED] focus:outline-none focus:border-[#FF5500] resize-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-md font-semibold text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-colors cursor-pointer text-xs uppercase tracking-wider"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-md font-semibold text-white bg-[#FF5500] hover:bg-[#E64A19] transition-colors cursor-pointer text-xs uppercase tracking-wider"
               >
                 <Send className="w-3.5 h-3.5" />
                 <span>Enviar y hablar con Camilo por WhatsApp</span>

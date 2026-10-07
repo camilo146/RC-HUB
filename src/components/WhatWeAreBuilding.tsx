@@ -80,15 +80,15 @@ export const WhatWeAreBuilding: React.FC = () => {
               alt="Bandera Colombia pincelazo"
               className="h-4 w-7 object-contain -rotate-3"
             />
-            <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-bold">
+            <span className="text-xs font-tech text-[#FF5500] uppercase tracking-widest font-bold">
               Los 4 pilares de ZONA RC COL
             </span>
-            <span className="font-handwritten text-xl text-[#C65D2E] -rotate-1 select-none">
+            <span className="font-handwritten text-xl text-[#FF5500] -rotate-1 select-none">
               «Pensado para conectar la comunidad»
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#F4F2ED] leading-[1.15] tracking-tight">
-            Cuatro formas de conectar la comunidad RC.
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display italic font-black uppercase text-[#F4F2ED] leading-[1.05] tracking-tight">
+            Cuatro formas de <span className="text-[#FF5500]">conectar la comunidad</span> RC.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#8D949C] leading-relaxed">
             Personas, lugares, proyectos y oportunidades para una comunidad RC que hoy está repartida entre muchos lugares.
@@ -118,7 +118,7 @@ export const WhatWeAreBuilding: React.FC = () => {
                   {/* Pillar number badge */}
                   <div className="absolute top-3 left-3 z-10 flex items-center gap-2">
                     <div className="px-2.5 py-1 rounded bg-[#101214]/90 backdrop-blur-sm border border-[#26292E] flex items-center gap-2">
-                      <Icon className="w-3.5 h-3.5 text-[#C65D2E]" />
+                      <Icon className="w-3.5 h-3.5 text-[#FF5500]" />
                       <span className="text-[11px] font-tech text-[#F4F2ED] font-bold">
                         Pilar {pillar.number}
                       </span>
@@ -127,8 +127,8 @@ export const WhatWeAreBuilding: React.FC = () => {
 
                   {/* Concept Badge */}
                   <div className="absolute top-3 right-3 z-10">
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#101214]/85 backdrop-blur-sm border border-[#26292E] text-[9px] font-tech text-[#C65D2E] font-semibold uppercase tracking-wider">
-                      <Sparkles className="w-2.5 h-2.5 text-[#C65D2E]" />
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#101214]/85 backdrop-blur-sm border border-[#26292E] text-[9px] font-tech text-[#FF5500] font-semibold uppercase tracking-wider">
+                      <Sparkles className="w-2.5 h-2.5 text-[#FF5500]" />
                       <span>CONCEPTO</span>
                     </span>
                   </div>
@@ -147,7 +147,7 @@ export const WhatWeAreBuilding: React.FC = () => {
                     <h3 className="text-2xl font-editorial font-bold text-[#F4F2ED]">
                       {pillar.title}
                     </h3>
-                    <p className="text-sm font-tech text-[#C65D2E] font-semibold">
+                    <p className="text-sm font-tech text-[#FF5500] font-semibold">
                       {pillar.tagline}
                     </p>
                     <p className="text-sm text-[#8D949C] leading-relaxed">
@@ -159,7 +159,7 @@ export const WhatWeAreBuilding: React.FC = () => {
                   <div className="pt-4 border-t border-[#26292E] space-y-2.5 text-xs text-[#8D949C]">
                     {pillar.benefits.map((benefit, i) => (
                       <div key={i} className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#C65D2E] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-[#FF5500] shrink-0 mt-0.5" />
                         <span className="leading-snug text-[#C8C4BC]">{benefit}</span>
                       </div>
                     ))}

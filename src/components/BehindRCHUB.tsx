@@ -8,9 +8,14 @@ export const BehindRCHUB: React.FC = () => {
   return (
     <section
       id="detras-de-rchub"
-      className="py-20 lg:py-28 bg-[#101214] text-[#F4F2ED] border-b border-[#26292E]"
+      className="relative overflow-hidden py-20 lg:py-28 bg-[#0E1012] text-[#F4F2ED] border-b border-[#26292E]"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Subtle workshop background */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <img src="/images/camilo-mn82-workshop.jpg" alt="" aria-hidden="true" className="w-full h-full object-cover opacity-[0.10]" loading="lazy" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0E1012] via-[#0E1012]/80 to-[#0E1012]" />
+      </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Tag */}
         <div className="reveal-on-scroll inline-flex items-center gap-2.5 px-3 py-1 rounded bg-[#17191C] border border-[#26292E] mb-8">
           <img
@@ -18,7 +23,7 @@ export const BehindRCHUB: React.FC = () => {
             alt="Bandera Colombia pincelazo"
             className="h-3.5 w-6 object-contain -rotate-3"
           />
-          <span className="text-[11px] font-tech text-[#C65D2E] uppercase tracking-widest font-bold">
+          <span className="text-[11px] font-tech text-[#FF5500] uppercase tracking-widest font-bold">
             Detrás de ZONA RC <span className="text-[#8D949C] text-[10px]">COL</span>
           </span>
         </div>
@@ -50,7 +55,7 @@ export const BehindRCHUB: React.FC = () => {
                   </div>
                   <div className="pt-1.5 px-1 text-[9px] font-tech text-[#8D949C] leading-tight">
                     <span className="block font-bold text-[#F4F2ED] truncate">Toyota LC79 · MN82</span>
-                    <span className="text-[#C65D2E]">Mi crawler con llantas trail</span>
+                    <span className="text-[#FF5500]">Mi crawler con llantas trail</span>
                   </div>
                 </div>
 
@@ -58,13 +63,13 @@ export const BehindRCHUB: React.FC = () => {
                 <div className="absolute bottom-5 left-5 sm:left-6 z-10 select-none">
                   <div className="inline-block transform -rotate-1">
                     <p className="font-handwritten text-3xl sm:text-4xl text-[#F4F2ED] leading-[1.1] drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)]">
-                      <span className="text-[#C65D2E]">RC</span><br />
+                      <span className="text-[#FF5500]">RC</span><br />
                       es más que<br />
                       un hobby.
                     </p>
                     {/* Organic hand-drawn orange underline */}
                     <svg
-                      className="w-36 sm:w-44 h-4 text-[#C65D2E] mt-1 -ml-1 drop-shadow-sm"
+                      className="w-36 sm:w-44 h-4 text-[#FF5500] mt-1 -ml-1 drop-shadow-sm"
                       viewBox="0 0 160 16"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +97,7 @@ export const BehindRCHUB: React.FC = () => {
                     alt="Colombia"
                     className="h-3.5 w-6 object-contain -rotate-3"
                   />
-                  <span className="text-[10px] font-tech text-[#C65D2E] font-bold uppercase tracking-wider">
+                  <span className="text-[10px] font-tech text-[#FF5500] font-bold uppercase tracking-wider">
                     CREADOR DE ZONA RC COL
                   </span>
                 </div>
@@ -103,11 +108,11 @@ export const BehindRCHUB: React.FC = () => {
           {/* Middle Column (4 cols): Human & Authentic Presentation Copy */}
           <div className="reveal-on-scroll delay-150 lg:col-span-4 flex flex-col justify-between space-y-6">
             <div className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-editorial font-bold text-[#F4F2ED] leading-tight tracking-tight">
-                Hola, soy Camilo López Romero.
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display italic font-black uppercase text-[#F4F2ED] leading-tight tracking-tight">
+                Hola, soy <span className="text-[#FF5500]">Camilo López Romero.</span>
               </h2>
 
-              <p className="text-xs sm:text-sm font-tech text-[#C65D2E] uppercase tracking-wider font-semibold">
+              <p className="text-xs sm:text-sm font-tech text-[#FF5500] uppercase tracking-wider font-semibold">
                 Creador de ZONA RC COL.
               </p>
 
@@ -129,7 +134,7 @@ export const BehindRCHUB: React.FC = () => {
                   <p className="font-semibold text-xs text-[#F4F2ED]">
                     Ya sea que lleves años en esto o apenas estés empezando como yo:
                   </p>
-                  <p className="font-editorial text-base text-[#C65D2E] italic">
+                  <p className="font-editorial text-base text-[#FF5500] italic">
                     Conversemos directamente y construyamos ZONA RC juntos.
                   </p>
                 </div>
@@ -160,10 +165,10 @@ export const BehindRCHUB: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 id="cta-whatsapp-behind"
-                className="animate-attention-wiggle w-full flex items-center justify-between p-3.5 rounded-md bg-[#101214] border border-[#26292E] hover:border-[#C65D2E] group transition-all cursor-pointer shadow-sm"
+                className="animate-attention-wiggle w-full flex items-center justify-between p-3.5 rounded-md bg-[#101214] border border-[#26292E] hover:border-[#FF5500] group transition-all cursor-pointer shadow-sm"
               >
                 <div className="flex items-center gap-2.5">
-                  <div className="relative w-8 h-8 rounded-full bg-[#C65D2E]/20 border border-[#C65D2E]/40 flex items-center justify-center text-[#C65D2E] group-hover:bg-[#C65D2E] group-hover:text-white transition-colors">
+                  <div className="relative w-8 h-8 rounded-full bg-[#FF5500]/20 border border-[#FF5500]/40 flex items-center justify-center text-[#FF5500] group-hover:bg-[#FF5500] group-hover:text-white transition-colors">
                     <MessageCircle className="w-4 h-4" />
                     <span className="absolute -top-0.5 -right-0.5 flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -179,14 +184,14 @@ export const BehindRCHUB: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                <ArrowRight className="w-4 h-4 text-[#8D949C] group-hover:text-[#C65D2E] group-hover:translate-x-0.5 transition-all" />
+                <ArrowRight className="w-4 h-4 text-[#8D949C] group-hover:text-[#FF5500] group-hover:translate-x-0.5 transition-all" />
               </a>
 
               <div className="text-center pt-1 space-y-1">
                 <p className="text-xs font-tech text-[#F4F2ED] font-semibold">
                   +57 313 223 3304
                 </p>
-                <p className="text-[11px] font-handwritten text-[#C65D2E] text-base">
+                <p className="text-[11px] font-handwritten text-[#FF5500] text-base">
                   «Respondo personalmente todos los mensajes»
                 </p>
               </div>
@@ -198,7 +203,7 @@ export const BehindRCHUB: React.FC = () => {
                 ¡Hablemos!
               </span>
               <svg
-                className="w-28 h-3 text-[#C65D2E] mx-auto mt-0.5"
+                className="w-28 h-3 text-[#FF5500] mx-auto mt-0.5"
                 viewBox="0 0 110 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

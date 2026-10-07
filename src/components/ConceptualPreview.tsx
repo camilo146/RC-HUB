@@ -19,15 +19,15 @@ export const ConceptualPreview: React.FC = () => {
                 alt="Bandera Colombia pincelazo"
                 className="h-4 w-7 object-contain -rotate-3"
               />
-              <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-bold px-2.5 py-1 rounded bg-[#17191C] border border-[#26292E]">
+              <span className="text-xs font-tech text-[#FF5500] uppercase tracking-widest font-bold px-2.5 py-1 rounded bg-[#17191C] border border-[#26292E]">
                 CONCEPTO — ASÍ PODRÍA VERSE ZONA RC
               </span>
-              <span className="font-handwritten text-xl text-[#C65D2E] rotate-1 select-none">
+              <span className="font-handwritten text-xl text-[#FF5500] rotate-1 select-none">
                 «Exploración visual»
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#F4F2ED] leading-[1.15] tracking-tight">
-              Así podría verse ZONA RC.
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display italic font-black uppercase text-[#F4F2ED] leading-[1.05] tracking-tight">
+              Así podría verse <span className="text-[#FF5500]">ZONA RC.</span>
             </h2>
             <p className="mt-4 text-base sm:text-lg text-[#8D949C] leading-relaxed">
               Una exploración visual de cómo podrían convivir personas, lugares, proyectos y compra/venta dentro de un mismo espacio.
@@ -39,7 +39,7 @@ export const ConceptualPreview: React.FC = () => {
             <button
               onClick={() => setActiveTab('inicio')}
               className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-md font-semibold transition-colors cursor-pointer ${
-                activeTab === 'inicio' ? 'bg-[#C65D2E] text-white' : 'text-[#8D949C] hover:text-[#F4F2ED]'
+                activeTab === 'inicio' ? 'bg-[#FF5500] text-white' : 'text-[#8D949C] hover:text-[#F4F2ED]'
               }`}
             >
               <Layout className="w-3.5 h-3.5" />
@@ -48,7 +48,7 @@ export const ConceptualPreview: React.FC = () => {
             <button
               onClick={() => setActiveTab('perfiles')}
               className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-md font-semibold transition-colors cursor-pointer ${
-                activeTab === 'perfiles' ? 'bg-[#C65D2E] text-white' : 'text-[#8D949C] hover:text-[#F4F2ED]'
+                activeTab === 'perfiles' ? 'bg-[#FF5500] text-white' : 'text-[#8D949C] hover:text-[#F4F2ED]'
               }`}
             >
               <Users className="w-3.5 h-3.5" />
@@ -57,7 +57,7 @@ export const ConceptualPreview: React.FC = () => {
             <button
               onClick={() => setActiveTab('lugares')}
               className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-md font-semibold transition-colors cursor-pointer ${
-                activeTab === 'lugares' ? 'bg-[#C65D2E] text-white' : 'text-[#8D949C] hover:text-[#F4F2ED]'
+                activeTab === 'lugares' ? 'bg-[#FF5500] text-white' : 'text-[#8D949C] hover:text-[#F4F2ED]'
               }`}
             >
               <Compass className="w-3.5 h-3.5" />
@@ -66,7 +66,7 @@ export const ConceptualPreview: React.FC = () => {
             <button
               onClick={() => setActiveTab('garage')}
               className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-md font-semibold transition-colors cursor-pointer ${
-                activeTab === 'garage' ? 'bg-[#C65D2E] text-white' : 'text-[#8D949C] hover:text-[#F4F2ED]'
+                activeTab === 'garage' ? 'bg-[#FF5500] text-white' : 'text-[#8D949C] hover:text-[#F4F2ED]'
               }`}
             >
               <Wrench className="w-3.5 h-3.5" />
@@ -75,7 +75,7 @@ export const ConceptualPreview: React.FC = () => {
             <button
               onClick={() => setActiveTab('marketplace')}
               className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-md font-semibold transition-colors cursor-pointer ${
-                activeTab === 'marketplace' ? 'bg-[#C65D2E] text-white' : 'text-[#8D949C] hover:text-[#F4F2ED]'
+                activeTab === 'marketplace' ? 'bg-[#FF5500] text-white' : 'text-[#8D949C] hover:text-[#F4F2ED]'
               }`}
             >
               <ShoppingBag className="w-3.5 h-3.5" />
@@ -86,7 +86,7 @@ export const ConceptualPreview: React.FC = () => {
 
         {/* Conceptual Note Banner (Honest disclaimer) */}
         <div className="reveal-on-scroll delay-75 mb-10 p-4 rounded-md bg-[#17191C] border border-[#26292E] flex items-start sm:items-center gap-3 text-xs text-[#8D949C]">
-          <Info className="w-4 h-4 text-[#C65D2E] shrink-0 mt-0.5 sm:mt-0" />
+          <Info className="w-4 h-4 text-[#FF5500] shrink-0 mt-0.5 sm:mt-0" />
           <span>
             <strong>VISTA CONCEPTUAL:</strong> Estas pantallas son exploraciones de diseño para ilustrar lo que queremos construir junto a la comunidad. <strong>No son funcionalidades actualmente operativas</strong> ni inventario real en venta.
           </span>
@@ -103,7 +103,7 @@ export const ConceptualPreview: React.FC = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#101214] via-transparent to-transparent opacity-80" />
               <div className="absolute top-4 left-4">
-                <span className="px-3 py-1 rounded bg-[#101214]/90 border border-[#26292E] text-xs font-tech text-[#C65D2E] font-bold uppercase tracking-wider">
+                <span className="px-3 py-1 rounded bg-[#101214]/90 border border-[#26292E] text-xs font-tech text-[#FF5500] font-bold uppercase tracking-wider">
                   CONCEPTO — PANTALLA PRINCIPAL
                 </span>
               </div>
@@ -130,14 +130,14 @@ export const ConceptualPreview: React.FC = () => {
                   className="w-full h-auto object-cover"
                 />
                 <div className="absolute top-3 right-3">
-                  <span className="px-2 py-0.5 rounded bg-[#101214]/90 text-[10px] font-tech text-[#C65D2E] border border-[#26292E] uppercase font-bold tracking-wider">
+                  <span className="px-2 py-0.5 rounded bg-[#101214]/90 text-[10px] font-tech text-[#FF5500] border border-[#26292E] uppercase font-bold tracking-wider">
                     ASÍ PODRÍA VERSE
                   </span>
                 </div>
               </div>
 
               <div className="w-full lg:w-1/2 space-y-4">
-                <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-[#101214] border border-[#26292E] text-xs font-tech text-[#C65D2E] font-bold uppercase tracking-wider">
+                <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-[#101214] border border-[#26292E] text-xs font-tech text-[#FF5500] font-bold uppercase tracking-wider">
                   <Users className="w-3.5 h-3.5" />
                   <span>Módulo conceptual: Personas RC</span>
                 </div>
@@ -180,14 +180,14 @@ export const ConceptualPreview: React.FC = () => {
                   className="w-full h-auto object-cover"
                 />
                 <div className="absolute top-3 right-3">
-                  <span className="px-2 py-0.5 rounded bg-[#101214]/90 text-[10px] font-tech text-[#C65D2E] border border-[#26292E] uppercase font-bold tracking-wider">
+                  <span className="px-2 py-0.5 rounded bg-[#101214]/90 text-[10px] font-tech text-[#FF5500] border border-[#26292E] uppercase font-bold tracking-wider">
                     ASÍ PODRÍA VERSE
                   </span>
                 </div>
               </div>
 
               <div className="w-full lg:w-1/2 space-y-4">
-                <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-[#101214] border border-[#26292E] text-xs font-tech text-[#C65D2E] font-bold uppercase tracking-wider">
+                <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-[#101214] border border-[#26292E] text-xs font-tech text-[#FF5500] font-bold uppercase tracking-wider">
                   <MapPin className="w-3.5 h-3.5" />
                   <span>Módulo conceptual: Lugares RC</span>
                 </div>
@@ -237,7 +237,7 @@ export const ConceptualPreview: React.FC = () => {
                         Escala {vehicle.scale}
                       </span>
                     </div>
-                    <span className="text-[10px] font-tech text-[#C65D2E] uppercase font-bold tracking-wider">
+                    <span className="text-[10px] font-tech text-[#FF5500] uppercase font-bold tracking-wider">
                       CONCEPTO
                     </span>
                   </div>
@@ -291,13 +291,13 @@ export const ConceptualPreview: React.FC = () => {
                       loading="lazy"
                     />
                     <div className="absolute top-2.5 left-2.5">
-                      <span className="px-2 py-0.5 rounded-sm bg-[#101214]/90 text-[10px] font-tech text-[#C65D2E] border border-[#26292E] uppercase font-bold tracking-wider">
+                      <span className="px-2 py-0.5 rounded-sm bg-[#101214]/90 text-[10px] font-tech text-[#FF5500] border border-[#26292E] uppercase font-bold tracking-wider">
                         CONCEPTO
                       </span>
                     </div>
                     <div className="absolute top-2.5 right-2.5">
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-sm bg-[#101214]/90 text-[9px] font-tech text-[#C65D2E] border border-[#26292E] uppercase font-semibold tracking-wider">
-                        <Sparkles className="w-2.5 h-2.5 text-[#C65D2E]" />
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-sm bg-[#101214]/90 text-[9px] font-tech text-[#FF5500] border border-[#26292E] uppercase font-semibold tracking-wider">
+                        <Sparkles className="w-2.5 h-2.5 text-[#FF5500]" />
                         <span>Referencia</span>
                       </span>
                     </div>
@@ -308,7 +308,7 @@ export const ConceptualPreview: React.FC = () => {
                     <div className="flex items-center justify-between text-[11px] font-tech text-[#8D949C]">
                       <span>{item.scale}</span>
                       <span className="flex items-center gap-1">
-                        <MapPin className="w-3 h-3 text-[#C65D2E]" />
+                        <MapPin className="w-3 h-3 text-[#FF5500]" />
                         {item.city}
                       </span>
                     </div>

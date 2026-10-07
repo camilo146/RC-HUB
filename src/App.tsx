@@ -50,7 +50,7 @@ export function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#17191C] text-[#F4F2ED] flex flex-col selection:bg-[#C65D2E] selection:text-white">
+    <div className="min-h-screen bg-[#17191C] text-[#F4F2ED] flex flex-col selection:bg-[#FF5500] selection:text-white">
       {/* Sticky Navbar */}
       <Navbar onNavigate={scrollToSection} />
 

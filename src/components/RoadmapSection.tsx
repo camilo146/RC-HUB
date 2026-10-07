@@ -60,8 +60,13 @@ const STAGES: RoadmapStage[] = [
 
 export const RoadmapSection: React.FC = () => {
   return (
-    <section id="hoja-de-ruta" className="py-20 lg:py-28 bg-[#17191C] border-b border-[#26292E]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="hoja-de-ruta" className="relative overflow-hidden py-20 lg:py-28 bg-[#17191C] border-b border-[#26292E]">
+      {/* Cinematic background */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <img src="/images/roadmap-stage-crecer.jpg" alt="" aria-hidden="true" className="w-full h-full object-cover opacity-[0.12]" loading="lazy" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#17191C] via-[#17191C]/75 to-[#17191C]" />
+      </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-14 reveal-on-scroll">
           <div className="flex items-center gap-3 mb-3">
@@ -71,17 +76,17 @@ export const RoadmapSection: React.FC = () => {
                 alt="Bandera Colombia pincelazo"
                 className="h-3.5 w-6 object-contain -rotate-3"
               />
-              <span className="text-[11px] font-tech text-[#C65D2E] uppercase tracking-widest font-bold">
+              <span className="text-[11px] font-tech text-[#FF5500] uppercase tracking-widest font-bold">
                 Hoja de ruta comunitaria · Colombia
               </span>
             </div>
-            <span className="font-handwritten text-xl text-[#C65D2E] -rotate-1 select-none">
+            <span className="font-handwritten text-xl text-[#FF5500] -rotate-1 select-none">
               «Evoluciona con la comunidad»
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#F4F2ED] leading-[1.15] tracking-tight">
-            El camino para hacer realidad ZONA RC.
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display italic font-black uppercase text-[#F4F2ED] leading-[1.05] tracking-tight">
+            El camino para hacer <span className="text-[#FF5500]">realidad ZONA RC.</span>
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-[#8D949C] leading-relaxed">
@@ -101,7 +106,7 @@ export const RoadmapSection: React.FC = () => {
                 <div
                   className={`flex-1 rounded-xl bg-[#101214] border transition-all duration-200 overflow-hidden flex flex-col justify-between ${
                     stage.isCurrent
-                      ? 'border-[#C65D2E] shadow-[0_0_24px_rgba(198,93,46,0.18)] ring-1 ring-[#C65D2E]/30'
+                      ? 'border-[#FF5500] shadow-[0_0_24px_rgba(255,85,0,0.18)] ring-1 ring-[#FF5500]/30'
                       : 'border-[#26292E] hover:border-[#8D949C]/40'
                   }`}
                 >
@@ -117,8 +122,8 @@ export const RoadmapSection: React.FC = () => {
 
                     {/* AI image badge */}
                     <div className="absolute top-2.5 right-2.5 z-10">
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#101214]/85 backdrop-blur-sm border border-[#26292E] text-[9px] font-tech text-[#C65D2E] font-semibold uppercase tracking-wider">
-                        <Sparkles className="w-2.5 h-2.5 text-[#C65D2E]" />
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#101214]/85 backdrop-blur-sm border border-[#26292E] text-[9px] font-tech text-[#FF5500] font-semibold uppercase tracking-wider">
+                        <Sparkles className="w-2.5 h-2.5 text-[#FF5500]" />
                         <span>Fase {stage.number}</span>
                       </span>
                     </div>
@@ -137,10 +142,10 @@ export const RoadmapSection: React.FC = () => {
                       {/* Status indicator */}
                       <div>
                         {stage.isCurrent ? (
-                          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-[#C65D2E]/15 border border-[#C65D2E] text-xs font-tech font-bold text-[#C65D2E] uppercase tracking-wider">
+                          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-[#FF5500]/15 border border-[#FF5500] text-xs font-tech font-bold text-[#FF5500] uppercase tracking-wider">
                             <span className="relative flex h-2 w-2">
-                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C65D2E] opacity-75"></span>
-                              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#C65D2E]"></span>
+                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF5500] opacity-75"></span>
+                              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FF5500]"></span>
                             </span>
                             <span>{stage.status}</span>
                           </div>
@@ -159,7 +164,7 @@ export const RoadmapSection: React.FC = () => {
 
                       {/* Objective */}
                       <div className="p-3 rounded-lg bg-[#17191C] border border-[#26292E]">
-                        <span className="text-[10px] font-tech text-[#C65D2E] uppercase tracking-wider block font-bold mb-1">
+                        <span className="text-[10px] font-tech text-[#FF5500] uppercase tracking-wider block font-bold mb-1">
                           Objetivo:
                         </span>
                         <p className="text-xs sm:text-sm text-[#F4F2ED] leading-relaxed">
@@ -188,10 +193,10 @@ export const RoadmapSection: React.FC = () => {
                     {/* Bottom Micro Icon */}
                     <div className="pt-3.5 border-t border-[#26292E] flex items-center justify-between text-xs font-tech text-[#8D949C]">
                       <div className="flex items-center gap-2">
-                        <Icon className={`w-3.5 h-3.5 ${stage.isCurrent ? 'text-[#C65D2E]' : 'text-[#8D949C]'}`} />
+                        <Icon className={`w-3.5 h-3.5 ${stage.isCurrent ? 'text-[#FF5500]' : 'text-[#8D949C]'}`} />
                         <span>Fase {stage.number}</span>
                       </div>
-                      <span className="text-[10px] text-[#C65D2E] font-bold">ZONA RC</span>
+                      <span className="text-[10px] text-[#FF5500] font-bold">ZONA RC</span>
                     </div>
                   </div>
                 </div>
@@ -209,7 +214,7 @@ export const RoadmapSection: React.FC = () => {
 
         {/* Honest Note as requested */}
         <div className="mt-10 p-4 rounded-lg bg-[#101214] border border-[#26292E] text-xs text-[#8D949C] font-tech flex items-center gap-2.5">
-          <span className="text-[#C65D2E] font-bold text-sm">*</span>
+          <span className="text-[#FF5500] font-bold text-sm">*</span>
           <span className="text-[#C8C4BC]">
             <strong>Nota importante:</strong> La hoja de ruta puede cambiar según lo que la comunidad realmente necesite.
           </span>

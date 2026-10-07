@@ -15,11 +15,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
       {/* Pre-footer Call to Action: Belonging */}
       <div className="border-b border-[#26292E] py-16 bg-[#17191C]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <span className="font-handwritten text-2xl text-[#C65D2E] block -rotate-1">
+          <span className="font-handwritten text-2xl text-[#FF5500] block -rotate-1">
             «Construyamos ZONA RC juntos»
           </span>
-          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#F4F2ED] max-w-2xl mx-auto leading-tight">
-            Sé parte desde el comienzo.
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-display italic font-black uppercase text-[#F4F2ED] max-w-2xl mx-auto leading-tight">
+            SÉ PARTE DESDE EL <span className="text-[#FF5500]">COMIENZO.</span>
           </h3>
           <p className="text-sm sm:text-base text-[#8D949C] max-w-xl mx-auto leading-relaxed">
             El radio control en Colombia merece su propio espacio. Si quieres que esta plataforma exista y quieres estar en primera fila cuando salga:
@@ -30,7 +30,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               target="_blank"
               rel="noopener noreferrer"
               id="cta-footer-join"
-              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-md text-sm font-tech font-bold uppercase tracking-wider text-white bg-[#C65D2E] hover:bg-[#B34F24] transition-all shadow-xl hover:shadow-[#C65D2E]/25 cursor-pointer"
+              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-tech font-bold uppercase tracking-wider text-white bg-[#FF5500] hover:bg-[#E64A19] transition-all shadow-xl hover:shadow-[#FF5500]/30 hover:scale-105 active:scale-95 cursor-pointer"
             >
               <span>QUIERO SER PARTE</span>
               <ArrowRight className="w-4 h-4" />
@@ -107,7 +107,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <li>
                 <button
                   onClick={() => onNavigate('contacto')}
-                  className="text-[#C65D2E] hover:text-white font-semibold transition-colors cursor-pointer text-left"
+                  className="text-[#FF5500] hover:text-white font-semibold transition-colors cursor-pointer text-left"
                 >
                   Participa
                 </button>
@@ -126,9 +126,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 href="https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Me%20gustar%C3%ADa%20conversar%20sobre%20ZONA%20RC."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-tech text-[#F4F2ED] hover:text-[#C65D2E] transition-colors"
+                className="inline-flex items-center gap-2 text-xs font-tech text-[#F4F2ED] hover:text-[#FF5500] transition-colors"
               >
-                <MessageCircle className="w-4 h-4 text-[#C65D2E]" />
+                <MessageCircle className="w-4 h-4 text-[#FF5500]" />
                 <span>+57 313 223 3304</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>

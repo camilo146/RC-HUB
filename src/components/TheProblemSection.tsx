@@ -46,8 +46,13 @@ const SCATTERED_CHANNELS = [
 
 export const TheProblemSection: React.FC = () => {
   return (
-    <section id="el-problema" className="py-20 lg:py-28 bg-[#101214] text-[#F4F2ED] border-b border-[#26292E]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="el-problema" className="relative overflow-hidden py-20 lg:py-28 bg-[#0E1012] text-[#F4F2ED] border-b border-[#26292E]">
+      {/* Cinematic background */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <img src="/images/hero-rc-ecosystem.jpg" alt="" aria-hidden="true" className="w-full h-full object-cover opacity-[0.16]" loading="lazy" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0E1012] via-[#0E1012]/70 to-[#0E1012]" />
+      </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Block */}
         <div className="max-w-3xl mb-14 reveal-on-scroll">
           <div className="flex items-center gap-3 mb-3">
@@ -56,15 +61,15 @@ export const TheProblemSection: React.FC = () => {
               alt="Bandera Colombia pincelazo"
               className="h-4 w-7 object-contain -rotate-3"
             />
-            <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-bold">
+            <span className="text-xs font-tech text-[#FF5500] uppercase tracking-widest font-bold">
               Lo que vivimos los aficionados en Colombia
             </span>
-            <span className="font-handwritten text-xl text-[#C65D2E] -rotate-1 select-none">
+            <span className="font-handwritten text-xl text-[#FF5500] -rotate-1 select-none">
               — la fragmentación actual
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#F4F2ED] leading-[1.15] tracking-tight">
-            La comunidad existe. Lo que está fragmentado es la forma de encontrarla.
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display italic font-black uppercase text-[#F4F2ED] leading-[1.05] tracking-tight">
+            La comunidad existe. <span className="text-[#FF5500]">Lo que está fragmentado</span> es la forma de encontrarla.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#8D949C] leading-relaxed">
             El radio control es una afición apasionante, pero hoy los aficionados, los lugares, los repuestos y los proyectos estamos dispersos en decenas de canales aislados:
@@ -78,14 +83,14 @@ export const TheProblemSection: React.FC = () => {
             return (
               <div
                 key={idx}
-                className={`reveal-on-scroll ${delays[idx % delays.length]} hover-lift p-6 rounded-lg bg-[#17191C] border border-[#26292E] hover:border-[#C65D2E]/60 transition-all duration-200 flex flex-col justify-between space-y-4 group`}
+                className={`reveal-on-scroll ${delays[idx % delays.length]} hover-lift p-6 rounded-lg bg-[#17191C] border border-[#26292E] hover:border-[#FF5500]/60 transition-all duration-200 flex flex-col justify-between space-y-4 group`}
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-[11px] font-tech">
-                    <span className="text-[#C65D2E] uppercase font-bold tracking-wider">
+                    <span className="text-[#FF5500] uppercase font-bold tracking-wider">
                       {item.category}
                     </span>
-                    <HelpCircle className="w-4 h-4 text-[#8D949C] group-hover:text-[#C65D2E] transition-colors" />
+                    <HelpCircle className="w-4 h-4 text-[#8D949C] group-hover:text-[#FF5500] transition-colors" />
                   </div>
                   <h3 className="font-editorial font-bold text-lg sm:text-xl text-[#F4F2ED] leading-snug group-hover:text-white transition-colors">
                     {item.question}
@@ -97,7 +102,7 @@ export const TheProblemSection: React.FC = () => {
 
                 <div className="pt-3 border-t border-[#26292E] flex items-center justify-between text-[11px] font-tech text-[#8D949C]">
                   <span>Pregunta común</span>
-                  <span className="text-[#C65D2E] font-medium">#{idx + 1}</span>
+                  <span className="text-[#FF5500] font-medium">#{idx + 1}</span>
                 </div>
               </div>
             );
@@ -108,7 +113,7 @@ export const TheProblemSection: React.FC = () => {
         <div className="reveal-scale delay-150 rounded-xl bg-[#17191C]/70 border border-[#26292E] p-6 sm:p-8 lg:p-10 relative overflow-hidden">
           <div className="max-w-4xl space-y-6">
             <div className="inline-flex items-center gap-2 text-xs font-tech text-[#8D949C] uppercase tracking-wider font-semibold">
-              <Layers className="w-4 h-4 text-[#C65D2E]" />
+              <Layers className="w-4 h-4 text-[#FF5500]" />
               <span>La realidad del hobby</span>
             </div>
 
@@ -141,7 +146,7 @@ export const TheProblemSection: React.FC = () => {
 
               <a
                 href="#que-construimos"
-                className="inline-flex items-center gap-2 text-xs font-tech text-[#C65D2E] hover:text-white uppercase tracking-wider font-bold transition-colors shrink-0"
+                className="inline-flex items-center gap-2 text-xs font-tech text-[#FF5500] hover:text-white uppercase tracking-wider font-bold transition-colors shrink-0"
               >
                 <span>Conoce los 4 pilares</span>
                 <ArrowRight className="w-4 h-4" />

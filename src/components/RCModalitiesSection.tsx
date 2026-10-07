@@ -106,8 +106,13 @@ const MODALITIES: Modality[] = [
 
 export const RCModalitiesSection: React.FC = () => {
   return (
-    <section id="modalidades" className="py-20 lg:py-28 bg-[#101214] text-[#F4F2ED] border-b border-[#26292E]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="modalidades" className="relative overflow-hidden py-20 lg:py-28 bg-[#0E1012] text-[#F4F2ED] border-b border-[#26292E]">
+      {/* Cinematic background */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <img src="/images/hero-cinematic-bg-final.jpg" alt="" aria-hidden="true" className="w-full h-full object-cover object-right opacity-[0.14]" loading="lazy" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0E1012] via-[#0E1012]/75 to-[#0E1012]" />
+      </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-14 reveal-on-scroll">
           <div className="flex items-center gap-3 mb-3">
@@ -116,15 +121,15 @@ export const RCModalitiesSection: React.FC = () => {
               alt="Bandera Colombia pincelazo"
               className="h-4 w-7 object-contain -rotate-3"
             />
-            <span className="text-xs font-tech text-[#C65D2E] uppercase tracking-widest font-bold">
+            <span className="text-xs font-tech text-[#FF5500] uppercase tracking-widest font-bold">
               El mundo RC completo · ZONA RC COL
             </span>
-            <span className="font-handwritten text-xl text-[#C65D2E] -rotate-1 select-none">
+            <span className="font-handwritten text-xl text-[#FF5500] -rotate-1 select-none">
               «Todas las disciplinas en un solo lugar»
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-editorial font-bold text-[#F4F2ED] leading-[1.15] tracking-tight">
-            No importa qué tipo de RC tengas.
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display italic font-black uppercase text-[#F4F2ED] leading-[1.05] tracking-tight">
+            No importa qué <span className="text-[#FF5500]">tipo de RC</span> tengas.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#8D949C] leading-relaxed">
             Si te apasiona el radio control, <strong className="text-[#F4F2ED] font-semibold">ZONA RC también es para ti</strong>. No somos un espacio cerrado para una sola categoría; estamos diseñando la plataforma para que cada disciplina encuentre su espacio, sus repuestos y su comunidad en Colombia.
@@ -139,15 +144,15 @@ export const RCModalitiesSection: React.FC = () => {
             return (
               <div
                 key={mod.id}
-                className={`reveal-on-scroll ${delays[idx % delays.length]} hover-lift p-6 rounded-xl bg-[#17191C] border border-[#26292E] hover:border-[#C65D2E]/60 transition-all duration-200 flex flex-col justify-between space-y-4 group relative overflow-hidden`}
+                className={`reveal-on-scroll ${delays[idx % delays.length]} hover-lift p-6 rounded-xl bg-[#17191C] border border-[#26292E] hover:border-[#FF5500]/60 transition-all duration-200 flex flex-col justify-between space-y-4 group relative overflow-hidden`}
               >
                 {/* Subtle top indicator line on hover */}
-                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C65D2E] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FF5500] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <span className="font-tech font-bold text-[11px] text-[#C65D2E] tracking-widest">
+                      <span className="font-tech font-bold text-[11px] text-[#FF5500] tracking-widest">
                         #{String(idx + 1).padStart(2, '0')}
                       </span>
                       <span className="text-[10px] font-tech text-[#8D949C] uppercase tracking-wider font-semibold">
@@ -160,7 +165,7 @@ export const RCModalitiesSection: React.FC = () => {
                   </div>
 
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-[#101214] border border-[#26292E] flex items-center justify-center text-[#C65D2E] group-hover:border-[#C65D2E] group-hover:bg-[#C65D2E]/10 transition-colors">
+                    <div className="w-10 h-10 rounded-lg bg-[#101214] border border-[#26292E] flex items-center justify-center text-[#FF5500] group-hover:border-[#FF5500] group-hover:bg-[#FF5500]/10 transition-colors">
                       <Icon className="w-5 h-5" />
                     </div>
                     <h3 className="font-editorial font-bold text-lg text-[#F4F2ED] group-hover:text-white transition-colors">
@@ -185,7 +190,7 @@ export const RCModalitiesSection: React.FC = () => {
         {/* Bottom Inclusive Callout */}
         <div className="reveal-scale delay-150 mt-10 p-5 rounded-lg bg-[#17191C]/50 border border-[#26292E] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs font-tech text-[#8D949C]">
           <div className="flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-[#C65D2E] shrink-0" />
+            <Sparkles className="w-4 h-4 text-[#FF5500] shrink-0" />
             <span>
               ¿Practicas otra modalidad como tanques de combate, motos RC o proyectos artesanales? Tu voz también cuenta para incluirlos.
             </span>
@@ -194,7 +199,7 @@ export const RCModalitiesSection: React.FC = () => {
             href="https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Me%20gustar%C3%ADa%20que%20ZONA%20RC%20incluya%20mi%20modalidad%20RC:"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#C65D2E] hover:text-[#F4F2ED] font-semibold underline underline-offset-4 decoration-[#C65D2E]/40 shrink-0"
+            className="text-[#FF5500] hover:text-[#F4F2ED] font-semibold underline underline-offset-4 decoration-[#FF5500]/40 shrink-0"
           >
             Cuéntanos qué corres →
           </a>
