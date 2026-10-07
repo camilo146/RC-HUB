@@ -34,71 +34,73 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            className="flex items-center group focus:outline-none transition-transform hover:scale-[1.02]"
-            aria-label="ZONA RC COL — Inicio"
-          >
-            <ZonaRcLogo size="md" showTricolor={true} />
-          </a>
+          <div className="shrink-0 flex items-center">
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="flex items-center group focus:outline-none transition-transform hover:scale-[1.02]"
+              aria-label="ZONA RC COL — Inicio"
+            >
+              <ZonaRcLogo size="md" showTricolor={true} />
+            </a>
+          </div>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-7">
+          {/* Desktop Navigation Links - Single-line Editorial Layout */}
+          <nav className="hidden lg:flex items-center gap-3.5 xl:gap-6 shrink-0">
             <button
               onClick={() => handleLinkClick('el-problema')}
-              className="text-xs uppercase font-tech tracking-wider text-[#A0A6B2] hover:text-white transition-colors cursor-pointer"
+              className="text-[11px] xl:text-xs uppercase font-tech tracking-wider text-[#A0A6B2] hover:text-white transition-colors cursor-pointer whitespace-nowrap py-1"
             >
               ¿Por qué ZONA RC?
             </button>
             <button
               onClick={() => handleLinkClick('que-construimos')}
-              className="text-xs uppercase font-tech tracking-wider text-[#A0A6B2] hover:text-white transition-colors cursor-pointer"
+              className="text-[11px] xl:text-xs uppercase font-tech tracking-wider text-[#A0A6B2] hover:text-white transition-colors cursor-pointer whitespace-nowrap py-1"
             >
               Los 4 pilares
             </button>
             <button
               onClick={() => handleLinkClick('modalidades')}
-              className="text-xs uppercase font-tech tracking-wider text-[#A0A6B2] hover:text-white transition-colors cursor-pointer"
+              className="text-[11px] xl:text-xs uppercase font-tech tracking-wider text-[#A0A6B2] hover:text-white transition-colors cursor-pointer whitespace-nowrap py-1"
             >
               Modalidades
             </button>
             <button
               onClick={() => handleLinkClick('vista-previa')}
-              className="text-xs uppercase font-tech tracking-wider text-[#A0A6B2] hover:text-white transition-colors cursor-pointer"
+              className="text-[11px] xl:text-xs uppercase font-tech tracking-wider text-[#A0A6B2] hover:text-white transition-colors cursor-pointer whitespace-nowrap py-1"
             >
-              Vista preliminar
+              Vista previa
             </button>
             <button
               onClick={() => handleLinkClick('hoja-de-ruta')}
-              className="text-xs uppercase font-tech tracking-wider text-[#A0A6B2] hover:text-white transition-colors cursor-pointer"
+              className="text-[11px] xl:text-xs uppercase font-tech tracking-wider text-[#A0A6B2] hover:text-white transition-colors cursor-pointer whitespace-nowrap py-1"
             >
               Hoja de ruta
             </button>
             <button
               onClick={() => handleLinkClick('detras-de-rchub')}
-              className="text-xs uppercase font-tech tracking-wider text-[#A0A6B2] hover:text-white transition-colors cursor-pointer"
+              className="text-[11px] xl:text-xs uppercase font-tech tracking-wider text-[#A0A6B2] hover:text-white transition-colors cursor-pointer whitespace-nowrap py-1"
             >
               El creador
             </button>
             <button
               onClick={() => handleLinkClick('contacto')}
-              className="text-xs uppercase font-tech tracking-wider text-[#FF5500] hover:text-white font-bold transition-colors cursor-pointer"
+              className="text-[11px] xl:text-xs uppercase font-tech tracking-wider text-[#FF5500] hover:text-white font-bold transition-colors cursor-pointer whitespace-nowrap py-1"
             >
               Participa
             </button>
           </nav>
 
           {/* Desktop Right Action: Únete a la comunidad */}
-          <div className="hidden sm:flex items-center gap-4">
+          <div className="hidden sm:flex items-center shrink-0">
             <a
               href="https://wa.me/573132233304?text=Hola%2C%20Camilo.%20Quiero%20unirme%20a%20la%20comunidad%20ZONA%20RC."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-tech font-bold uppercase tracking-wider text-white bg-[#FF5500] hover:bg-[#E64A19] shadow-md shadow-black/40 hover:scale-105 active:scale-95 transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 px-4 xl:px-5 py-2.5 rounded-full text-[11px] xl:text-xs font-tech font-bold uppercase tracking-wider text-white bg-[#FF5500] hover:bg-[#E64A19] shadow-md shadow-black/40 hover:scale-105 active:scale-95 transition-all cursor-pointer whitespace-nowrap"
             >
               <Users className="w-3.5 h-3.5" />
               <span>ÚNETE A LA COMUNIDAD</span>
